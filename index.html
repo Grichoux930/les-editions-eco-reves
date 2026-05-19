@@ -4,659 +4,536 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Les éditions Éco-Rêves</title>
+
   <style>
-    :root {
-      --green-dark: #1f5c3a;
-      --green: #3f8f5a;
-      --green-soft: #dff2df;
-      --cream: #fff8e8;
-      --yellow: #ffd86b;
-      --orange: #f7a95a;
-      --blue: #a9ddf3;
-      --brown: #6b4a2b;
-      --text: #2e2a22;
-      --white: #ffffff;
+    :root{
+      --green-dark:#1f5c3a;
+      --green:#4b9962;
+      --green-soft:#e8f6e8;
+      --cream:#fff9ec;
+      --yellow:#ffd96d;
+      --orange:#f5a556;
+      --brown:#5c4327;
+      --text:#33291f;
+      --white:#ffffff;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      font-family: "Trebuchet MS", Arial, sans-serif;
-      color: var(--text);
-      background: linear-gradient(180deg, #fff8e8 0%, #e9f8e7 48%, #fffdf3 100%);
-      overflow-x: hidden;
+    body{
+      font-family:"Trebuchet MS", Arial, sans-serif;
+      background:linear-gradient(
+        180deg,
+        #fff8eb 0%,
+        #eef8ea 45%,
+        #fffdf7 100%
+      );
+      color:var(--text);
+      overflow-x:hidden;
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255, 248, 232, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 2px solid rgba(63, 143, 90, 0.15);
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter:blur(12px);
+      background:rgba(255,248,235,0.92);
+      border-bottom:2px solid rgba(75,153,98,0.12);
     }
 
-    .nav {
-      max-width: 1180px;
-      margin: auto;
-      padding: 18px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      padding:18px 24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      color: var(--green-dark);
-      font-size: 1.25rem;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:1.3rem;
+      font-weight:900;
+      color:var(--green-dark);
     }
 
-    .brand-icon {
-      width: 46px;
-      height: 46px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--yellow), var(--green-soft));
-      box-shadow: 0 8px 20px rgba(31, 92, 58, 0.18);
-      font-size: 1.6rem;
+    .brand-icon{
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#ffe37d,#dff5de);
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+      font-size:1.5rem;
     }
 
-    nav a {
-      text-decoration: none;
-      color: var(--green-dark);
-      font-weight: 800;
-      margin-left: 22px;
-      transition: 0.25s;
+    nav a{
+      text-decoration:none;
+      margin-left:24px;
+      color:var(--green-dark);
+      font-weight:800;
+      transition:0.2s;
     }
 
-    nav a:hover {
-      color: var(--orange);
+    nav a:hover{
+      color:var(--orange);
     }
 
-    .hero {
-      max-width: 1180px;
-      margin: auto;
-      padding: 84px 24px 70px;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
-      gap: 48px;
-      position: relative;
+    .hero{
+      max-width:1200px;
+      margin:auto;
+      padding:80px 24px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--white);
-      color: var(--green-dark);
-      border: 2px solid rgba(63, 143, 90, 0.2);
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 900;
-      box-shadow: 0 10px 24px rgba(31, 92, 58, 0.1);
-      margin-bottom: 22px;
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:12px 18px;
+      border-radius:999px;
+      background:white;
+      border:2px solid rgba(75,153,98,0.15);
+      color:var(--green-dark);
+      font-weight:900;
+      margin-bottom:24px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.06);
     }
 
-    h1 {
-      font-size: clamp(2.8rem, 7vw, 5.6rem);
-      line-height: 0.95;
-      color: var(--green-dark);
-      letter-spacing: -2px;
-      margin-bottom: 24px;
+    h1{
+      font-size:clamp(3rem,7vw,5.8rem);
+      line-height:0.95;
+      color:var(--green-dark);
+      letter-spacing:-2px;
+      margin-bottom:24px;
     }
 
-    h1 span {
-      color: var(--orange);
-      display: block;
+    h1 span{
+      display:block;
+      color:var(--orange);
     }
 
-    .hero p {
-      font-size: 1.25rem;
-      line-height: 1.7;
-      max-width: 620px;
-      color: #4a3e2d;
-      margin-bottom: 30px;
+    .hero p{
+      font-size:1.2rem;
+      line-height:1.8;
+      color:#4c4338;
+      margin-bottom:34px;
+      max-width:620px;
     }
 
-    .buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
     }
 
-    .btn {
-      border: none;
-      text-decoration: none;
-      padding: 15px 24px;
-      border-radius: 18px;
-      font-weight: 900;
-      font-size: 1rem;
-      box-shadow: 0 12px 24px rgba(31, 92, 58, 0.18);
-      transition: 0.25s;
-      display: inline-block;
+    .btn{
+      padding:15px 24px;
+      border-radius:18px;
+      font-weight:900;
+      text-decoration:none;
+      transition:0.2s;
+      box-shadow:0 12px 24px rgba(0,0,0,0.12);
     }
 
-    .btn-primary {
-      background: var(--green-dark);
-      color: white;
+    .btn:hover{
+      transform:translateY(-4px);
     }
 
-    .btn-secondary {
-      background: var(--yellow);
-      color: var(--brown);
+    .btn-primary{
+      background:var(--green-dark);
+      color:white;
     }
 
-    .btn:hover {
-      transform: translateY(-4px) scale(1.02);
+    .btn-secondary{
+      background:var(--yellow);
+      color:var(--brown);
     }
 
-    .hero-card {
-      min-height: 520px;
-      border-radius: 42px;
-      background: radial-gradient(circle at top, #fff 0%, #fff8dc 35%, #caedc9 100%);
-      position: relative;
-      box-shadow: 0 28px 70px rgba(31, 92, 58, 0.22);
-      overflow: hidden;
-      border: 6px solid rgba(255, 255, 255, 0.9);
+    .hero-card{
+      width:100%;
+      min-height:560px;
+      border-radius:40px;
+      overflow:hidden;
+      box-shadow:0 30px 70px rgba(31,92,58,0.18);
+      border:6px solid rgba(255,255,255,0.9);
+      background:white;
     }
 
-    .sun {
-      position: absolute;
-      width: 130px;
-      height: 130px;
-      top: 38px;
-      right: 48px;
-      background: var(--yellow);
-      border-radius: 50%;
-      box-shadow: 0 0 60px rgba(255, 216, 107, 0.95);
+    .hero-image{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
 
-    .rainbow {
-      position: absolute;
-      width: 330px;
-      height: 165px;
-      top: 72px;
-      left: 42px;
-      border-radius: 330px 330px 0 0;
-      border: 24px solid transparent;
-      border-top-color: #ff8a8a;
-      border-left-color: #ff8a8a;
-      border-right-color: #ff8a8a;
-      opacity: 0.88;
+    section{
+      max-width:1200px;
+      margin:auto;
+      padding:80px 24px;
     }
 
-    .rainbow::before {
-      content: "";
-      position: absolute;
-      inset: 16px;
-      border-radius: 300px 300px 0 0;
-      border: 22px solid transparent;
-      border-top-color: #ffd86b;
-      border-left-color: #ffd86b;
-      border-right-color: #ffd86b;
+    .section-title{
+      text-align:center;
+      font-size:clamp(2.2rem,5vw,3.5rem);
+      color:var(--green-dark);
+      margin-bottom:16px;
     }
 
-    .rainbow::after {
-      content: "";
-      position: absolute;
-      inset: 48px;
-      border-radius: 260px 260px 0 0;
-      border: 18px solid transparent;
-      border-top-color: #74c7f0;
-      border-left-color: #74c7f0;
-      border-right-color: #74c7f0;
+    .section-subtitle{
+      max-width:760px;
+      margin:0 auto 50px;
+      text-align:center;
+      line-height:1.8;
+      color:#5b4d3d;
+      font-size:1.1rem;
     }
 
-    .hill {
-      position: absolute;
-      bottom: -40px;
-      left: -40px;
-      width: 120%;
-      height: 240px;
-      background: var(--green);
-      border-radius: 55% 55% 0 0;
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
     }
 
-    .book {
-      position: absolute;
-      bottom: 115px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 300px;
-      height: 110px;
-      background: #fff8d8;
-      border-radius: 16px 16px 38px 38px;
-      box-shadow: 0 16px 28px rgba(91, 66, 30, 0.22);
-      border: 4px solid #8a673e;
+    .card{
+      background:rgba(255,255,255,0.82);
+      border-radius:30px;
+      padding:32px;
+      box-shadow:0 20px 40px rgba(0,0,0,0.08);
+      border:2px solid rgba(75,153,98,0.1);
+      transition:0.2s;
     }
 
-    .book::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 0;
-      width: 4px;
-      height: 100%;
-      background: #d8bd80;
+    .card:hover{
+      transform:translateY(-6px);
     }
 
-    .book::after {
-      content: "";
-      position: absolute;
-      left: 24px;
-      right: 24px;
-      top: 28px;
-      height: 4px;
-      background: repeating-linear-gradient(90deg, #c4a15d 0 46px, transparent 46px 62px);
-      box-shadow: 0 22px 0 #c4a15d, 0 44px 0 #c4a15d;
-      opacity: 0.7;
+    .card-icon{
+      width:72px;
+      height:72px;
+      border-radius:22px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      background:linear-gradient(135deg,#ffe07d,#dff5de);
+      margin-bottom:20px;
     }
 
-    .animal {
-      position: absolute;
-      bottom: 220px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 150px;
-      height: 150px;
-      background: #9c6a3c;
-      border-radius: 50% 50% 42% 42%;
-      box-shadow: inset -10px -8px 0 rgba(0,0,0,0.08);
+    .card h3{
+      color:var(--green-dark);
+      margin-bottom:12px;
+      font-size:1.4rem;
     }
 
-    .animal::before,
-    .animal::after {
-      content: "";
-      position: absolute;
-      width: 42px;
-      height: 42px;
-      background: #9c6a3c;
-      top: -12px;
-      border-radius: 12px 32px 12px 32px;
+    .card p{
+      line-height:1.8;
+      color:#5c4c3d;
     }
 
-    .animal::before { left: 18px; transform: rotate(-25deg); }
-    .animal::after { right: 18px; transform: rotate(25deg); }
-
-    .face {
-      position: absolute;
-      width: 104px;
-      height: 86px;
-      background: #f8dfb3;
-      border-radius: 48%;
-      left: 23px;
-      top: 38px;
+    .books-showcase{
+      background:linear-gradient(135deg,#dff2df,#fff5d7);
+      border-radius:40px;
+      padding:40px;
+      display:grid;
+      grid-template-columns:0.9fr 1.1fr;
+      gap:40px;
+      align-items:center;
+      box-shadow:0 24px 60px rgba(0,0,0,0.08);
     }
 
-    .face::before,
-    .face::after {
-      content: "";
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      background: #2a1b10;
-      border-radius: 50%;
-      top: 25px;
+    .fake-cover{
+      aspect-ratio:1/1.18;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 20px 45px rgba(0,0,0,0.16);
+      border:8px solid white;
     }
 
-    .face::before { left: 24px; }
-    .face::after { right: 24px; }
-
-    .nose {
-      position: absolute;
-      width: 22px;
-      height: 14px;
-      background: #2a1b10;
-      border-radius: 50%;
-      left: 41px;
-      top: 44px;
+    .fake-cover img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
 
-    .stars {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
+    .showcase-text h2{
+      font-size:clamp(2rem,4vw,3rem);
+      color:var(--green-dark);
+      margin-bottom:20px;
     }
 
-    .star {
-      position: absolute;
-      font-size: 2rem;
-      color: #f6b842;
-      animation: float 4s ease-in-out infinite;
+    .showcase-text p{
+      line-height:1.9;
+      margin-bottom:18px;
+      color:#4d4132;
+      font-size:1.08rem;
     }
 
-    .star:nth-child(1) { top: 52px; left: 64px; }
-    .star:nth-child(2) { top: 190px; right: 82px; animation-delay: 0.5s; }
-    .star:nth-child(3) { top: 295px; left: 70px; animation-delay: 1s; }
-    .star:nth-child(4) { top: 120px; right: 210px; animation-delay: 1.4s; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-12px) rotate(8deg); }
+    .pill-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
     }
 
-    section {
-      max-width: 1180px;
-      margin: auto;
-      padding: 70px 24px;
+    .pill{
+      padding:10px 16px;
+      border-radius:999px;
+      background:white;
+      border:2px solid rgba(75,153,98,0.15);
+      font-weight:900;
+      color:var(--green-dark);
     }
 
-    .section-title {
-      text-align: center;
-      color: var(--green-dark);
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      margin-bottom: 16px;
+    .contact{
+      background:var(--green-dark);
+      color:white;
+      border-radius:42px;
+      padding:70px 30px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
     }
 
-    .section-subtitle {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 44px;
-      line-height: 1.7;
-      color: #5a4c38;
-      font-size: 1.15rem;
+    .contact h2{
+      font-size:clamp(2rem,5vw,3.2rem);
+      margin-bottom:18px;
+      position:relative;
+      z-index:2;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+    .contact p{
+      max-width:720px;
+      margin:0 auto 30px;
+      line-height:1.8;
+      position:relative;
+      z-index:2;
+      font-size:1.1rem;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.82);
-      border: 3px solid rgba(63, 143, 90, 0.15);
-      padding: 30px;
-      border-radius: 32px;
-      box-shadow: 0 18px 40px rgba(31, 92, 58, 0.1);
-      transition: 0.25s;
+    footer{
+      text-align:center;
+      padding:36px 20px;
+      color:var(--green-dark);
+      font-weight:800;
     }
 
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 26px 50px rgba(31, 92, 58, 0.18);
-    }
+    @media(max-width:950px){
 
-    .card-icon {
-      width: 72px;
-      height: 72px;
-      display: grid;
-      place-items: center;
-      border-radius: 24px;
-      background: linear-gradient(135deg, var(--yellow), var(--green-soft));
-      font-size: 2.1rem;
-      margin-bottom: 18px;
-    }
-
-    .card h3 {
-      color: var(--green-dark);
-      font-size: 1.45rem;
-      margin-bottom: 12px;
-    }
-
-    .card p {
-      line-height: 1.7;
-      color: #5a4c38;
-    }
-
-    .books-showcase {
-      background: linear-gradient(135deg, #dff2df, #fff6d9);
-      border-radius: 44px;
-      padding: 42px;
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 34px;
-      align-items: center;
-      box-shadow: 0 24px 60px rgba(31, 92, 58, 0.14);
-    }
-
-    .fake-cover {
-      aspect-ratio: 1 / 1.18;
-      border-radius: 28px;
-      background: linear-gradient(160deg, #7ecb72 0%, #bfeec2 45%, #fff3bd 100%);
-      box-shadow: 0 24px 50px rgba(80, 65, 30, 0.22);
-      border: 8px solid white;
-      padding: 26px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .fake-cover::before {
-      content: "🌿🦫🐝";
-      font-size: 4rem;
-      position: absolute;
-      top: 34%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .fake-cover h3 {
-      color: var(--green-dark);
-      font-size: 2rem;
-      line-height: 1.1;
-      z-index: 1;
-    }
-
-    .fake-cover small {
-      z-index: 1;
-      font-weight: 900;
-      color: var(--brown);
-    }
-
-    .showcase-text h2 {
-      color: var(--green-dark);
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 18px;
-    }
-
-    .showcase-text p {
-      line-height: 1.8;
-      font-size: 1.12rem;
-      color: #4f432f;
-      margin-bottom: 18px;
-    }
-
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .pill {
-      background: white;
-      color: var(--green-dark);
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-weight: 900;
-      border: 2px solid rgba(63, 143, 90, 0.18);
-    }
-
-    .contact {
-      text-align: center;
-      background: var(--green-dark);
-      color: white;
-      border-radius: 44px;
-      padding: 58px 28px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact::before {
-      content: "🌙 ✨ 🌿 📚 🐝 🦫";
-      position: absolute;
-      font-size: 4rem;
-      opacity: 0.13;
-      inset: 20px;
-      letter-spacing: 28px;
-    }
-
-    .contact h2 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      margin-bottom: 16px;
-      position: relative;
-    }
-
-    .contact p {
-      max-width: 700px;
-      margin: 0 auto 26px;
-      line-height: 1.7;
-      font-size: 1.15rem;
-      position: relative;
-    }
-
-    footer {
-      text-align: center;
-      padding: 34px 20px;
-      color: var(--green-dark);
-      font-weight: 800;
-    }
-
-    @media (max-width: 900px) {
-      .hero,
-      .books-showcase {
-        grid-template-columns: 1fr;
+      .hero{
+        grid-template-columns:1fr;
       }
 
-      .hero-card {
-        min-height: 460px;
+      .books-showcase{
+        grid-template-columns:1fr;
       }
 
-      .cards {
-        grid-template-columns: 1fr;
+      .cards{
+        grid-template-columns:1fr;
       }
 
-      nav {
-        display: none;
+      nav{
+        display:none;
+      }
+
+      .hero-card{
+        min-height:auto;
       }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand">
-        <div class="brand-icon">📚</div>
-        <div>Les éditions Éco-Rêves</div>
-      </div>
-      <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#mission">Mission</a>
-        <a href="#livres">Livres</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main id="accueil" class="hero">
-    <div>
-      <div class="badge">🌿 Maison d’édition jeunesse & nature</div>
-      <h1>Des livres pour <span>rêver plus vert.</span></h1>
-      <p>
-        Les éditions Éco-Rêves créent des histoires douces, colorées et éducatives
-        pour éveiller les enfants à la beauté de la nature, aux animaux et à la protection
-        de notre planète.
-      </p>
-      <div class="buttons">
-        <a class="btn btn-primary" href="#livres">Découvrir nos livres</a>
-        <a class="btn btn-secondary" href="#contact">Nous contacter</a>
-      </div>
+<header>
+  <div class="nav">
+
+    <div class="brand">
+      <div class="brand-icon">📚</div>
+      <div>Les éditions Éco-Rêves</div>
     </div>
 
-    <div class="hero-card" aria-label="Illustration enfantine nature et lecture">
-      <div class="sun"></div>
-      <div class="rainbow"></div>
-      <div class="stars">
-        <div class="star">✦</div>
-        <div class="star">✶</div>
-        <div class="star">✧</div>
-        <div class="star">★</div>
-      </div>
-      <div class="animal"><div class="face"><div class="nose"></div></div></div>
-      <div class="book"></div>
-      <div class="hill"></div>
-    </div>
-  </main>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#mission">Mission</a>
+      <a href="#livres">Livres</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <section id="mission">
-    <h2 class="section-title">Notre petite mission, avec un grand cœur</h2>
-    <p class="section-subtitle">
-      Nous croyons que les histoires peuvent aider les enfants à comprendre le monde,
-      à aimer les animaux et à poser de petits gestes remplis de sens.
+  </div>
+</header>
+
+<main id="accueil" class="hero">
+
+  <div>
+
+    <div class="badge">
+      🌿 Maison d’édition jeunesse & nature
+    </div>
+
+    <h1>
+      Des livres pour
+      <span>rêver plus vert.</span>
+    </h1>
+
+    <p>
+      Les éditions Éco-Rêves créent des histoires douces,
+      colorées et éducatives pour éveiller les enfants à la beauté
+      de la nature, aux animaux et à la protection de notre planète.
     </p>
 
-    <div class="cards">
-      <div class="card">
-        <div class="card-icon">🌱</div>
-        <h3>Apprendre</h3>
-        <p>Des livres simples et accessibles pour découvrir les milieux naturels, les saisons, les animaux et la biodiversité.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">✨</div>
-        <h3>Rêver</h3>
-        <p>Des univers lumineux, tendres et magiques qui donnent envie aux enfants d’ouvrir un livre encore et encore.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">💚</div>
-        <h3>Protéger</h3>
-        <p>Des messages positifs pour encourager le respect de la nature, des animaux et des milieux fragiles.</p>
-      </div>
-    </div>
-  </section>
+    <div class="buttons">
+      <a class="btn btn-primary" href="#livres">
+        Découvrir nos livres
+      </a>
 
-  <section id="livres">
-    <div class="books-showcase">
-      <div class="fake-cover">
-        <h3>Bibo le castor<br />et les gardiens<br />des milieux humides</h3>
-        <small>Une aventure éducative</small>
-      </div>
-      <div class="showcase-text">
-        <h2>Des livres jeunesse qui attirent l’œil</h2>
-        <p>
-          Nos histoires mettent en scène des personnages attachants, des décors naturels colorés
-          et des thèmes importants comme la biodiversité, l’entraide et le respect du vivant.
-        </p>
-        <p>
-          Chaque livre est pensé pour les jeunes enfants, avec des textes courts, des images riches
-          et une ambiance chaleureuse qui plaît autant aux petits qu’aux grands.
-        </p>
-        <div class="pill-list">
-          <span class="pill">2 à 6 ans</span>
-          <span class="pill">Nature</span>
-          <span class="pill">Animaux</span>
-          <span class="pill">Éducation</span>
-          <span class="pill">Émotions</span>
-        </div>
-      </div>
+      <a class="btn btn-secondary" href="#contact">
+        Nous contacter
+      </a>
     </div>
-  </section>
 
-  <section id="contact">
-    <div class="contact">
-      <h2>Un projet, une question ou une collaboration?</h2>
+  </div>
+
+  <div class="hero-card">
+    <img
+      src="Image intro site.png"
+      alt="Illustration Éco-Rêves"
+      class="hero-image"
+    />
+  </div>
+
+</main>
+
+<section id="mission">
+
+  <h2 class="section-title">
+    Notre petite mission, avec un grand cœur
+  </h2>
+
+  <p class="section-subtitle">
+    Nous croyons que les histoires peuvent aider les enfants
+    à comprendre le monde, à aimer les animaux et à poser
+    de petits gestes remplis de sens.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon">🌱</div>
+
+      <h3>Apprendre</h3>
+
       <p>
-        Écrivez-nous pour en savoir plus sur nos livres, nos projets jeunesse ou nos futures publications.
+        Des livres simples et accessibles pour découvrir
+        les milieux naturels, les saisons, les animaux
+        et la biodiversité.
       </p>
-      <a class="btn btn-secondary" href="mailto:contact@eco-reves.ca">contact@eco-reves.ca</a>
     </div>
-  </section>
 
-  <footer>
-    © 2026 Les éditions Éco-Rêves — Des histoires pour rêver, apprendre et protéger la nature.
-  </footer>
+    <div class="card">
+      <div class="card-icon">✨</div>
+
+      <h3>Rêver</h3>
+
+      <p>
+        Des univers lumineux, tendres et magiques qui donnent envie
+        aux enfants d’ouvrir un livre encore et encore.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">💚</div>
+
+      <h3>Protéger</h3>
+
+      <p>
+        Des messages positifs pour encourager le respect
+        de la nature, des animaux et des milieux fragiles.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="livres">
+
+  <div class="books-showcase">
+
+    <div class="fake-cover">
+      <img src="Image intro site.png" alt="Livre jeunesse Éco-Rêves">
+    </div>
+
+    <div class="showcase-text">
+
+      <h2>
+        Des livres jeunesse qui attirent l’œil
+      </h2>
+
+      <p>
+        Nos histoires mettent en scène des personnages attachants,
+        des décors naturels colorés et des thèmes importants comme
+        la biodiversité, l’entraide et le respect du vivant.
+      </p>
+
+      <p>
+        Chaque livre est pensé pour les jeunes enfants,
+        avec des textes courts, des images riches
+        et une ambiance chaleureuse qui plaît autant
+        aux petits qu’aux grands.
+      </p>
+
+      <div class="pill-list">
+        <span class="pill">2 à 6 ans</span>
+        <span class="pill">Nature</span>
+        <span class="pill">Animaux</span>
+        <span class="pill">Éducation</span>
+        <span class="pill">Émotions</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contact">
+
+  <div class="contact">
+
+    <h2>
+      Un projet, une question ou une collaboration?
+    </h2>
+
+    <p>
+      Écrivez-nous pour en savoir plus sur nos livres,
+      nos projets jeunesse ou nos futures publications.
+    </p>
+
+    <a class="btn btn-secondary" href="mailto:contact@eco-reves.ca">
+      contact@eco-reves.ca
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Les éditions Éco-Rêves —
+  Des histoires pour rêver, apprendre et protéger la nature.
+</footer>
+
 </body>
 </html>
