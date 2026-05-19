@@ -6,34 +6,19 @@
   <title>Les éditions Éco-Rêves</title>
 
   <style>
-
     :root{
       --green-dark:#1f5c3a;
-      --green:#4a9761;
-      --green-soft:#e6f5e6;
-      --cream:#fff8ec;
       --yellow:#ffd86d;
       --orange:#f5a454;
       --brown:#5a4127;
       --text:#342a20;
-      --white:#ffffff;
     }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+    *{margin:0;padding:0;box-sizing:border-box;}
 
     body{
       font-family:"Trebuchet MS", Arial, sans-serif;
-      background:
-      linear-gradient(
-        180deg,
-        #fff8ea 0%,
-        #eef8ea 45%,
-        #fffdf6 100%
-      );
+      background:linear-gradient(180deg,#fff8ea 0%,#eef8ea 45%,#fffdf6 100%);
       color:var(--text);
       overflow-x:hidden;
     }
@@ -60,10 +45,14 @@
     .brand{
       display:flex;
       align-items:center;
+      gap:14px;
+      font-size:1.3rem;
+      font-weight:900;
+      color:var(--green-dark);
     }
 
     .logo{
-      height:72px;
+      height:68px;
       width:auto;
       display:block;
     }
@@ -73,12 +62,9 @@
       margin-left:24px;
       color:var(--green-dark);
       font-weight:900;
-      transition:0.2s;
     }
 
-    nav a:hover{
-      color:var(--orange);
-    }
+    nav a:hover{color:var(--orange);}
 
     .hero{
       max-width:1200px;
@@ -140,9 +126,7 @@
       box-shadow:0 12px 24px rgba(0,0,0,0.12);
     }
 
-    .btn:hover{
-      transform:translateY(-4px);
-    }
+    .btn:hover{transform:translateY(-4px);}
 
     .btn-primary{
       background:var(--green-dark);
@@ -205,11 +189,6 @@
       padding:32px;
       border:2px solid rgba(74,151,97,0.1);
       box-shadow:0 20px 40px rgba(0,0,0,0.08);
-      transition:0.2s;
-    }
-
-    .card:hover{
-      transform:translateY(-6px);
     }
 
     .card-icon{
@@ -219,12 +198,7 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      background:
-      linear-gradient(
-        135deg,
-        #ffe27b,
-        #e2f6df
-      );
+      background:linear-gradient(135deg,#ffe27b,#e2f6df);
       font-size:2rem;
       margin-bottom:20px;
     }
@@ -241,12 +215,7 @@
     }
 
     .books-showcase{
-      background:
-      linear-gradient(
-        135deg,
-        #dff2df,
-        #fff4d7
-      );
+      background:linear-gradient(135deg,#dff2df,#fff4d7);
       border-radius:40px;
       padding:40px;
       display:grid;
@@ -328,11 +297,7 @@
     }
 
     @media(max-width:950px){
-
-      .hero{
-        grid-template-columns:1fr;
-      }
-
+      .hero,
       .books-showcase{
         grid-template-columns:1fr;
       }
@@ -341,36 +306,26 @@
         grid-template-columns:1fr;
       }
 
-      nav{
-        display:none;
-      }
+      nav{display:none;}
 
       .hero-card{
         min-height:auto;
       }
 
       .logo{
-        height:62px;
+        height:58px;
       }
-
     }
-
   </style>
-
 </head>
 
 <body>
 
 <header>
-
   <div class="nav">
-
     <div class="brand">
-      <img
-        src="logo.png"
-        alt="Logo Éco-Rêves"
-        class="logo"
-      >
+      <img src="logo.png" alt="Logo Éco-Rêves" class="logo">
+      <div>Les éditions Éco-Rêves</div>
     </div>
 
     <nav>
@@ -379,18 +334,12 @@
       <a href="#livres">Livres</a>
       <a href="#contact">Contact</a>
     </nav>
-
   </div>
-
 </header>
 
 <main id="accueil" class="hero">
-
   <div>
-
-    <div class="badge">
-      🌿 Maison d’édition jeunesse & nature
-    </div>
+    <div class="badge">🌿 Maison d’édition jeunesse & nature</div>
 
     <h1>
       Des livres pour
@@ -405,204 +354,105 @@
     </p>
 
     <div class="buttons">
-
-      <a
-        class="btn btn-primary"
-        href="#livres"
-      >
-        Découvrir nos livres
-      </a>
-
-      <a
-        class="btn btn-secondary"
-        href="#contact"
-      >
-        Nous contacter
-      </a>
-
+      <a class="btn btn-primary" href="#livres">Découvrir nos livres</a>
+      <a class="btn btn-secondary" href="#contact">Nous contacter</a>
     </div>
-
   </div>
 
   <div class="hero-card">
-
-    <img
-      src="Image intro site.png"
-      alt="Illustration Éco-Rêves"
-      class="hero-image"
-    >
-
+    <img src="Image intro site.png" alt="Illustration Éco-Rêves" class="hero-image">
   </div>
-
 </main>
 
 <section id="mission">
-
-  <h2 class="section-title">
-    Notre petite mission, avec un grand cœur
-  </h2>
+  <h2 class="section-title">Notre petite mission, avec un grand cœur</h2>
 
   <p class="section-subtitle">
-    Nous croyons que les histoires peuvent aider
-    les enfants à comprendre le monde,
-    à aimer les animaux et à poser
+    Nous croyons que les histoires peuvent aider les enfants
+    à comprendre le monde, à aimer les animaux et à poser
     de petits gestes remplis de sens.
   </p>
 
   <div class="cards">
-
     <div class="card">
-
-      <div class="card-icon">
-        🌱
-      </div>
-
+      <div class="card-icon">🌱</div>
       <h3>Apprendre</h3>
-
       <p>
-        Des livres simples et accessibles
-        pour découvrir les milieux naturels,
+        Des livres simples et accessibles pour découvrir les milieux naturels,
         les saisons, les animaux et la biodiversité.
       </p>
-
     </div>
 
     <div class="card">
-
-      <div class="card-icon">
-        ✨
-      </div>
-
+      <div class="card-icon">✨</div>
       <h3>Rêver</h3>
-
       <p>
-        Des univers lumineux, tendres et magiques
-        qui donnent envie aux enfants
+        Des univers lumineux, tendres et magiques qui donnent envie aux enfants
         d’ouvrir un livre encore et encore.
       </p>
-
     </div>
 
     <div class="card">
-
-      <div class="card-icon">
-        💚
-      </div>
-
+      <div class="card-icon">💚</div>
       <h3>Protéger</h3>
-
       <p>
-        Des messages positifs pour encourager
-        le respect de la nature,
+        Des messages positifs pour encourager le respect de la nature,
         des animaux et des milieux fragiles.
       </p>
-
     </div>
-
   </div>
-
 </section>
 
 <section id="livres">
-
   <div class="books-showcase">
-
     <div class="fake-cover">
-
-      <img
-        src="Image intro site.png"
-        alt="Livre jeunesse Éco-Rêves"
-      >
-
+      <img src="Image intro site.png" alt="Livre jeunesse Éco-Rêves">
     </div>
 
     <div class="showcase-text">
-
-      <h2>
-        Des livres jeunesse qui attirent l’œil
-      </h2>
+      <h2>Des livres jeunesse qui attirent l’œil</h2>
 
       <p>
-        Nos histoires mettent en scène
-        des personnages attachants,
-        des décors naturels colorés
-        et des thèmes importants comme
-        la biodiversité, l’entraide
-        et le respect du vivant.
+        Nos histoires mettent en scène des personnages attachants,
+        des décors naturels colorés et des thèmes importants comme
+        la biodiversité, l’entraide et le respect du vivant.
       </p>
 
       <p>
-        Chaque livre est pensé
-        pour les jeunes enfants,
-        avec des textes courts,
-        des images riches
-        et une ambiance chaleureuse
-        qui plaît autant aux petits
+        Chaque livre est pensé pour les jeunes enfants, avec des textes courts,
+        des images riches et une ambiance chaleureuse qui plaît autant aux petits
         qu’aux grands.
       </p>
 
       <div class="pill-list">
-
-        <span class="pill">
-          2 à 6 ans
-        </span>
-
-        <span class="pill">
-          Nature
-        </span>
-
-        <span class="pill">
-          Animaux
-        </span>
-
-        <span class="pill">
-          Éducation
-        </span>
-
-        <span class="pill">
-          Émotions
-        </span>
-
+        <span class="pill">2 à 6 ans</span>
+        <span class="pill">Nature</span>
+        <span class="pill">Animaux</span>
+        <span class="pill">Éducation</span>
+        <span class="pill">Émotions</span>
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 <section id="contact">
-
   <div class="contact">
-
-    <h2>
-      Un projet,
-      une question
-      ou une collaboration?
-    </h2>
+    <h2>Un projet, une question ou une collaboration?</h2>
 
     <p>
-      Écrivez-nous pour en savoir plus
-      sur nos livres,
-      nos projets jeunesse
-      ou nos futures publications.
+      Écrivez-nous pour en savoir plus sur nos livres,
+      nos projets jeunesse ou nos futures publications.
     </p>
 
-    <a
-      class="btn btn-secondary"
-      href="mailto:contact@eco-reves.ca"
-    >
+    <a class="btn btn-secondary" href="mailto:contact@eco-reves.ca">
       contact@eco-reves.ca
     </a>
-
   </div>
-
 </section>
 
 <footer>
   © 2026 Les éditions Éco-Rêves —
-  Des histoires pour rêver,
-  apprendre et protéger la nature.
+  Des histoires pour rêver, apprendre et protéger la nature.
 </footer>
 
 </body>
