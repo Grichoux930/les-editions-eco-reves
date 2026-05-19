@@ -2,19 +2,20 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Les éditions Éco-Rêves</title>
 
   <style>
+
     :root{
       --green-dark:#1f5c3a;
-      --green:#4b9962;
-      --green-soft:#e8f6e8;
-      --cream:#fff9ec;
-      --yellow:#ffd96d;
-      --orange:#f5a556;
-      --brown:#5c4327;
-      --text:#33291f;
+      --green:#4a9761;
+      --green-soft:#e6f5e6;
+      --cream:#fff8ec;
+      --yellow:#ffd86d;
+      --orange:#f5a454;
+      --brown:#5a4127;
+      --text:#342a20;
       --white:#ffffff;
     }
 
@@ -26,11 +27,12 @@
 
     body{
       font-family:"Trebuchet MS", Arial, sans-serif;
-      background:linear-gradient(
+      background:
+      linear-gradient(
         180deg,
-        #fff8eb 0%,
+        #fff8ea 0%,
         #eef8ea 45%,
-        #fffdf7 100%
+        #fffdf6 100%
       );
       color:var(--text);
       overflow-x:hidden;
@@ -39,47 +41,38 @@
     header{
       position:sticky;
       top:0;
-      z-index:100;
+      z-index:1000;
+      background:rgba(255,248,234,0.92);
       backdrop-filter:blur(12px);
-      background:rgba(255,248,235,0.92);
-      border-bottom:2px solid rgba(75,153,98,0.12);
+      border-bottom:2px solid rgba(74,151,97,0.1);
     }
 
     .nav{
       max-width:1200px;
       margin:auto;
-      padding:18px 24px;
+      padding:12px 24px;
       display:flex;
       justify-content:space-between;
       align-items:center;
+      gap:20px;
     }
 
     .brand{
       display:flex;
       align-items:center;
-      gap:12px;
-      font-size:1.3rem;
-      font-weight:900;
-      color:var(--green-dark);
     }
 
-    .brand-icon{
-      width:48px;
-      height:48px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:linear-gradient(135deg,#ffe37d,#dff5de);
-      box-shadow:0 8px 20px rgba(0,0,0,0.08);
-      font-size:1.5rem;
+    .logo{
+      height:72px;
+      width:auto;
+      display:block;
     }
 
     nav a{
       text-decoration:none;
       margin-left:24px;
       color:var(--green-dark);
-      font-weight:800;
+      font-weight:900;
       transition:0.2s;
     }
 
@@ -104,7 +97,7 @@
       padding:12px 18px;
       border-radius:999px;
       background:white;
-      border:2px solid rgba(75,153,98,0.15);
+      border:2px solid rgba(74,151,97,0.15);
       color:var(--green-dark);
       font-weight:900;
       margin-bottom:24px;
@@ -114,8 +107,8 @@
     h1{
       font-size:clamp(3rem,7vw,5.8rem);
       line-height:0.95;
-      color:var(--green-dark);
       letter-spacing:-2px;
+      color:var(--green-dark);
       margin-bottom:24px;
     }
 
@@ -127,9 +120,9 @@
     .hero p{
       font-size:1.2rem;
       line-height:1.8;
-      color:#4c4338;
-      margin-bottom:34px;
+      color:#4d4338;
       max-width:620px;
+      margin-bottom:34px;
     }
 
     .buttons{
@@ -139,10 +132,10 @@
     }
 
     .btn{
+      text-decoration:none;
       padding:15px 24px;
       border-radius:18px;
       font-weight:900;
-      text-decoration:none;
       transition:0.2s;
       box-shadow:0 12px 24px rgba(0,0,0,0.12);
     }
@@ -166,9 +159,9 @@
       min-height:560px;
       border-radius:40px;
       overflow:hidden;
-      box-shadow:0 30px 70px rgba(31,92,58,0.18);
-      border:6px solid rgba(255,255,255,0.9);
       background:white;
+      border:6px solid rgba(255,255,255,0.9);
+      box-shadow:0 30px 70px rgba(31,92,58,0.18);
     }
 
     .hero-image{
@@ -186,8 +179,8 @@
 
     .section-title{
       text-align:center;
-      font-size:clamp(2.2rem,5vw,3.5rem);
       color:var(--green-dark);
+      font-size:clamp(2.2rem,5vw,3.5rem);
       margin-bottom:16px;
     }
 
@@ -207,11 +200,11 @@
     }
 
     .card{
-      background:rgba(255,255,255,0.82);
+      background:rgba(255,255,255,0.85);
       border-radius:30px;
       padding:32px;
+      border:2px solid rgba(74,151,97,0.1);
       box-shadow:0 20px 40px rgba(0,0,0,0.08);
-      border:2px solid rgba(75,153,98,0.1);
       transition:0.2s;
     }
 
@@ -226,8 +219,13 @@
       display:flex;
       align-items:center;
       justify-content:center;
+      background:
+      linear-gradient(
+        135deg,
+        #ffe27b,
+        #e2f6df
+      );
       font-size:2rem;
-      background:linear-gradient(135deg,#ffe07d,#dff5de);
       margin-bottom:20px;
     }
 
@@ -239,11 +237,16 @@
 
     .card p{
       line-height:1.8;
-      color:#5c4c3d;
+      color:#5c4d3d;
     }
 
     .books-showcase{
-      background:linear-gradient(135deg,#dff2df,#fff5d7);
+      background:
+      linear-gradient(
+        135deg,
+        #dff2df,
+        #fff4d7
+      );
       border-radius:40px;
       padding:40px;
       display:grid;
@@ -254,11 +257,11 @@
     }
 
     .fake-cover{
-      aspect-ratio:1/1.18;
-      border-radius:28px;
+      aspect-ratio:1 / 1.18;
       overflow:hidden;
-      box-shadow:0 20px 45px rgba(0,0,0,0.16);
+      border-radius:28px;
       border:8px solid white;
+      box-shadow:0 20px 45px rgba(0,0,0,0.16);
     }
 
     .fake-cover img{
@@ -269,15 +272,15 @@
     }
 
     .showcase-text h2{
-      font-size:clamp(2rem,4vw,3rem);
       color:var(--green-dark);
+      font-size:clamp(2rem,4vw,3rem);
       margin-bottom:20px;
     }
 
     .showcase-text p{
       line-height:1.9;
       margin-bottom:18px;
-      color:#4d4132;
+      color:#4e4232;
       font-size:1.08rem;
     }
 
@@ -292,9 +295,9 @@
       padding:10px 16px;
       border-radius:999px;
       background:white;
-      border:2px solid rgba(75,153,98,0.15);
-      font-weight:900;
+      border:2px solid rgba(74,151,97,0.15);
       color:var(--green-dark);
+      font-weight:900;
     }
 
     .contact{
@@ -303,23 +306,17 @@
       border-radius:42px;
       padding:70px 30px;
       text-align:center;
-      position:relative;
-      overflow:hidden;
     }
 
     .contact h2{
       font-size:clamp(2rem,5vw,3.2rem);
       margin-bottom:18px;
-      position:relative;
-      z-index:2;
     }
 
     .contact p{
       max-width:720px;
       margin:0 auto 30px;
       line-height:1.8;
-      position:relative;
-      z-index:2;
       font-size:1.1rem;
     }
 
@@ -351,18 +348,29 @@
       .hero-card{
         min-height:auto;
       }
+
+      .logo{
+        height:62px;
+      }
+
     }
+
   </style>
+
 </head>
 
 <body>
 
 <header>
+
   <div class="nav">
 
     <div class="brand">
-      <div class="brand-icon">📚</div>
-      <div>Les éditions Éco-Rêves</div>
+      <img
+        src="logo.png"
+        alt="Logo Éco-Rêves"
+        class="logo"
+      >
     </div>
 
     <nav>
@@ -373,6 +381,7 @@
     </nav>
 
   </div>
+
 </header>
 
 <main id="accueil" class="hero">
@@ -390,28 +399,39 @@
 
     <p>
       Les éditions Éco-Rêves créent des histoires douces,
-      colorées et éducatives pour éveiller les enfants à la beauté
-      de la nature, aux animaux et à la protection de notre planète.
+      colorées et éducatives pour éveiller les enfants
+      à la beauté de la nature, aux animaux et à la protection
+      de notre planète.
     </p>
 
     <div class="buttons">
-      <a class="btn btn-primary" href="#livres">
+
+      <a
+        class="btn btn-primary"
+        href="#livres"
+      >
         Découvrir nos livres
       </a>
 
-      <a class="btn btn-secondary" href="#contact">
+      <a
+        class="btn btn-secondary"
+        href="#contact"
+      >
         Nous contacter
       </a>
+
     </div>
 
   </div>
 
   <div class="hero-card">
+
     <img
       src="Image intro site.png"
       alt="Illustration Éco-Rêves"
       class="hero-image"
-    />
+    >
+
   </div>
 
 </main>
@@ -423,45 +443,60 @@
   </h2>
 
   <p class="section-subtitle">
-    Nous croyons que les histoires peuvent aider les enfants
-    à comprendre le monde, à aimer les animaux et à poser
+    Nous croyons que les histoires peuvent aider
+    les enfants à comprendre le monde,
+    à aimer les animaux et à poser
     de petits gestes remplis de sens.
   </p>
 
   <div class="cards">
 
     <div class="card">
-      <div class="card-icon">🌱</div>
+
+      <div class="card-icon">
+        🌱
+      </div>
 
       <h3>Apprendre</h3>
 
       <p>
-        Des livres simples et accessibles pour découvrir
-        les milieux naturels, les saisons, les animaux
-        et la biodiversité.
+        Des livres simples et accessibles
+        pour découvrir les milieux naturels,
+        les saisons, les animaux et la biodiversité.
       </p>
+
     </div>
 
     <div class="card">
-      <div class="card-icon">✨</div>
+
+      <div class="card-icon">
+        ✨
+      </div>
 
       <h3>Rêver</h3>
 
       <p>
-        Des univers lumineux, tendres et magiques qui donnent envie
-        aux enfants d’ouvrir un livre encore et encore.
+        Des univers lumineux, tendres et magiques
+        qui donnent envie aux enfants
+        d’ouvrir un livre encore et encore.
       </p>
+
     </div>
 
     <div class="card">
-      <div class="card-icon">💚</div>
+
+      <div class="card-icon">
+        💚
+      </div>
 
       <h3>Protéger</h3>
 
       <p>
-        Des messages positifs pour encourager le respect
-        de la nature, des animaux et des milieux fragiles.
+        Des messages positifs pour encourager
+        le respect de la nature,
+        des animaux et des milieux fragiles.
       </p>
+
     </div>
 
   </div>
@@ -473,7 +508,12 @@
   <div class="books-showcase">
 
     <div class="fake-cover">
-      <img src="Image intro site.png" alt="Livre jeunesse Éco-Rêves">
+
+      <img
+        src="Image intro site.png"
+        alt="Livre jeunesse Éco-Rêves"
+      >
+
     </div>
 
     <div class="showcase-text">
@@ -483,24 +523,46 @@
       </h2>
 
       <p>
-        Nos histoires mettent en scène des personnages attachants,
-        des décors naturels colorés et des thèmes importants comme
-        la biodiversité, l’entraide et le respect du vivant.
+        Nos histoires mettent en scène
+        des personnages attachants,
+        des décors naturels colorés
+        et des thèmes importants comme
+        la biodiversité, l’entraide
+        et le respect du vivant.
       </p>
 
       <p>
-        Chaque livre est pensé pour les jeunes enfants,
-        avec des textes courts, des images riches
-        et une ambiance chaleureuse qui plaît autant
-        aux petits qu’aux grands.
+        Chaque livre est pensé
+        pour les jeunes enfants,
+        avec des textes courts,
+        des images riches
+        et une ambiance chaleureuse
+        qui plaît autant aux petits
+        qu’aux grands.
       </p>
 
       <div class="pill-list">
-        <span class="pill">2 à 6 ans</span>
-        <span class="pill">Nature</span>
-        <span class="pill">Animaux</span>
-        <span class="pill">Éducation</span>
-        <span class="pill">Émotions</span>
+
+        <span class="pill">
+          2 à 6 ans
+        </span>
+
+        <span class="pill">
+          Nature
+        </span>
+
+        <span class="pill">
+          Animaux
+        </span>
+
+        <span class="pill">
+          Éducation
+        </span>
+
+        <span class="pill">
+          Émotions
+        </span>
+
       </div>
 
     </div>
@@ -514,15 +576,22 @@
   <div class="contact">
 
     <h2>
-      Un projet, une question ou une collaboration?
+      Un projet,
+      une question
+      ou une collaboration?
     </h2>
 
     <p>
-      Écrivez-nous pour en savoir plus sur nos livres,
-      nos projets jeunesse ou nos futures publications.
+      Écrivez-nous pour en savoir plus
+      sur nos livres,
+      nos projets jeunesse
+      ou nos futures publications.
     </p>
 
-    <a class="btn btn-secondary" href="mailto:contact@eco-reves.ca">
+    <a
+      class="btn btn-secondary"
+      href="mailto:contact@eco-reves.ca"
+    >
       contact@eco-reves.ca
     </a>
 
@@ -532,7 +601,8 @@
 
 <footer>
   © 2026 Les éditions Éco-Rêves —
-  Des histoires pour rêver, apprendre et protéger la nature.
+  Des histoires pour rêver,
+  apprendre et protéger la nature.
 </footer>
 
 </body>
