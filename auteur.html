@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>À propos de l’auteure | Les éditions Éco-Rêves</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --green:#195c3a;
+      --green2:#2f8f5b;
+      --cream:#fff8e8;
+      --yellow:#ffd66b;
+      --orange:#f79b4b;
+      --blue:#dff4ff;
+      --text:#3b3028;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Baloo 2', cursive;
+      background:
+      radial-gradient(circle at top left,#ffe8a3 0,transparent 28%),
+      linear-gradient(180deg,#fff8e8 0%,#edf8e7 100%);
+      color:var(--text);
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:999;
+      background:rgba(255,248,232,0.92);
+      backdrop-filter:blur(10px);
+      border-bottom:2px solid rgba(0,0,0,0.05);
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      padding:10px 24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      height:120px;
+    }
+
+    nav{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--green);
+      background:white;
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:800;
+      box-shadow:0 8px 18px rgba(0,0,0,0.06);
+      transition:0.2s;
+    }
+
+    nav a:hover{
+      background:var(--yellow);
+      transform:translateY(-3px);
+    }
+
+    .hero{
+      max-width:1200px;
+      margin:auto;
+      padding:70px 24px;
+      display:grid;
+      grid-template-columns:0.9fr 1.1fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .photo{
+      aspect-ratio:1 / 1;
+      border-radius:40px;
+      overflow:hidden;
+      border:8px solid white;
+      box-shadow:0 30px 70px rgba(0,0,0,0.16);
+      background:white;
+    }
+
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .content{
+      background:rgba(255,255,255,0.72);
+      border-radius:42px;
+      padding:42px;
+      border:4px solid white;
+      box-shadow:0 24px 60px rgba(0,0,0,0.08);
+    }
+
+    .badge{
+      display:inline-block;
+      background:var(--yellow);
+      color:#664300;
+      padding:10px 18px;
+      border-radius:999px;
+      font-weight:800;
+      margin-bottom:22px;
+    }
+
+    h1{
+      font-size:clamp(3rem,6vw,5.5rem);
+      line-height:0.95;
+      color:var(--green);
+      margin-bottom:24px;
+    }
+
+    h1 span{
+      display:block;
+      color:var(--orange);
+    }
+
+    .content p{
+      font-size:1.18rem;
+      line-height:1.8;
+      margin-bottom:20px;
+    }
+
+    .quote{
+      margin-top:30px;
+      background:var(--blue);
+      border-radius:28px;
+      padding:24px;
+      font-size:1.15rem;
+      font-weight:700;
+      color:var(--green);
+      box-shadow:0 14px 30px rgba(0,0,0,0.08);
+    }
+
+    .books{
+      max-width:1200px;
+      margin:auto;
+      padding:30px 24px 80px;
+    }
+
+    .books-box{
+      background:white;
+      border-radius:42px;
+      padding:42px;
+      box-shadow:0 25px 65px rgba(0,0,0,0.08);
+    }
+
+    .books h2{
+      text-align:center;
+      color:var(--green);
+      font-size:3rem;
+      margin-bottom:16px;
+    }
+
+    .books p{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 34px;
+      line-height:1.7;
+      font-size:1.15rem;
+    }
+
+    .book-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+
+    .book-card{
+      background:linear-gradient(180deg,#fffef7,#edf8e7);
+      border-radius:30px;
+      padding:26px;
+      box-shadow:0 14px 32px rgba(0,0,0,0.08);
+    }
+
+    .book-card h3{
+      color:var(--green);
+      margin-bottom:12px;
+      font-size:1.6rem;
+    }
+
+    .book-card p{
+      text-align:left;
+      margin:0;
+      font-size:1.05rem;
+    }
+
+    footer{
+      text-align:center;
+      padding:36px 20px;
+      color:var(--green);
+      font-weight:800;
+    }
+
+    @media(max-width:950px){
+
+      .hero{
+        grid-template-columns:1fr;
+      }
+
+      .book-grid{
+        grid-template-columns:1fr;
+      }
+
+      nav{
+        display:none;
+      }
+
+      .logo{
+        height:95px;
+      }
+
+      .content{
+        padding:28px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <img src="logo.png" alt="Logo Éco-Rêves" class="logo">
+
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="index.html#livres">Livres</a>
+      <a href="index.html#bibo">Bibo</a>
+      <a href="auteur.html">Auteure</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<section class="hero">
+
+  <div class="photo">
+    <img src="auteur.jpg" alt="Photo de l’auteure">
+  </div>
+
+  <div class="content">
+
+    <div class="badge">✨ Auteure jeunesse québécoise</div>
+
+    <h1>
+      Josée
+      <span>Tremblay</span>
+    </h1>
+
+    <p>
+      Passionnée par la nature, les animaux et l’univers des enfants,
+      Josée Tremblay crée des histoires douces et éducatives
+      qui éveillent l’imagination tout en sensibilisant
+      les jeunes lecteurs à la beauté du monde vivant.
+    </p>
+
+    <p>
+      À travers Les éditions Éco-Rêves,
+      elle souhaite transmettre des valeurs de respect,
+      de bienveillance et de protection de la nature,
+      dans des univers chaleureux remplis de tendresse.
+    </p>
+
+    <p>
+      Inspirées par les abeilles, les castors,
+      les forêts canadiennes et les milieux humides,
+      ses histoires sont pensées pour émerveiller les enfants
+      de 2 à 6 ans.
+    </p>
+
+    <div class="quote">
+      “Chaque histoire peut aider un enfant
+      à aimer un peu plus la nature.” 🌿
+    </div>
+
+  </div>
+
+</section>
+
+<section class="books">
+
+  <div class="books-box">
+
+    <h2>Les univers Éco-Rêves</h2>
+
+    <p>
+      Les livres publiés par Les éditions Éco-Rêves
+      mélangent imagination, apprentissage et découverte
+      de la biodiversité.
+    </p>
+
+    <div class="book-grid">
+
+      <div class="book-card">
+        <h3>🐝 Bella l’abeille</h3>
+
+        <p>
+          Une aventure éducative et colorée
+          pour découvrir le rôle essentiel des abeilles
+          dans la nature.
+        </p>
+      </div>
+
+      <div class="book-card">
+        <h3>🦫 Bibo le castor</h3>
+
+        <p>
+          Une histoire tendre sur les castors,
+          les milieux humides et la biodiversité
+          des forêts canadiennes.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Les éditions Éco-Rêves —
+  Des histoires pour rêver, apprendre et protéger la nature.
+</footer>
+
+</body>
+</html>
