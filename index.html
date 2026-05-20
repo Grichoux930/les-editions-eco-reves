@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Les éditions Éco-Rêves</title>
 
+  <!-- Police Baloo -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+
     :root{
       --green-dark:#1f5c3a;
       --yellow:#ffd86d;
@@ -18,14 +20,25 @@
       --text:#342a20;
     }
 
-    *{margin:0;padding:0;box-sizing:border-box;}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
     body{
       font-family:'Baloo 2', cursive;
-      background:linear-gradient(180deg,#fff8ea 0%,#eef8ea 45%,#fffdf6 100%);
+      background:linear-gradient(
+        180deg,
+        #fff8ea 0%,
+        #eef8ea 45%,
+        #fffdf6 100%
+      );
       color:var(--text);
       overflow-x:hidden;
     }
+
+    /* HEADER */
 
     header{
       position:sticky;
@@ -49,7 +62,7 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
+      gap:16px;
       font-size:1.35rem;
       font-weight:800;
       color:var(--green-dark);
@@ -70,7 +83,11 @@
       font-size:1.1rem;
     }
 
-    nav a:hover{color:var(--orange);}
+    nav a:hover{
+      color:var(--orange);
+    }
+
+    /* HERO */
 
     .hero{
       max-width:1200px;
@@ -98,7 +115,7 @@
     }
 
     h1{
-      font-size:clamp(3.4rem,7vw,6.2rem);
+      font-size:clamp(3.5rem,7vw,6.3rem);
       line-height:0.95;
       letter-spacing:-2px;
       color:var(--green-dark);
@@ -136,7 +153,9 @@
       font-size:1.08rem;
     }
 
-    .btn:hover{transform:translateY(-4px);}
+    .btn:hover{
+      transform:translateY(-4px);
+    }
 
     .btn-primary{
       background:var(--green-dark);
@@ -166,6 +185,8 @@
       display:block;
     }
 
+    /* SECTIONS */
+
     section{
       max-width:1200px;
       margin:auto;
@@ -189,6 +210,8 @@
       font-size:1.25rem;
     }
 
+    /* CARDS */
+
     .cards{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -210,7 +233,11 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      background:linear-gradient(135deg,#ffe27b,#e2f6df);
+      background:linear-gradient(
+        135deg,
+        #ffe27b,
+        #e2f6df
+      );
       font-size:2rem;
       margin-bottom:20px;
     }
@@ -228,8 +255,14 @@
       font-size:1.12rem;
     }
 
+    /* LIVRE */
+
     .books-showcase{
-      background:linear-gradient(135deg,#dff2df,#fff4d7);
+      background:linear-gradient(
+        135deg,
+        #dff2df,
+        #fff4d7
+      );
       border-radius:40px;
       padding:40px;
       display:grid;
@@ -240,7 +273,7 @@
     }
 
     .fake-cover{
-      aspect-ratio:4 / 3;
+      aspect-ratio:16 / 9;
       overflow:hidden;
       border-radius:28px;
       border:8px solid white;
@@ -251,7 +284,6 @@
       width:100%;
       height:100%;
       object-fit:cover;
-      object-position:center;
       display:block;
     }
 
@@ -286,6 +318,8 @@
       font-size:1.05rem;
     }
 
+    /* CONTACT */
+
     .contact{
       background:var(--green-dark);
       color:white;
@@ -315,7 +349,10 @@
       font-size:1.05rem;
     }
 
+    /* MOBILE */
+
     @media(max-width:950px){
+
       .hero,
       .books-showcase{
         grid-template-columns:1fr;
@@ -325,7 +362,9 @@
         grid-template-columns:1fr;
       }
 
-      nav{display:none;}
+      nav{
+        display:none;
+      }
 
       .logo{
         height:88px;
@@ -335,16 +374,18 @@
         font-size:1.15rem;
       }
     }
+
   </style>
 </head>
 
 <body>
 
 <header>
+
   <div class="nav">
+
     <div class="brand">
       <img src="logo.png" alt="Logo Éco-Rêves" class="logo">
-      <div>Les éditions Éco-Rêves</div>
     </div>
 
     <nav>
@@ -353,12 +394,20 @@
       <a href="#livres">Livres</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </div>
+
 </header>
 
+<!-- HERO -->
+
 <main id="accueil" class="hero">
+
   <div>
-    <div class="badge">🌿 Maison d’édition jeunesse & nature</div>
+
+    <div class="badge">
+      🌿 Maison d’édition jeunesse & nature
+    </div>
 
     <h1>
       Des livres pour
@@ -373,18 +422,34 @@
     </p>
 
     <div class="buttons">
-      <a class="btn btn-primary" href="#livres">Découvrir nos livres</a>
-      <a class="btn btn-secondary" href="#contact">Nous contacter</a>
+      <a class="btn btn-primary" href="#livres">
+        Découvrir nos livres
+      </a>
+
+      <a class="btn btn-secondary" href="#contact">
+        Nous contacter
+      </a>
     </div>
+
   </div>
 
   <div class="hero-card">
-    <img src="image intro site.png" alt="Illustration Éco-Rêves" class="hero-image">
+    <img
+      src="image intro site.png"
+      alt="Illustration Éco-Rêves"
+      class="hero-image"
+    >
   </div>
+
 </main>
 
+<!-- MISSION -->
+
 <section id="mission">
-  <h2 class="section-title">Notre petite mission, avec un grand cœur</h2>
+
+  <h2 class="section-title">
+    Notre petite mission, avec un grand cœur
+  </h2>
 
   <p class="section-subtitle">
     Nous croyons que les histoires peuvent aider les enfants
@@ -393,80 +458,115 @@
   </p>
 
   <div class="cards">
+
     <div class="card">
       <div class="card-icon">🌱</div>
+
       <h3>Apprendre</h3>
+
       <p>
-        Des livres simples et accessibles pour découvrir les milieux naturels,
+        Des livres simples et accessibles
+        pour découvrir les milieux naturels,
         les saisons, les animaux et la biodiversité.
       </p>
     </div>
 
     <div class="card">
       <div class="card-icon">✨</div>
+
       <h3>Rêver</h3>
+
       <p>
-        Des univers lumineux, tendres et magiques qui donnent envie aux enfants
+        Des univers lumineux, tendres et magiques
+        qui donnent envie aux enfants
         d’ouvrir un livre encore et encore.
       </p>
     </div>
 
     <div class="card">
       <div class="card-icon">💚</div>
+
       <h3>Protéger</h3>
+
       <p>
-        Des messages positifs pour encourager le respect de la nature,
+        Des messages positifs pour encourager
+        le respect de la nature,
         des animaux et des milieux fragiles.
       </p>
     </div>
+
   </div>
+
 </section>
 
+<!-- LIVRES -->
+
 <section id="livres">
+
   <div class="books-showcase">
+
     <div class="fake-cover">
-      <img src="image intro site.png" alt="Livre jeunesse Éco-Rêves">
+      <img src="bella labeille.png" alt="Bella l'abeille">
     </div>
 
     <div class="showcase-text">
-      <h2>Des livres jeunesse qui attirent l’œil</h2>
+
+      <h2>
+        Bella l’abeille
+      </h2>
 
       <p>
-        Nos histoires mettent en scène des personnages attachants,
-        des décors naturels colorés et des thèmes importants comme
-        la biodiversité, l’entraide et le respect du vivant.
+        Notre tout premier livre jeunesse raconte l’histoire de Bella,
+        une petite abeille curieuse qui découvre l’importance des abeilles
+        pour la nature et la planète.
       </p>
 
       <p>
-        Chaque livre est pensé pour les jeunes enfants, avec des textes courts,
-        des images riches et une ambiance chaleureuse qui plaît autant aux petits
-        qu’aux grands.
+        Avec ses couleurs vibrantes, ses fleurs magnifiques
+        et son univers chaleureux, Bella l’abeille aide les enfants
+        à comprendre que chaque petit geste peut protéger le vivant.
       </p>
 
       <div class="pill-list">
+        <span class="pill">Premier livre</span>
         <span class="pill">2 à 6 ans</span>
+        <span class="pill">Abeilles</span>
         <span class="pill">Nature</span>
-        <span class="pill">Animaux</span>
         <span class="pill">Éducation</span>
-        <span class="pill">Émotions</span>
       </div>
+
     </div>
+
   </div>
+
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact">
+
   <div class="contact">
-    <h2>Un projet, une question ou une collaboration?</h2>
+
+    <h2>
+      Un projet, une question ou une collaboration?
+    </h2>
 
     <p>
-      Écrivez-nous pour en savoir plus sur nos livres,
-      nos projets jeunesse ou nos futures publications.
+      Écrivez-nous pour en savoir plus
+      sur nos livres,
+      nos projets jeunesse
+      ou nos futures publications.
     </p>
 
-    <a class="btn btn-secondary" href="mailto:contact@eco-reves.ca">
+    <a
+      class="btn btn-secondary"
+      href="mailto:contact@eco-reves.ca"
+    >
       contact@eco-reves.ca
     </a>
+
   </div>
+
 </section>
 
 <footer>
