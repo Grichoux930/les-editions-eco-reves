@@ -3,17 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Les éditions Éco-Rêves</title>
 
-  <!-- POLICE BALOO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
     :root{
       --green:#1f5c3a;
       --orange:#f5a454;
@@ -21,29 +17,16 @@
       --text:#3a3026;
     }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+    *{margin:0;padding:0;box-sizing:border-box;}
 
-    html{
-      scroll-behavior:smooth;
-    }
+    html{scroll-behavior:smooth;}
 
     body{
       font-family:'Baloo 2', cursive;
-      background:linear-gradient(
-        180deg,
-        #fff8ea 0%,
-        #eef8ea 45%,
-        #fffdf6 100%
-      );
+      background:linear-gradient(180deg,#fff8ea 0%,#eef8ea 45%,#fffdf6 100%);
       color:var(--text);
       overflow-x:hidden;
     }
-
-    /* HEADER */
 
     header{
       position:sticky;
@@ -67,11 +50,6 @@
       height:170px;
       width:auto;
       display:block;
-      transition:0.2s;
-    }
-
-    .logo:hover{
-      transform:scale(1.03);
     }
 
     nav a{
@@ -80,14 +58,9 @@
       color:var(--green);
       font-weight:800;
       font-size:1.08rem;
-      transition:0.2s;
     }
 
-    nav a:hover{
-      color:var(--orange);
-    }
-
-    /* HERO */
+    nav a:hover{color:var(--orange);}
 
     .hero{
       max-width:1200px;
@@ -106,12 +79,10 @@
       background:white;
       border-radius:999px;
       padding:12px 20px;
-      border:2px solid rgba(31,92,58,0.1);
       color:var(--green);
       font-weight:800;
       margin-bottom:24px;
       box-shadow:0 10px 24px rgba(0,0,0,0.06);
-      font-size:1.05rem;
     }
 
     h1{
@@ -144,14 +115,12 @@
       padding:15px 26px;
       border-radius:18px;
       font-weight:800;
-      transition:0.2s;
       display:inline-block;
       box-shadow:0 12px 24px rgba(0,0,0,0.12);
+      transition:0.2s;
     }
 
-    .btn:hover{
-      transform:translateY(-4px);
-    }
+    .btn:hover{transform:translateY(-4px);}
 
     .btn-primary{
       background:var(--green);
@@ -179,8 +148,6 @@
       display:block;
     }
 
-    /* SECTION */
-
     section{
       max-width:1200px;
       margin:auto;
@@ -203,8 +170,6 @@
       font-size:1.2rem;
     }
 
-    /* CARDS */
-
     .cards{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -216,11 +181,6 @@
       padding:32px;
       border-radius:30px;
       box-shadow:0 18px 40px rgba(0,0,0,0.08);
-      transition:0.2s;
-    }
-
-    .card:hover{
-      transform:translateY(-6px);
     }
 
     .card-icon{
@@ -246,14 +206,8 @@
       font-size:1.08rem;
     }
 
-    /* LIVRES */
-
     .books-showcase{
-      background:linear-gradient(
-        135deg,
-        #dff2df,
-        #fff4d7
-      );
+      background:linear-gradient(135deg,#dff2df,#fff4d7);
       border-radius:40px;
       padding:40px;
       display:grid;
@@ -275,11 +229,6 @@
       border:8px solid white;
       box-shadow:0 20px 45px rgba(0,0,0,0.16);
       background:white;
-      transition:0.2s;
-    }
-
-    .fake-cover:hover{
-      transform:scale(1.02);
     }
 
     .fake-cover img{
@@ -334,7 +283,16 @@
       background:#ffcc66;
     }
 
-    /* CONTACT */
+    .coming-soon{
+      display:inline-block;
+      background:white;
+      color:var(--orange);
+      font-weight:800;
+      padding:10px 18px;
+      border-radius:999px;
+      margin-bottom:18px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    }
 
     .contact{
       background:var(--green);
@@ -364,10 +322,7 @@
       font-size:1.05rem;
     }
 
-    /* MOBILE */
-
     @media(max-width:950px){
-
       .hero,
       .books-showcase{
         grid-template-columns:1fr;
@@ -388,41 +343,29 @@
       .hero{
         padding-top:40px;
       }
-
     }
-
   </style>
-
 </head>
 
 <body>
 
 <header>
-
   <div class="nav">
-
     <img src="logo.png" alt="Logo Éco-Rêves" class="logo">
 
     <nav>
       <a href="#accueil">Accueil</a>
       <a href="#mission">Mission</a>
       <a href="#livres">Livres</a>
+      <a href="#bibo">Bibo</a>
       <a href="#contact">Contact</a>
     </nav>
-
   </div>
-
 </header>
 
-<!-- HERO -->
-
 <main id="accueil" class="hero">
-
   <div>
-
-    <div class="badge">
-      🌿 Maison d’édition jeunesse & nature
-    </div>
+    <div class="badge">🌿 Maison d’édition jeunesse & nature</div>
 
     <h1>
       Des livres pour
@@ -437,37 +380,18 @@
     </p>
 
     <div class="buttons">
-
-      <a class="btn btn-primary" href="#livres">
-        Découvrir nos livres
-      </a>
-
-      <a class="btn btn-secondary" href="#contact">
-        Nous contacter
-      </a>
-
+      <a class="btn btn-primary" href="#livres">Découvrir nos livres</a>
+      <a class="btn btn-secondary" href="#contact">Nous contacter</a>
     </div>
-
   </div>
 
   <div class="hero-card">
-
-    <img
-      src="image intro site.png"
-      alt="Illustration Éco-Rêves"
-    >
-
+    <img src="image intro site.png" alt="Illustration Éco-Rêves">
   </div>
-
 </main>
 
-<!-- MISSION -->
-
 <section id="mission">
-
-  <h2 class="section-title">
-    Notre petite mission, avec un grand cœur
-  </h2>
+  <h2 class="section-title">Notre petite mission, avec un grand cœur</h2>
 
   <p class="section-subtitle">
     Nous croyons que les histoires peuvent aider les enfants
@@ -476,73 +400,29 @@
   </p>
 
   <div class="cards">
-
     <div class="card">
-
-      <div class="card-icon">
-        🌱
-      </div>
-
-      <h3>
-        Apprendre
-      </h3>
-
-      <p>
-        Des livres simples et accessibles pour découvrir
-        les milieux naturels, les saisons,
-        les animaux et la biodiversité.
-      </p>
-
+      <div class="card-icon">🌱</div>
+      <h3>Apprendre</h3>
+      <p>Des livres simples et accessibles pour découvrir les milieux naturels, les saisons, les animaux et la biodiversité.</p>
     </div>
 
     <div class="card">
-
-      <div class="card-icon">
-        ✨
-      </div>
-
-      <h3>
-        Rêver
-      </h3>
-
-      <p>
-        Des univers lumineux, tendres et magiques
-        qui donnent envie aux enfants
-        d’ouvrir un livre encore et encore.
-      </p>
-
+      <div class="card-icon">✨</div>
+      <h3>Rêver</h3>
+      <p>Des univers lumineux, tendres et magiques qui donnent envie aux enfants d’ouvrir un livre encore et encore.</p>
     </div>
 
     <div class="card">
-
-      <div class="card-icon">
-        💚
-      </div>
-
-      <h3>
-        Protéger
-      </h3>
-
-      <p>
-        Des messages positifs pour encourager
-        le respect de la nature,
-        des animaux et des milieux fragiles.
-      </p>
-
+      <div class="card-icon">💚</div>
+      <h3>Protéger</h3>
+      <p>Des messages positifs pour encourager le respect de la nature, des animaux et des milieux fragiles.</p>
     </div>
-
   </div>
-
 </section>
 
-<!-- LIVRES -->
-
 <section id="livres">
-
   <div class="books-showcase">
-
     <div class="books-gallery">
-
       <div class="fake-cover">
         <img src="bella labeille.png" alt="Bella l'abeille">
       </div>
@@ -550,14 +430,10 @@
       <div class="fake-cover">
         <img src="bella-ruche.png" alt="Bella dans la ruche">
       </div>
-
     </div>
 
     <div class="showcase-text">
-
-      <h2>
-        Bella l’abeille
-      </h2>
+      <h2>Bella l’abeille</h2>
 
       <p>
         Notre tout premier livre jeunesse raconte l’histoire
@@ -581,13 +457,11 @@
       </p>
 
       <div class="pill-list">
-
         <span class="pill">Premier livre</span>
         <span class="pill">2 à 6 ans</span>
         <span class="pill">Abeilles</span>
         <span class="pill">Nature</span>
         <span class="pill">Éducation</span>
-
       </div>
 
       <a
@@ -597,22 +471,58 @@
       >
         🛒 Acheter sur Amazon
       </a>
-
     </div>
-
   </div>
-
 </section>
 
-<!-- CONTACT -->
+<section id="bibo">
+  <div class="books-showcase">
+    <div class="books-gallery">
+      <div class="fake-cover">
+        <img src="bibo-cover.png" alt="Bibo le castor">
+      </div>
+
+      <div class="fake-cover">
+        <img src="bibo-page.png" alt="Bibo et les milieux humides">
+      </div>
+    </div>
+
+    <div class="showcase-text">
+      <span class="coming-soon">✨ Prochainement</span>
+
+      <h2>Bibo le castor</h2>
+
+      <p>
+        <strong>Bibo le castor et les gardiens des milieux humides</strong>
+        entraînera les enfants dans une aventure éducative
+        au cœur des étangs, des animaux et de la biodiversité.
+      </p>
+
+      <p>
+        À travers un univers chaleureux, coloré et rempli de vie,
+        les jeunes lecteurs découvriront l’importance des castors,
+        des milieux humides et de la protection de la nature.
+      </p>
+
+      <p>
+        Un livre tendre et éducatif pour apprendre à aimer,
+        observer et protéger les petits trésors de notre planète.
+      </p>
+
+      <div class="pill-list">
+        <span class="pill">Bientôt disponible</span>
+        <span class="pill">2 à 6 ans</span>
+        <span class="pill">Castors</span>
+        <span class="pill">Milieux humides</span>
+        <span class="pill">Biodiversité</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="contact">
-
   <div class="contact">
-
-    <h2>
-      Un projet, une question ou une collaboration?
-    </h2>
+    <h2>Un projet, une question ou une collaboration?</h2>
 
     <p>
       Écrivez-nous pour en savoir plus
@@ -621,21 +531,15 @@
       ou nos futures publications.
     </p>
 
-    <a
-      class="btn btn-secondary"
-      href="mailto:contact@eco-reves.ca"
-    >
+    <a class="btn btn-secondary" href="mailto:contact@eco-reves.ca">
       contact@eco-reves.ca
     </a>
-
   </div>
-
 </section>
 
 <footer>
   © 2026 Les éditions Éco-Rêves —
-  Des histoires pour rêver,
-  apprendre et protéger la nature.
+  Des histoires pour rêver, apprendre et protéger la nature.
 </footer>
 
 </body>
