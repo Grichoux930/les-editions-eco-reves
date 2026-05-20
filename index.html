@@ -12,17 +12,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
     :root{
       --green:#195c3a;
       --green2:#2f8f5b;
       --mint:#dff6df;
-      --cream:#fff8e8;
       --yellow:#ffd66b;
       --orange:#f79b4b;
       --blue:#dff4ff;
       --text:#3b3028;
-      --white:#ffffff;
     }
 
     *{
@@ -39,16 +36,11 @@
       font-family:'Baloo 2', cursive;
       color:var(--text);
       overflow-x:hidden;
-
       background:
-      radial-gradient(circle at top left,#ffe8a3 0,transparent 28%),
-      radial-gradient(circle at top right,#dff4ff 0,transparent 24%),
-      linear-gradient(180deg,#fff8e8 0%,#edf8e7 48%,#fffdf5 100%);
+        radial-gradient(circle at top left,#ffe8a3 0,transparent 28%),
+        radial-gradient(circle at top right,#dff4ff 0,transparent 24%),
+        linear-gradient(180deg,#fff8e8 0%,#edf8e7 48%,#fffdf5 100%);
     }
-
-    /* =========================
-       HEADER
-    ========================== */
 
     header{
       position:sticky;
@@ -102,15 +94,10 @@
       color:#5b3600;
     }
 
-    /* =========================
-       HERO
-    ========================== */
-
     .hero{
       max-width:1220px;
       margin:auto;
       padding:55px 24px 80px;
-
       display:grid;
       grid-template-columns:1.05fr 0.95fr;
       gap:50px;
@@ -212,21 +199,14 @@
       position:absolute;
       left:-12px;
       bottom:24px;
-
       background:white;
       padding:18px 22px;
       border-radius:26px;
       font-weight:800;
       color:var(--green);
-
       box-shadow:0 18px 40px rgba(0,0,0,0.15);
-
       transform:rotate(-4deg);
     }
-
-    /* =========================
-       SECTIONS
-    ========================== */
 
     section{
       max-width:1220px;
@@ -251,10 +231,6 @@
       font-size:1.2rem;
     }
 
-    /* =========================
-       CARDS
-    ========================== */
-
     .cards{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -265,9 +241,7 @@
       background:white;
       border-radius:34px;
       padding:34px;
-
       box-shadow:0 20px 45px rgba(0,0,0,0.08);
-
       transition:0.2s;
     }
 
@@ -288,20 +262,19 @@
     }
 
     .card-icon{
-      width:78px;
-      height:78px;
-      border-radius:24px;
-
+      width:100px;
+      height:100px;
       display:flex;
       align-items:center;
       justify-content:center;
-
-      background:white;
-      font-size:2.3rem;
-
       margin-bottom:18px;
+    }
 
-      box-shadow:0 12px 24px rgba(0,0,0,0.08);
+    .card-icon img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
     }
 
     .card h3{
@@ -315,17 +288,11 @@
       font-size:1.08rem;
     }
 
-    /* =========================
-       BOOK SECTION
-    ========================== */
-
     .book-section{
       background:white;
       border-radius:54px;
       padding:42px;
-
       box-shadow:0 30px 75px rgba(0,0,0,0.1);
-
       position:relative;
       overflow:hidden;
     }
@@ -333,14 +300,11 @@
     .book-section::before{
       content:"";
       position:absolute;
-
       width:280px;
       height:280px;
       border-radius:50%;
-
       background:var(--yellow);
       opacity:0.25;
-
       right:-100px;
       top:-100px;
     }
@@ -348,14 +312,11 @@
     .book-section::after{
       content:"";
       position:absolute;
-
       width:220px;
       height:220px;
       border-radius:50%;
-
       background:var(--blue);
       opacity:0.4;
-
       left:-90px;
       bottom:-90px;
     }
@@ -363,7 +324,6 @@
     .book-layout{
       position:relative;
       z-index:1;
-
       display:grid;
       grid-template-columns:0.9fr 1.1fr;
       gap:46px;
@@ -379,12 +339,9 @@
     .fake-cover{
       aspect-ratio:1 / 1;
       overflow:hidden;
-
       border-radius:32px;
       border:8px solid white;
-
       background:white;
-
       box-shadow:0 22px 48px rgba(0,0,0,0.18);
     }
 
@@ -427,30 +384,22 @@
     .pill{
       background:var(--mint);
       color:var(--green);
-
       padding:10px 15px;
       border-radius:999px;
-
       font-weight:800;
     }
 
     .amazon-btn{
       margin-top:28px;
       display:inline-block;
-
       background:linear-gradient(135deg,#ffb13d,#ffd66b);
-
       color:#553400;
       text-decoration:none;
-
       font-weight:800;
       font-size:1.08rem;
-
       padding:16px 28px;
       border-radius:22px;
-
       box-shadow:0 15px 30px rgba(0,0,0,0.15);
-
       transition:0.2s;
     }
 
@@ -462,14 +411,10 @@
       display:inline-block;
       background:var(--orange);
       color:white;
-
       padding:10px 18px;
       border-radius:999px;
-
       font-weight:800;
-
       margin-bottom:16px;
-
       box-shadow:0 10px 22px rgba(0,0,0,0.12);
     }
 
@@ -477,22 +422,14 @@
       background:linear-gradient(135deg,#e4f8df,#fff7d7);
     }
 
-    /* =========================
-       CONTACT
-    ========================== */
-
     .contact{
       background:
-      radial-gradient(circle at top left, rgba(255,216,109,0.3), transparent 32%),
-      linear-gradient(135deg,#195c3a,#2f8f5b);
-
+        radial-gradient(circle at top left, rgba(255,216,109,0.3), transparent 32%),
+        linear-gradient(135deg,#195c3a,#2f8f5b);
       color:white;
-
       border-radius:54px;
       padding:74px 32px;
-
       text-align:center;
-
       box-shadow:0 30px 75px rgba(0,0,0,0.18);
     }
 
@@ -517,12 +454,7 @@
       font-size:1.05rem;
     }
 
-    /* =========================
-       MOBILE
-    ========================== */
-
     @media(max-width:950px){
-
       .hero,
       .book-layout{
         grid-template-columns:1fr;
@@ -564,49 +496,35 @@
         margin-top:18px;
         transform:none;
       }
-
     }
-
   </style>
 </head>
 
 <body>
 
 <header>
-
   <div class="nav">
-
     <img src="logo.png" alt="Logo Éco-Rêves" class="logo">
 
     <nav>
-
       <a href="#accueil">Accueil</a>
-
       <a href="#mission">Mission</a>
-
       <a href="#livres">Livres</a>
-
       <a href="auteur.html">Auteure</a>
-
       <a href="#contact">Contact</a>
-
     </nav>
-
   </div>
-
 </header>
 
 <main id="accueil" class="hero">
-
   <div class="hero-text">
-
     <div class="badge">
       🌿 Maison d’édition jeunesse & nature
     </div>
 
     <h1>
-      Des histoires
-      <span>pour rêver plus vert.</span>
+      Des histoires pour
+      <span>rêver plus vert.</span>
     </h1>
 
     <p>
@@ -616,7 +534,6 @@
     </p>
 
     <div class="buttons">
-
       <a class="btn btn-primary" href="#livres">
         Découvrir nos livres
       </a>
@@ -624,13 +541,10 @@
       <a class="btn btn-secondary" href="auteur.html">
         À propos de l’auteure
       </a>
-
     </div>
-
   </div>
 
   <div class="hero-art">
-
     <div class="hero-card">
       <img src="image intro site.png" alt="Illustration Éco-Rêves">
     </div>
@@ -638,13 +552,10 @@
     <div class="floating-note">
       ✨ Histoires · Nature · Animaux
     </div>
-
   </div>
-
 </main>
 
 <section id="mission">
-
   <h2 class="section-title">
     Une maison d’édition remplie de nature
   </h2>
@@ -656,10 +567,10 @@
   </p>
 
   <div class="cards">
-
     <div class="card">
-
-      <div class="card-icon">🌱</div>
+      <div class="card-icon">
+        <img src="icon-apprendre.png" alt="Apprendre">
+      </div>
 
       <h3>Apprendre</h3>
 
@@ -667,12 +578,12 @@
         Des histoires simples pour découvrir les abeilles,
         les castors, les fleurs et les milieux humides.
       </p>
-
     </div>
 
     <div class="card">
-
-      <div class="card-icon">📚</div>
+      <div class="card-icon">
+        <img src="icon-lire.png" alt="Lire avec douceur">
+      </div>
 
       <h3>Lire avec douceur</h3>
 
@@ -680,12 +591,12 @@
         Des livres pensés pour les jeunes enfants,
         faciles à comprendre et remplis de tendresse.
       </p>
-
     </div>
 
     <div class="card">
-
-      <div class="card-icon">💚</div>
+      <div class="card-icon">
+        <img src="icon-proteger.png" alt="Protéger">
+      </div>
 
       <h3>Protéger</h3>
 
@@ -693,21 +604,14 @@
         Des messages positifs pour encourager
         le respect de la nature et de la biodiversité.
       </p>
-
     </div>
-
   </div>
-
 </section>
 
 <section id="livres">
-
   <div class="book-section">
-
     <div class="book-layout">
-
       <div class="books-gallery">
-
         <div class="fake-cover">
           <img src="bella labeille.png" alt="Bella l’abeille">
         </div>
@@ -715,11 +619,9 @@
         <div class="fake-cover">
           <img src="bella-ruche.png" alt="Bella dans la ruche">
         </div>
-
       </div>
 
       <div class="book-text">
-
         <h2>Bella l’abeille</h2>
 
         <p>
@@ -743,17 +645,11 @@
         </p>
 
         <div class="pill-list">
-
           <span class="pill">2 à 6 ans</span>
-
           <span class="pill">Abeilles</span>
-
           <span class="pill">Nature</span>
-
           <span class="pill">Éducation</span>
-
           <span class="pill">Livre jeunesse</span>
-
         </div>
 
         <a
@@ -763,23 +659,15 @@
         >
           🛒 Acheter sur Amazon
         </a>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 <section id="bibo">
-
   <div class="book-section">
-
     <div class="book-layout">
-
       <div class="books-gallery">
-
         <div class="fake-cover">
           <img src="bibo-cover.png" alt="Bibo le castor">
         </div>
@@ -787,11 +675,9 @@
         <div class="fake-cover">
           <img src="bibo-page.png" alt="Bibo et les milieux humides">
         </div>
-
       </div>
 
       <div class="book-text">
-
         <div class="soon">
           ✨ Prochainement
         </div>
@@ -820,31 +706,19 @@
         </p>
 
         <div class="pill-list">
-
           <span class="pill">Bientôt disponible</span>
-
           <span class="pill">Castors</span>
-
           <span class="pill">Milieux humides</span>
-
           <span class="pill">Biodiversité</span>
-
           <span class="pill">Forêt canadienne</span>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 <section id="contact">
-
   <div class="contact">
-
     <h2>
       Une question ou une collaboration?
     </h2>
@@ -859,9 +733,7 @@
     <a class="btn btn-secondary" href="mailto:contact@eco-reves.ca">
       contact@eco-reves.ca
     </a>
-
   </div>
-
 </section>
 
 <footer>
