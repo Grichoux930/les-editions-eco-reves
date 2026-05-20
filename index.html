@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Les éditions Éco-Rêves</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --green-dark:#1f5c3a;
@@ -17,7 +21,7 @@
     *{margin:0;padding:0;box-sizing:border-box;}
 
     body{
-      font-family:"Trebuchet MS", Arial, sans-serif;
+      font-family:'Baloo 2', cursive;
       background:linear-gradient(180deg,#fff8ea 0%,#eef8ea 45%,#fffdf6 100%);
       color:var(--text);
       overflow-x:hidden;
@@ -46,8 +50,8 @@
       display:flex;
       align-items:center;
       gap:14px;
-      font-size:1.3rem;
-      font-weight:900;
+      font-size:1.45rem;
+      font-weight:800;
       color:var(--green-dark);
     }
 
@@ -61,8 +65,9 @@
       text-decoration:none;
       margin-left:24px;
       color:var(--green-dark);
-      font-weight:900;
+      font-weight:800;
       transition:0.2s;
+      font-size:1.1rem;
     }
 
     nav a:hover{color:var(--orange);}
@@ -86,17 +91,19 @@
       background:white;
       border:2px solid rgba(74,151,97,0.15);
       color:var(--green-dark);
-      font-weight:900;
+      font-weight:800;
       margin-bottom:24px;
       box-shadow:0 10px 25px rgba(0,0,0,0.06);
+      font-size:1.1rem;
     }
 
     h1{
-      font-size:clamp(3rem,7vw,5.8rem);
+      font-size:clamp(3.4rem,7vw,6.2rem);
       line-height:0.95;
       letter-spacing:-2px;
       color:var(--green-dark);
       margin-bottom:24px;
+      font-weight:800;
     }
 
     h1 span{
@@ -105,11 +112,12 @@
     }
 
     .hero p{
-      font-size:1.2rem;
-      line-height:1.8;
+      font-size:1.3rem;
+      line-height:1.7;
       color:#4d4338;
       max-width:620px;
       margin-bottom:34px;
+      font-weight:400;
     }
 
     .buttons{
@@ -122,10 +130,11 @@
       text-decoration:none;
       padding:15px 24px;
       border-radius:18px;
-      font-weight:900;
+      font-weight:800;
       transition:0.2s;
       box-shadow:0 12px 24px rgba(0,0,0,0.12);
       display:inline-block;
+      font-size:1.08rem;
     }
 
     .btn:hover{transform:translateY(-4px);}
@@ -166,17 +175,18 @@
     .section-title{
       text-align:center;
       color:var(--green-dark);
-      font-size:clamp(2.2rem,5vw,3.5rem);
+      font-size:clamp(2.4rem,5vw,3.8rem);
       margin-bottom:16px;
+      font-weight:800;
     }
 
     .section-subtitle{
       max-width:760px;
       margin:0 auto 50px;
       text-align:center;
-      line-height:1.8;
+      line-height:1.7;
       color:#5b4d3d;
-      font-size:1.1rem;
+      font-size:1.25rem;
     }
 
     .cards{
@@ -208,12 +218,14 @@
     .card h3{
       color:var(--green-dark);
       margin-bottom:12px;
-      font-size:1.4rem;
+      font-size:1.6rem;
+      font-weight:800;
     }
 
     .card p{
-      line-height:1.8;
+      line-height:1.7;
       color:#5c4d3d;
+      font-size:1.12rem;
     }
 
     .books-showcase{
@@ -244,15 +256,16 @@
 
     .showcase-text h2{
       color:var(--green-dark);
-      font-size:clamp(2rem,4vw,3rem);
+      font-size:clamp(2.2rem,4vw,3.3rem);
       margin-bottom:20px;
+      font-weight:800;
     }
 
     .showcase-text p{
-      line-height:1.9;
+      line-height:1.75;
       margin-bottom:18px;
       color:#4e4232;
-      font-size:1.08rem;
+      font-size:1.18rem;
     }
 
     .pill-list{
@@ -268,7 +281,8 @@
       background:white;
       border:2px solid rgba(74,151,97,0.15);
       color:var(--green-dark);
-      font-weight:900;
+      font-weight:800;
+      font-size:1.05rem;
     }
 
     .contact{
@@ -280,15 +294,16 @@
     }
 
     .contact h2{
-      font-size:clamp(2rem,5vw,3.2rem);
+      font-size:clamp(2.2rem,5vw,3.5rem);
       margin-bottom:18px;
+      font-weight:800;
     }
 
     .contact p{
       max-width:720px;
       margin:0 auto 30px;
-      line-height:1.8;
-      font-size:1.1rem;
+      line-height:1.7;
+      font-size:1.2rem;
     }
 
     footer{
@@ -296,6 +311,7 @@
       padding:36px 20px;
       color:var(--green-dark);
       font-weight:800;
+      font-size:1.05rem;
     }
 
     @media(max-width:950px){
@@ -316,6 +332,10 @@
 
       .logo{
         height:58px;
+      }
+
+      .brand{
+        font-size:1.2rem;
       }
     }
   </style>
