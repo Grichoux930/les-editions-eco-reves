@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Les éditions Éco-Rêves</title>
 
-  <!-- Police Baloo -->
+  <!-- POLICE BALOO -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -62,10 +62,6 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:16px;
-      font-size:1.35rem;
-      font-weight:800;
-      color:var(--green-dark);
     }
 
     .logo{
@@ -185,7 +181,7 @@
       display:block;
     }
 
-    /* SECTIONS */
+    /* SECTION */
 
     section{
       max-width:1200px;
@@ -255,7 +251,7 @@
       font-size:1.12rem;
     }
 
-    /* LIVRE */
+    /* LIVRES */
 
     .books-showcase{
       background:linear-gradient(
@@ -272,12 +268,19 @@
       box-shadow:0 24px 60px rgba(0,0,0,0.08);
     }
 
+    .books-gallery{
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+    }
+
     .fake-cover{
       aspect-ratio:16 / 9;
       overflow:hidden;
       border-radius:28px;
       border:8px solid white;
       box-shadow:0 20px 45px rgba(0,0,0,0.16);
+      background:white;
     }
 
     .fake-cover img{
@@ -369,10 +372,6 @@
       .logo{
         height:88px;
       }
-
-      .brand{
-        font-size:1.15rem;
-      }
     }
 
   </style>
@@ -422,6 +421,7 @@
     </p>
 
     <div class="buttons">
+
       <a class="btn btn-primary" href="#livres">
         Découvrir nos livres
       </a>
@@ -429,16 +429,19 @@
       <a class="btn btn-secondary" href="#contact">
         Nous contacter
       </a>
+
     </div>
 
   </div>
 
   <div class="hero-card">
+
     <img
       src="image intro site.png"
       alt="Illustration Éco-Rêves"
       class="hero-image"
     >
+
   </div>
 
 </main>
@@ -460,39 +463,57 @@
   <div class="cards">
 
     <div class="card">
-      <div class="card-icon">🌱</div>
 
-      <h3>Apprendre</h3>
+      <div class="card-icon">
+        🌱
+      </div>
+
+      <h3>
+        Apprendre
+      </h3>
 
       <p>
         Des livres simples et accessibles
         pour découvrir les milieux naturels,
         les saisons, les animaux et la biodiversité.
       </p>
+
     </div>
 
     <div class="card">
-      <div class="card-icon">✨</div>
 
-      <h3>Rêver</h3>
+      <div class="card-icon">
+        ✨
+      </div>
+
+      <h3>
+        Rêver
+      </h3>
 
       <p>
         Des univers lumineux, tendres et magiques
         qui donnent envie aux enfants
         d’ouvrir un livre encore et encore.
       </p>
+
     </div>
 
     <div class="card">
-      <div class="card-icon">💚</div>
 
-      <h3>Protéger</h3>
+      <div class="card-icon">
+        💚
+      </div>
+
+      <h3>
+        Protéger
+      </h3>
 
       <p>
         Des messages positifs pour encourager
         le respect de la nature,
         des animaux et des milieux fragiles.
       </p>
+
     </div>
 
   </div>
@@ -505,8 +526,16 @@
 
   <div class="books-showcase">
 
-    <div class="fake-cover">
-      <img src="bella labeille.png" alt="Bella l'abeille">
+    <div class="books-gallery">
+
+      <div class="fake-cover">
+        <img src="bella labeille.png" alt="Bella l'abeille">
+      </div>
+
+      <div class="fake-cover">
+        <img src="bella-ruche.png" alt="Bella dans la ruche">
+      </div>
+
     </div>
 
     <div class="showcase-text">
@@ -522,17 +551,39 @@
       </p>
 
       <p>
-        Avec ses couleurs vibrantes, ses fleurs magnifiques
-        et son univers chaleureux, Bella l’abeille aide les enfants
-        à comprendre que chaque petit geste peut protéger le vivant.
+        À travers ses aventures colorées, Bella apprend comment
+        les abeilles fabriquent le miel, transportent le pollen
+        et aident les fleurs à pousser partout autour de nous.
+      </p>
+
+      <p>
+        Avec ses illustrations lumineuses et son univers chaleureux,
+        Bella l’abeille aide les enfants à comprendre
+        que chaque petit geste peut protéger le vivant.
       </p>
 
       <div class="pill-list">
-        <span class="pill">Premier livre</span>
-        <span class="pill">2 à 6 ans</span>
-        <span class="pill">Abeilles</span>
-        <span class="pill">Nature</span>
-        <span class="pill">Éducation</span>
+
+        <span class="pill">
+          Premier livre
+        </span>
+
+        <span class="pill">
+          2 à 6 ans
+        </span>
+
+        <span class="pill">
+          Abeilles
+        </span>
+
+        <span class="pill">
+          Nature
+        </span>
+
+        <span class="pill">
+          Éducation
+        </span>
+
       </div>
 
     </div>
