@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Éco-Rêves Shop | Children’s Nature Books</title>
+  <meta name="description" content="The Éco-Rêves shop: educational children’s books, Amazon purchases, and group orders for schools, daycares, libraries, and organizations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --forest:#0f4a2e;
+      --green:#1d7245;
+      --leaf:#55a96e;
+      --gold:#f4a634;
+      --honey:#ffd166;
+      --cream:#fff8e9;
+      --paper:#fffaf0;
+      --soft:#f3f9ee;
+      --text:#35291f;
+      --shadow:0 24px 70px rgba(36,47,31,.14);
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Baloo 2',cursive;
+      color:var(--text);
+      overflow-x:hidden;
+      background:linear-gradient(180deg,#fff6df,#eef8e8 48%,#fffaf0);
+    }
+
+    .site-shell{
+      max-width:1500px;
+      min-height:100vh;
+      margin:0 auto;
+      background:#fffaf0;
+      box-shadow:0 30px 100px rgba(0,0,0,.10);
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(255,250,240,.94);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(15,74,46,.10);
+    }
+
+    .nav-wrap{
+      max-width:1260px;
+      margin:0 auto;
+      padding:14px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .logo-link{
+      display:block;
+      width:230px;
+      height:90px;
+      background:url('logo.png') center center/contain no-repeat;
+      text-indent:-9999px;
+      overflow:hidden;
+      flex-shrink:0;
+    }
+
+    .menu{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:28px;
+      flex:1;
+    }
+
+    .menu a,
+    .shop-active{
+      color:var(--forest);
+      text-decoration:none;
+      font-weight:800;
+      font-size:1.04rem;
+      line-height:1;
+      white-space:nowrap;
+    }
+
+    .menu a:hover{
+      text-decoration:underline;
+      text-underline-offset:8px;
+    }
+
+    .shop-active{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      background:linear-gradient(135deg,var(--forest),var(--green));
+      color:white;
+      padding:15px 28px;
+      border-radius:999px;
+      box-shadow:0 12px 24px rgba(15,74,46,.22);
+      flex-shrink:0;
+    }
+
+    .shop-hero{
+      max-width:1260px;
+      margin:0 auto;
+      padding:64px 24px 34px;
+      text-align:center;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      background:linear-gradient(135deg,var(--forest),var(--green));
+      color:white;
+      border-radius:999px;
+      padding:11px 24px;
+      font-weight:800;
+      margin-bottom:18px;
+      box-shadow:0 14px 28px rgba(15,74,46,.18);
+    }
+
+    h1{
+      color:var(--forest);
+      font-size:clamp(3rem,7vw,6rem);
+      line-height:.92;
+      font-weight:800;
+      letter-spacing:-1px;
+      margin-bottom:20px;
+    }
+
+    .hero-text{
+      max-width:780px;
+      margin:0 auto;
+      font-size:1.25rem;
+      line-height:1.6;
+      color:#514235;
+      font-weight:700;
+    }
+
+    section{
+      max-width:1260px;
+      margin:auto;
+      padding:58px 24px;
+    }
+
+    .section-kicker{
+      text-align:center;
+      color:var(--gold);
+      font-weight:800;
+      font-size:1.1rem;
+      margin-bottom:8px;
+    }
+
+    .section-title{
+      text-align:center;
+      color:var(--forest);
+      font-weight:800;
+      font-size:clamp(2.35rem,5vw,4.1rem);
+      line-height:.98;
+      margin-bottom:16px;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 38px;
+      font-size:1.18rem;
+      line-height:1.65;
+      color:#514235;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      text-decoration:none;
+      border-radius:999px;
+      padding:16px 28px;
+      font-weight:800;
+      font-size:1.08rem;
+      border:0;
+      box-shadow:0 14px 28px rgba(0,0,0,.12);
+      transition:.22s ease;
+    }
+
+    .btn:hover{transform:translateY(-4px)}
+    .btn-primary{background:linear-gradient(135deg,var(--forest),var(--green));color:white}
+    .btn-secondary{background:linear-gradient(135deg,var(--honey),var(--gold));color:#543500}
+
+    .shop-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .product-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:38px;
+      background:#fffef7;
+      border:6px solid white;
+      box-shadow:var(--shadow);
+      padding:28px;
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:26px;
+      align-items:center;
+      min-height:390px;
+    }
+
+    .product-card.bella{
+      background:linear-gradient(135deg,#fffdf4 0%,#fff0bb 58%,#fffbdf 100%);
+    }
+
+    .product-card.bibo{
+      background:linear-gradient(135deg,#e3f7df 0%,#fff7ce 56%,#dff4ff 100%);
+    }
+
+    .book-cover{
+      aspect-ratio:1/1;
+      border-radius:28px;
+      border:8px solid white;
+      overflow:hidden;
+      background:white;
+      box-shadow:0 22px 48px rgba(44,54,35,.18);
+      transform:rotate(-2deg);
+    }
+
+    .book-cover img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .status{
+      display:inline-block;
+      background:var(--forest);
+      color:white;
+      padding:9px 17px;
+      border-radius:999px;
+      font-weight:800;
+      margin-bottom:12px;
+    }
+
+    .product-copy h2{
+      font-size:clamp(2rem,3vw,3rem);
+      line-height:1;
+      color:var(--forest);
+      margin-bottom:12px;
+    }
+
+    .product-copy p{
+      font-size:1.08rem;
+      line-height:1.65;
+      margin-bottom:14px;
+    }
+
+    .pill-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:16px 0 20px;
+    }
+
+    .pill{
+      background:white;
+      color:var(--forest);
+      padding:9px 15px;
+      border-radius:999px;
+      font-weight:800;
+      box-shadow:0 8px 16px rgba(0,0,0,.06);
+    }
+
+    .bulk-order{
+      position:relative;
+      overflow:hidden;
+      border-radius:42px;
+      padding:46px;
+      background:linear-gradient(135deg,#fffef7 0%,#e8f7df 54%,#fff1bd 100%);
+      border:4px solid rgba(85,169,110,.32);
+      box-shadow:var(--shadow);
+    }
+
+    .bulk-layout{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:36px;
+      align-items:center;
+    }
+
+    .bulk-copy h2{
+      color:var(--forest);
+      font-size:clamp(2.35rem,4.6vw,3.9rem);
+      line-height:1;
+      margin-bottom:18px;
+    }
+
+    .bulk-copy p{
+      font-size:1.14rem;
+      line-height:1.72;
+      margin-bottom:16px;
+    }
+
+    .bulk-box{
+      background:#fffef7;
+      border:5px solid white;
+      border-radius:30px;
+      padding:28px;
+      box-shadow:0 16px 35px rgba(38,48,34,.11);
+    }
+
+    .bulk-box h3{
+      color:var(--forest);
+      font-size:1.65rem;
+      margin-bottom:14px;
+    }
+
+    .bulk-list{
+      list-style:none;
+      display:grid;
+      gap:12px;
+      margin-bottom:24px;
+    }
+
+    .bulk-list li{
+      background:#f3f9ee;
+      border-radius:18px;
+      padding:12px 14px;
+      font-weight:800;
+      color:var(--forest);
+    }
+
+    .bulk-note{
+      font-size:.96rem;
+      line-height:1.55;
+      color:#5d4a3d;
+      margin-top:14px;
+    }
+
+    .contact{
+      text-align:center;
+      color:white;
+      border-radius:52px;
+      background:radial-gradient(circle at 15% 20%,rgba(255,215,106,.35),transparent 28%),linear-gradient(135deg,var(--forest),#55a96e);
+      border:6px solid white;
+      box-shadow:var(--shadow);
+      padding:68px 34px;
+    }
+
+    .contact h2{
+      font-size:clamp(2.4rem,5vw,4rem);
+      line-height:1;
+      margin-bottom:18px;
+    }
+
+    .contact p{
+      max-width:760px;
+      margin:0 auto 28px;
+      font-size:1.2rem;
+      line-height:1.65;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--forest);
+      font-weight:800;
+      padding:38px 20px;
+      font-size:1.05rem;
+    }
+
+    @media(max-width:1050px){
+      .menu{display:none}
+      .shop-grid,
+      .bulk-layout,
+      .product-card{grid-template-columns:1fr}
+      .logo-link{width:215px;height:82px}
+      .shop-active{padding:13px 22px;font-size:.95rem}
+      .book-cover{
+        max-width:360px;
+        margin:auto;
+        transform:none;
+      }
+    }
+
+    @media(max-width:768px){
+      .nav-wrap{
+        padding:10px 14px;
+        gap:12px;
+      }
+
+      .logo-link{
+        width:150px;
+        height:64px;
+      }
+
+      .shop-active{
+        padding:10px 15px;
+        font-size:.86rem;
+      }
+
+      .shop-hero{
+        padding:38px 16px 18px;
+      }
+
+      h1{
+        font-size:clamp(2.7rem,15vw,4.5rem);
+      }
+
+      .hero-text{
+        font-size:1.05rem;
+      }
+
+      section{
+        padding:48px 16px;
+      }
+
+      .product-card,
+      .bulk-order{
+        padding:22px 16px;
+        border-radius:28px;
+      }
+
+      .bulk-box .btn,
+      .contact .btn,
+      .product-copy .btn{
+        width:100%;
+        text-align:center;
+      }
+
+      .contact{
+        padding:42px 18px;
+        border-radius:34px;
+        border-width:4px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="site-shell">
+
+  <header class="topbar">
+    <div class="nav-wrap" aria-label="Main navigation">
+      <a class="logo-link" href="index-en.html" aria-label="Les éditions Éco-Rêves Home">Éco-Rêves Home</a>
+
+      <nav class="menu">
+        <a href="index-en.html">Home</a>
+        <a href="index-en.html#livres">Our Books</a>
+        <a href="auteur-en.html">About</a>
+        <a href="#commandes">For Schools</a>
+        <a href="index-en.html#mission">Resources</a>
+        <a href="#contact">Contact</a>
+        <a href="boutique.html">FR</a>
+      </nav>
+
+      <a class="shop-active" href="boutique-en.html">🛍️ Shop</a>
+    </div>
+  </header>
+
+  <main class="shop-hero">
+    <div class="kicker">📚 Official Shop</div>
+    <h1>Éco-Rêves Shop</h1>
+    <p class="hero-text">Discover our educational children’s books and our group order options for daycares, schools, libraries, and organizations.</p>
+  </main>
+
+  <section id="livres">
+    <div class="section-kicker">Our Books</div>
+    <h2 class="section-title">Buy or reserve our stories.</h2>
+    <p class="section-subtitle">Bella is available on Amazon. Bibo will soon arrive in the Éco-Rêves shop.</p>
+
+    <div class="shop-grid">
+      <article class="product-card bella">
+        <div class="book-cover">
+          <img src="bella labeille.png" alt="Cover of Bella the Bee">
+        </div>
+        <div class="product-copy">
+          <span class="status">🐝 Available Now</span>
+          <h2>Bella the Bee</h2>
+          <p>A bright story that helps children discover the essential role of bees, flowers, and pollen.</p>
+          <div class="pill-list">
+            <span class="pill">Ages 2 to 6</span>
+            <span class="pill">Nature</span>
+            <span class="pill">Bees</span>
+          </div>
+          <a class="btn btn-secondary" href="https://www.amazon.ca/-/fr/Jos%C3%A9e-Tremblay/dp/B0H1JVYJT3/" target="_blank" rel="noopener">🛒 Buy on Amazon</a>
+        </div>
+      </article>
+
+      <article class="product-card bibo">
+        <div class="book-cover">
+          <img src="bibo-cover.png" alt="Cover of Bibo the Beaver">
+        </div>
+        <div class="product-copy">
+          <span class="status">🦫 Coming Soon</span>
+          <h2>Bibo the Beaver</h2>
+          <p><strong>Bibo the Beaver and the Wetland Guardians</strong> will introduce children to beavers, ponds, and biodiversity.</p>
+          <div class="pill-list">
+            <span class="pill">Beavers</span>
+            <span class="pill">Wetlands</span>
+            <span class="pill">Biodiversity</span>
+          </div>
+          <a class="btn btn-primary" href="#contact">✉️ Keep Me Updated</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="commandes">
+    <div class="bulk-order">
+      <div class="bulk-layout">
+        <div class="bulk-copy">
+          <span class="status">📦 Group Orders</span>
+          <h2>Orders of 20 books or more</h2>
+          <p style="font-weight:800;color:#1d7245;">📚 Volume discounts available for schools, daycares, libraries, organizations, and special events.</p>
+          <p>For group orders, we prepare a personalized quote based on quantity, delivery, and availability.</p>
+          <p>After confirmation, we will send you a secure Stripe payment link.</p>
+          <div class="pill-list">
+            <span class="pill">Daycares</span>
+            <span class="pill">Schools</span>
+            <span class="pill">Libraries</span>
+            <span class="pill">Educational Gifts</span>
+          </div>
+        </div>
+
+        <div class="bulk-box">
+          <h3>Secure Payment</h3>
+          <ul class="bulk-list">
+            <li>✅ Minimum: 20 books</li>
+            <li>✅ Volume discounts available</li>
+            <li>✅ Secure payment with Stripe</li>
+            <li>✅ Delivery confirmed according to address</li>
+            <li>✅ Ideal for daycares, schools, and organizations</li>
+          </ul>
+
+          <a class="btn btn-primary" href="mailto:tremblayjosee00@gmail.com?subject=Quote%20Request%20-%20Order%20of%2020%20Books%20or%20More%20-%20Eco-Reves&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20an%20order%20of%2020%20books%20or%20more.%0A%0AName%3A%0AOrganization%20/%20daycare%20/%20school%3A%0ABook%20requested%3A%0ADesired%20quantity%3A%0ADelivery%20address%3A%0ADesired%20date%3A%0AComments%3A%0A%0AThank%20you%21">📋 Request a Quote</a>
+
+          <a class="btn btn-secondary" style="margin-top:12px" href="mailto:tremblayjosee00@gmail.com?subject=Eco-Reves%20Order&body=Hello%2C%0A%0AI%20would%20like%20to%20contact%20you%20about%20an%20Eco-Reves%20order.%0A%0AName%3A%0ABook%20requested%3A%0AQuantity%3A%0AComments%3A%0A%0AThank%20you%21">✉️ Write to Us About an Order</a>
+
+          <p class="bulk-note">After your request, we will confirm the quantity, delivery, and applicable discount, then send you a personalized quote.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Questions about the shop?</h2>
+      <p>Write to us for an order, a collaboration, or a book request for your school, daycare, library, or organization.</p>
+      <a class="btn btn-secondary" href="mailto:tremblayjosee00@gmail.com">tremblayjosee00@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Les éditions Éco-Rêves — Official Shop.</footer>
+</div>
+</body>
+</html>
