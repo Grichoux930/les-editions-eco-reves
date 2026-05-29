@@ -105,6 +105,29 @@
       flex-shrink:0;
     }
 
+
+    .lang-switch{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex-shrink:0;
+    }
+
+    .lang-switch a{
+      color:var(--forest);
+      text-decoration:none;
+      font-weight:800;
+      background:#fffef7;
+      padding:9px 13px;
+      border-radius:999px;
+      box-shadow:0 8px 16px rgba(0,0,0,.07);
+      white-space:nowrap;
+    }
+
+    .lang-switch a:hover{
+      transform:translateY(-2px);
+    }
+
     .shop-hero{
       max-width:1260px;
       margin:0 auto;
@@ -455,11 +478,15 @@
       <nav class="menu">
         <a href="index.html">Accueil</a>
         <a href="index.html#livres">Nos livres</a>
-        <a href="auteur.html">À propos</a>
-        <a href="#commandes">Pour les écoles</a>
-        <a href="index.html#mission">Ressources</a>
-        <a href="#contact">Contact</a>
+        <a href="auteur.html">Auteure</a>
+        <a href="boutique.html">Boutique</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
+
+      <div class="lang-switch" aria-label="Choix de langue">
+        <a href="boutique.html">🇫🇷 FR</a>
+        <a href="boutique-en.html">🇬🇧 EN</a>
+      </div>
 
       <a class="shop-active" href="boutique.html">🛍️ Boutique</a>
     </div>
