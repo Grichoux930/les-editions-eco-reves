@@ -93,6 +93,11 @@
       transition:.22s ease;
     }
 
+
+    .lang-switch{display:flex;gap:8px;align-items:center}
+    .lang-switch a{color:var(--forest);text-decoration:none;font-weight:800;background:#fffef7;padding:9px 13px;border-radius:999px;box-shadow:0 8px 16px rgba(0,0,0,.07)}
+    .lang-switch a:hover{transform:translateY(-2px)}
+
     nav a:hover,
     nav a.active{
       background:#fffef7;
@@ -440,14 +445,18 @@
 <div class="site-shell">
 <header>
   <div class="nav">
-    <a href="index.html" aria-label="Accueil Éco-Rêves"><img src="logo.png" alt="Logo Éco-Rêves" class="logo"></a>
+    <a href="./index.html" aria-label="Accueil Éco-Rêves"><img src="logo.png" alt="Logo Éco-Rêves" class="logo"></a>
     <nav>
-      <a href="index.html">Accueil</a>
-      <a href="index.html#mission">Mission</a>
-      <a href="index.html#livres">Livres</a>
-      <a href="auteur.html" class="active">Auteure</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="./index.html">Accueil</a>
+      <a href="./index.html#mission">Mission</a>
+      <a href="./index.html#livres">Livres</a>
+      <a href="./auteur.html" class="active">Auteure</a>
+      <a href="./index.html#contact">Contact</a>
     </nav>
+    <div class="lang-switch" aria-label="Choix de langue">
+      <a href="./auteur.html">🇫🇷 FR</a>
+      <a href="./auteur-en.html">🇬🇧 EN</a>
+    </div>
   </div>
 </header>
 
@@ -483,7 +492,7 @@
         <p>Une histoire tendre sur les castors, les milieux humides et la biodiversité des forêts canadiennes.</p>
       </div>
     </div>
-    <div class="cta"><a class="btn btn-primary" href="index.html#livres">📚 Voir les livres</a></div>
+    <div class="cta"><a class="btn btn-primary" href="./index.html#livres">📚 Voir les livres</a></div>
   </div>
 </section>
 
