@@ -12,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
     :root{
       --green:#195c3a;
       --green2:#2f8f5b;
@@ -82,12 +81,12 @@
     }
 
     .hero{
-      max-width:1200px;
+      max-width:1300px;
       margin:auto;
       padding:70px 24px;
       display:grid;
-      grid-template-columns:0.9fr 1.1fr;
-      gap:50px;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
       align-items:center;
     }
 
@@ -98,13 +97,18 @@
       border:8px solid white;
       box-shadow:0 30px 70px rgba(0,0,0,0.16);
       background:white;
+      max-width:500px;
+      width:100%;
+      margin:auto;
     }
 
     .photo img{
       width:100%;
       height:100%;
-      object-fit:cover;
+      object-fit:contain;
+      object-position:center;
       display:block;
+      background:white;
     }
 
     .content{
@@ -215,7 +219,6 @@
     }
 
     @media(max-width:950px){
-
       .hero{
         grid-template-columns:1fr;
       }
@@ -235,9 +238,7 @@
       .content{
         padding:28px;
       }
-
     }
-
   </style>
 </head>
 
@@ -262,54 +263,53 @@
 <section class="hero">
 
   <div class="photo">
-    <img src="auteur.jpg" alt="Photo de l’auteure">
+    <img src="auteure.png" alt="Photo de l’auteure">
   </div>
 
   <div class="content">
 
-  <div class="badge">✨ Auteure jeunesse québécoise</div>
+    <div class="badge">🌿 Fondatrice des Éditions Éco-Rêves</div>
 
-  <h1>
-    Josée
-    <span>Tremblay</span>
-  </h1>
+    <h1>
+      Josée
+      <span>Tremblay</span>
+    </h1>
 
-  <p>
-    Passionnée par la nature, les animaux et l’univers des enfants,
-    Josée Tremblay crée des histoires douces et éducatives
-    qui éveillent l’imagination tout en sensibilisant
-    les jeunes lecteurs à la beauté du monde vivant.
-  </p>
+    <p>
+      Passionnée par la nature, les animaux et l’univers des enfants,
+      Josée Tremblay crée des histoires douces et éducatives
+      qui éveillent l’imagination tout en sensibilisant
+      les jeunes lecteurs à la beauté du monde vivant.
+    </p>
 
-  <p>
-    Éducatrice à l’enfance depuis plus de 20 ans,
-    elle accompagne les tout-petits avec douceur,
-    créativité et bienveillance.
-    Son expérience auprès des enfants inspire chacune
-    de ses histoires et lui permet de créer
-    des univers adaptés aux jeunes lecteurs de 2 à 6 ans.
-  </p>
+    <p>
+      Éducatrice à l’enfance depuis plus de 20 ans,
+      elle accompagne les tout-petits avec douceur,
+      créativité et bienveillance.
+      Son expérience auprès des enfants inspire chacune
+      de ses histoires et lui permet de créer
+      des univers adaptés aux jeunes lecteurs de 2 à 6 ans.
+    </p>
 
-  <p>
-    À travers Les éditions Éco-Rêves,
-    elle souhaite transmettre des valeurs de respect,
-    de bienveillance et de protection de la nature,
-    dans des univers chaleureux remplis de tendresse.
-  </p>
+    <p>
+      À travers Les éditions Éco-Rêves,
+      elle souhaite transmettre des valeurs de respect,
+      de bienveillance et de protection de la nature,
+      dans des univers chaleureux remplis de tendresse.
+    </p>
 
-  <p>
-    Inspirées par les abeilles, les castors,
-    les forêts canadiennes et les milieux humides,
-    ses histoires sont pensées pour émerveiller les enfants
-    et développer leur amour du vivant.
-  </p>
+    <p>
+      Inspirées par les abeilles, les castors,
+      les forêts canadiennes et les milieux humides,
+      ses histoires sont pensées pour émerveiller les enfants
+      et développer leur amour du vivant.
+    </p>
 
-  <div class="quote">
-    “Chaque histoire peut aider un enfant
-    à aimer un peu plus la nature.” 🌿
+    <div class="quote">
+      « Chaque histoire peut aider un enfant à aimer un peu plus la nature. » 🌿
+    </div>
+
   </div>
-
-</div>
 
 </section>
 
