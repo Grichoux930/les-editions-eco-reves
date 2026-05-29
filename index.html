@@ -29,7 +29,16 @@
     .hero-menu{display:flex;align-items:center;justify-content:center;gap:34px;flex:1}
     .hero-menu a,.hero-shop{color:var(--forest);text-decoration:none;font-weight:800;font-size:1.05rem;line-height:1;padding:12px 4px;text-shadow:0 2px 10px rgba(255,255,255,.7)}
     .hero-menu a:hover{text-decoration:underline;text-underline-offset:8px}
-    .hero-logo-link{display:block;width:250px;height:86px;border-radius:20px;text-indent:-9999px;overflow:hidden}
+    .hero-logo-link{
+      display:block;
+      width:300px;
+      height:120px;
+      background:url('logo.png') center center / contain no-repeat;
+      border-radius:20px;
+      text-indent:-9999px;
+      overflow:hidden;
+      flex-shrink:0;
+    }
     .hero-shop{flex:0 0 auto;background:linear-gradient(135deg,var(--forest),var(--green));color:white;text-shadow:none;padding:16px 32px;border-radius:999px;box-shadow:0 14px 26px rgba(15,74,46,.24)}
     .hero-shop:hover,.hero-real-actions a:hover{transform:translateY(-3px)}
 
@@ -49,11 +58,70 @@
     .values{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.value-card{border-radius:38px;background:#fffef7;padding:34px;box-shadow:0 16px 35px rgba(38,48,34,.11);border:5px solid white;position:relative;overflow:hidden}.value-icon{width:88px;height:88px;margin-bottom:18px}.value-icon img{width:100%;height:100%;object-fit:contain}.value-card h3{color:var(--forest);font-size:1.7rem;margin-bottom:10px}.value-card p{font-size:1.08rem;line-height:1.7}
     .book-feature{border-radius:56px;padding:46px;box-shadow:var(--shadow);border:6px solid white;position:relative;overflow:hidden;margin-bottom:34px}.book-feature.bella{background:linear-gradient(135deg,#fffdf4 0%,#fff0bb 58%,#fffbdf 100%)}.book-feature.bibo{background:linear-gradient(135deg,#e3f7df 0%,#fff7ce 56%,#dff4ff 100%)}.book-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px;align-items:center}.book-feature.bibo .book-layout{grid-template-columns:1.05fr .95fr}.covers{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}.cover{aspect-ratio:1/1;border-radius:34px;border:8px solid white;overflow:hidden;background:white;box-shadow:0 24px 54px rgba(44,54,35,.20)}.cover:first-child{transform:rotate(-3deg)}.cover:last-child{transform:rotate(4deg);margin-top:34px}.cover img{width:100%;height:100%;object-fit:cover}.label{display:inline-block;background:var(--forest);color:white;padding:10px 18px;border-radius:999px;font-weight:800;margin-bottom:16px}.book-copy h2{font-size:clamp(2.6rem,4vw,4.1rem);line-height:.98;color:var(--forest);margin-bottom:20px}.book-copy p{font-size:1.16rem;line-height:1.78;margin-bottom:16px}.pill-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.pill{background:white;color:var(--forest);padding:10px 16px;border-radius:999px;font-weight:800;box-shadow:0 8px 16px rgba(0,0,0,.06)}.amazon-btn{margin-top:26px}
 
+
+    .shop-mini{
+      background:#fffef7;
+      border:5px solid rgba(255,255,255,.92);
+      border-radius:30px;
+      padding:26px 28px;
+      margin-bottom:28px;
+      box-shadow:0 16px 35px rgba(38,48,34,.11);
+    }
+    .shop-mini-title{text-align:center;margin-bottom:22px}
+    .shop-mini-title h3{color:var(--forest);font-size:2rem;font-weight:800;margin:0}
+    .shop-mini-line{width:130px;height:4px;background:#55a96e;border-radius:999px;margin:10px auto 0}
+    .shop-mini-books{display:grid;gap:14px}
+    .shop-mini-book{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      background:#f3f9ee;
+      border-radius:22px;
+      padding:15px 18px;
+    }
+    .shop-mini-book strong{
+      display:block;
+      color:var(--forest);
+      font-size:1.18rem;
+      line-height:1.15;
+      margin-bottom:4px;
+    }
+    .shop-mini-book span{color:#5d4a3d;font-size:1rem}
+    .shop-mini-book a{
+      color:#543500;
+      background:linear-gradient(135deg,var(--honey),var(--gold));
+      text-decoration:none;
+      font-weight:800;
+      padding:12px 16px;
+      border-radius:999px;
+      white-space:nowrap;
+      box-shadow:0 8px 18px rgba(0,0,0,.08);
+    }
+    .shop-mini-book em{
+      color:#5d4a3d;
+      font-style:normal;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
     .bulk-order{position:relative;overflow:hidden;border-radius:34px;padding:46px;background:linear-gradient(135deg,#fffef7 0%,#e8f7df 54%,#fff1bd 100%);border:4px solid rgba(85,169,110,.32);box-shadow:var(--shadow)}.bulk-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}.bulk-copy h2{color:var(--forest);font-size:clamp(2.45rem,4.6vw,4rem);line-height:1;margin-bottom:18px}.bulk-copy p{font-size:1.14rem;line-height:1.72;margin-bottom:16px}.bulk-box{background:#fffef7;border:5px solid white;border-radius:30px;padding:28px;box-shadow:0 16px 35px rgba(38,48,34,.11)}.bulk-box h3{color:var(--forest);font-size:1.65rem;margin-bottom:14px}.bulk-list{list-style:none;display:grid;gap:12px;margin-bottom:24px}.bulk-list li{background:#f3f9ee;border-radius:18px;padding:12px 14px;font-weight:800;color:var(--forest)}.bulk-note{font-size:.96rem;line-height:1.55;color:#5d4a3d;margin-top:14px}
     .author-strip{background:linear-gradient(135deg,#fffef7,#eaf8e4);border:6px solid white;border-radius:48px;box-shadow:var(--shadow);padding:42px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px}.author-strip h2{color:var(--forest);font-size:clamp(2.3rem,4vw,3.6rem);line-height:1;margin-bottom:12px}.author-strip p{font-size:1.18rem;line-height:1.7;max-width:760px}.contact{text-align:center;color:white;border-radius:56px;background:radial-gradient(circle at 15% 20%,rgba(255,215,106,.35),transparent 28%),linear-gradient(135deg,var(--forest),#55a96e);border:6px solid white;box-shadow:var(--shadow);padding:78px 34px}.contact h2{font-size:clamp(2.7rem,5vw,4.3rem);line-height:1;margin-bottom:18px}.contact p{max-width:760px;margin:0 auto 28px;font-size:1.22rem;line-height:1.7}footer{text-align:center;color:var(--forest);font-weight:800;padding:38px 20px;font-size:1.05rem}
 
-    @media(max-width:980px){.hero-mockup{min-height:620px;background-size:cover;background-position:center top}.hero-nav{left:24px;right:24px;top:18px}.hero-menu{display:none}.hero-logo-link{width:260px;height:86px}.hero-shop{padding:13px 22px;font-size:.95rem}.hero-real-actions{top:auto;bottom:22px;gap:14px}.hero-real-actions a{min-width:auto;padding:15px 20px;font-size:.98rem}.values,.book-layout,.book-feature.bibo .book-layout,.bulk-layout,.author-strip{grid-template-columns:1fr}.book-feature{padding:30px;border-radius:42px}.covers{grid-template-columns:1fr}.cover:last-child{margin-top:0}.cover:first-child,.cover:last-child{transform:none}}
-    @media(max-width:768px){section{padding:56px 16px}.hero-mockup{min-height:520px;background-size:auto 100%;background-position:center top}.hero-mockup::after{height:90px}.hero-nav{left:14px;right:14px;top:12px}.hero-logo-link{width:180px;height:60px}.hero-shop{padding:10px 15px;font-size:.86rem}.hero-real-actions{left:16px;right:16px;bottom:12px;transform:none;flex-direction:column;gap:8px}.hero-real-actions a{width:100%;max-width:320px;margin:auto;padding:13px 16px;font-size:.95rem}.bulk-order{padding:32px 18px;border-radius:28px}.bulk-box .btn,.contact .btn{width:100%;text-align:center;max-width:315px;margin-left:auto;margin-right:auto}.contact{padding:42px 18px;border-radius:34px;border-width:4px}.contact p{font-size:1rem;line-height:1.55;margin-bottom:22px;max-width:330px}}
+    @media(max-width:980px){.hero-mockup{min-height:620px;background-size:cover;background-position:center top}.hero-nav{left:24px;right:24px;top:18px}.hero-menu{display:none}.hero-logo-link{
+      width:250px;
+      height:95px;
+      background:url('logo.png') center center / contain no-repeat;
+    }.hero-shop{padding:13px 22px;font-size:.95rem}.hero-real-actions{top:auto;bottom:22px;gap:14px}.hero-real-actions a{min-width:auto;padding:15px 20px;font-size:.98rem}.values,.book-layout,.book-feature.bibo .book-layout,.bulk-layout,.author-strip{grid-template-columns:1fr}.book-feature{padding:30px;border-radius:42px}.covers{grid-template-columns:1fr}.cover:last-child{margin-top:0}.cover:first-child,.cover:last-child{transform:none}}
+    @media(max-width:768px){section{padding:56px 16px}.hero-mockup{min-height:520px;background-size:auto 100%;background-position:center top}.hero-mockup::after{height:90px}.hero-nav{left:14px;right:14px;top:12px}.hero-logo-link{
+      width:155px;
+      height:68px;
+      background:url('logo.png') center center / contain no-repeat;
+    }.hero-shop{padding:10px 15px;font-size:.86rem}.hero-real-actions{left:16px;right:16px;bottom:12px;transform:none;flex-direction:column;gap:8px}.hero-real-actions a{width:100%;max-width:320px;margin:auto;padding:13px 16px;font-size:.95rem}.shop-mini{padding:22px 16px;border-radius:24px}
+      .shop-mini-title h3{font-size:1.65rem}
+      .shop-mini-book{align-items:flex-start;flex-direction:column}
+      .shop-mini-book a{width:100%;text-align:center}
+      .bulk-order{padding:32px 18px;border-radius:28px}.bulk-box .btn,.contact .btn{width:100%;text-align:center;max-width:315px;margin-left:auto;margin-right:auto}.contact{padding:42px 18px;border-radius:34px;border-width:4px}.contact p{font-size:1rem;line-height:1.55;margin-bottom:22px;max-width:330px}}
   </style>
 </head>
 <body>
@@ -95,7 +163,30 @@
     <article class="book-feature bibo" id="bibo"><div class="book-layout"><div class="book-copy"><span class="label">🦫 Prochainement</span><h2>Bibo le castor</h2><p><strong>Bibo le castor et les gardiens des milieux humides</strong> entraînera les enfants dans une aventure éducative au cœur des étangs et de la biodiversité.</p><p>Les jeunes lecteurs découvriront l’importance des castors, des milieux humides et de la protection de la nature.</p><p>Un livre tendre et éducatif pour apprendre à aimer, observer et protéger les petits trésors de notre planète.</p><div class="pill-list"><span class="pill">Castors</span><span class="pill">Milieux humides</span><span class="pill">Biodiversité</span><span class="pill">Forêt canadienne</span></div></div><div class="covers"><div class="cover"><img src="bibo-cover.png" alt="Bibo le castor"></div><div class="cover"><img src="bibo-page.png" alt="Bibo et les milieux humides"></div></div></div></article>
   </section>
 
-  <section id="commandes"><div class="bulk-order"><div class="bulk-layout"><div class="bulk-copy"><span class="label">📦 Commandes de groupe</span><h2>Commandes de 20 livres ou plus</h2><p>Pour les écoles, garderies, bibliothèques, organismes et événements, nous offrons un service de commande personnalisée.</p><p>Écrivez-nous et nous vous enverrons un lien de paiement sécurisé Stripe lorsque la quantité, la livraison et la disponibilité seront confirmées.</p><div class="pill-list"><span class="pill">Garderies</span><span class="pill">Écoles</span><span class="pill">Bibliothèques</span><span class="pill">Cadeaux éducatifs</span></div></div><div class="bulk-box"><h3>Paiement sécurisé</h3><ul class="bulk-list"><li>✅ Minimum : 20 livres</li><li>✅ Paiement sécurisé avec Stripe</li><li>✅ Livraison à confirmer selon l’adresse</li><li>✅ Idéal pour garderies, écoles et organismes</li></ul><a class="btn btn-primary" href="#" aria-label="Lien Stripe à venir">💳 Payer avec Stripe à venir</a><a class="btn btn-secondary" style="margin-top:12px" href="mailto:tremblayjosee00@gmail.com?subject=Commande%20de%2020%20livres%20ou%20plus%20-%20%C3%89co-R%C3%AAves&body=Bonjour%2C%0A%0AJ%E2%80%99aimerais%20obtenir%20une%20soumission%20pour%20une%20commande%20de%2020%20livres%20ou%20plus.%0A%0ANom%20%3A%0AOrganisation%20/%20garderie%20/%20%C3%A9cole%20%3A%0ALivre%20souhait%C3%A9%20%3A%0AQuantit%C3%A9%20d%C3%A9sir%C3%A9e%20%3A%0AAdresse%20de%20livraison%20%3A%0ADate%20souhait%C3%A9e%20%3A%0ACommentaires%20%3A%0A%0AMerci%21">✉️ Nous écrire pour une commande</a><p class="bulk-note">Quand votre lien Stripe sera créé, il suffira de remplacer href="#" par le lien de paiement Stripe.</p></div></div></div></section>
+  <section id="commandes"><div class="bulk-order"><div class="bulk-layout"><div class="bulk-copy"><div class="shop-mini">
+              <div class="shop-mini-title">
+                <h3>📚 Boutique Éco-Rêves</h3>
+                <div class="shop-mini-line"></div>
+              </div>
+
+              <div class="shop-mini-books">
+                <div class="shop-mini-book">
+                  <div>
+                    <strong>🐝 Bella l'abeille</strong>
+                    <span>Disponible maintenant</span>
+                  </div>
+                  <a href="https://www.amazon.ca/-/fr/Jos%C3%A9e-Tremblay/dp/B0H1JVYJT3/" target="_blank" rel="noopener">🛒 Acheter sur Amazon</a>
+                </div>
+
+                <div class="shop-mini-book">
+                  <div>
+                    <strong>🦫 Bibo le castor</strong>
+                    <span>Bientôt disponible</span>
+                  </div>
+                  <em>À venir</em>
+                </div>
+              </div>
+            </div><span class="label">📦 Commandes de groupe</span><h2>Commandes de 20 livres ou plus</h2><p>Pour les écoles, garderies, bibliothèques, organismes et événements, nous offrons un service de commande personnalisée.</p><p>Écrivez-nous et nous vous enverrons un lien de paiement sécurisé Stripe lorsque la quantité, la livraison et la disponibilité seront confirmées.</p><div class="pill-list"><span class="pill">Garderies</span><span class="pill">Écoles</span><span class="pill">Bibliothèques</span><span class="pill">Cadeaux éducatifs</span></div></div><div class="bulk-box"><h3>Paiement sécurisé</h3><ul class="bulk-list"><li>✅ Minimum : 20 livres</li><li>✅ Paiement sécurisé avec Stripe</li><li>✅ Livraison à confirmer selon l’adresse</li><li>✅ Idéal pour garderies, écoles et organismes</li></ul><a class="btn btn-primary" href="#" aria-label="Lien Stripe à venir">💳 Payer avec Stripe à venir</a><a class="btn btn-secondary" style="margin-top:12px" href="mailto:tremblayjosee00@gmail.com?subject=Commande%20de%2020%20livres%20ou%20plus%20-%20%C3%89co-R%C3%AAves&body=Bonjour%2C%0A%0AJ%E2%80%99aimerais%20obtenir%20une%20soumission%20pour%20une%20commande%20de%2020%20livres%20ou%20plus.%0A%0ANom%20%3A%0AOrganisation%20/%20garderie%20/%20%C3%A9cole%20%3A%0ALivre%20souhait%C3%A9%20%3A%0AQuantit%C3%A9%20d%C3%A9sir%C3%A9e%20%3A%0AAdresse%20de%20livraison%20%3A%0ADate%20souhait%C3%A9e%20%3A%0ACommentaires%20%3A%0A%0AMerci%21">✉️ Nous écrire pour une commande</a><p class="bulk-note">Quand votre lien Stripe sera créé, il suffira de remplacer href="#" par le lien de paiement Stripe.</p></div></div></div></section>
 
   <section><div class="author-strip"><div><h2>Une auteure proche des enfants.</h2><p>Éducatrice à l’enfance depuis plus de 20 ans, Josée Tremblay imagine des histoires chaleureuses, accessibles et remplies de nature.</p></div><a class="btn btn-primary" href="auteur.html">Découvrir Josée</a></div></section>
   <section id="contact"><div class="contact"><h2>Une question ou une collaboration?</h2><p>Écrivez-nous pour en savoir plus sur nos livres, nos projets jeunesse ou nos futures publications.</p><a class="btn btn-secondary" href="mailto:tremblayjosee00@gmail.com">tremblayjosee00@gmail.com</a></div></section>
