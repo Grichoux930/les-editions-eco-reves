@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boutique Éco-Rêves | Livres jeunesse nature</title>
-  <meta name="description" content="Boutique des éditions Éco-Rêves : livres jeunesse éducatifs, achats Amazon et commandes de groupe pour écoles, garderies et organismes." />
+  <title>Éco-Rêves Shop | Children’s Nature Books</title>
+  <meta name="description" content="The Éco-Rêves shop: educational children’s books, Amazon purchases, and group orders for schools, daycares, libraries, and organizations." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -39,7 +39,6 @@
       box-shadow:0 30px 100px rgba(0,0,0,.10);
     }
 
-    /* HEADER SIMPLE — PLUS DE GRANDE IMAGE EN ARRIÈRE-PLAN */
     .topbar{
       position:sticky;
       top:0;
@@ -103,29 +102,6 @@
       border-radius:999px;
       box-shadow:0 12px 24px rgba(15,74,46,.22);
       flex-shrink:0;
-    }
-
-
-    .lang-switch{
-      display:flex;
-      gap:8px;
-      align-items:center;
-      flex-shrink:0;
-    }
-
-    .lang-switch a{
-      color:var(--forest);
-      text-decoration:none;
-      font-weight:800;
-      background:#fffef7;
-      padding:9px 13px;
-      border-radius:999px;
-      box-shadow:0 8px 16px rgba(0,0,0,.07);
-      white-space:nowrap;
-    }
-
-    .lang-switch a:hover{
-      transform:translateY(-2px);
     }
 
     .shop-hero{
@@ -304,6 +280,14 @@
       box-shadow:0 8px 16px rgba(0,0,0,.06);
     }
 
+    .amazon-note{
+      margin:0 0 18px;
+      font-size:1.02rem;
+      line-height:1.5;
+      font-weight:800;
+      color:#1d7245;
+    }
+
     .bulk-order{
       position:relative;
       overflow:hidden;
@@ -472,70 +456,66 @@
 <div class="site-shell">
 
   <header class="topbar">
-    <div class="nav-wrap" aria-label="Navigation principale">
-      <a class="logo-link" href="index.html" aria-label="Accueil Les éditions Éco-Rêves">Accueil Éco-Rêves</a>
+    <div class="nav-wrap" aria-label="Main navigation">
+      <a class="logo-link" href="index-en.html" aria-label="Les éditions Éco-Rêves Home">Éco-Rêves Home</a>
 
       <nav class="menu">
-        <a href="index.html">Accueil</a>
-        <a href="index.html#livres">Nos livres</a>
-        <a href="auteur.html">Auteure</a>
-        <a href="boutique.html">Boutique</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index-en.html">Home</a>
+        <a href="index-en.html#livres">Our Books</a>
+        <a href="auteur-en.html">About</a>
+        <a href="#commandes">For Schools</a>
+        <a href="index-en.html#mission">Resources</a>
+        <a href="#contact">Contact</a>
+        <a href="boutique.html">FR</a>
       </nav>
 
-      <div class="lang-switch" aria-label="Choix de langue">
-        <a href="boutique.html">🇫🇷 FR</a>
-        <a href="boutique-en.html">🇬🇧 EN</a>
-      </div>
-
-      <a class="shop-active" href="boutique.html">🛍️ Boutique</a>
+      <a class="shop-active" href="boutique-en.html">🛍️ Shop</a>
     </div>
   </header>
 
   <main class="shop-hero">
-    <div class="kicker">📚 Boutique officielle</div>
-    <h1>Boutique Éco-Rêves</h1>
-    <p class="hero-text">Découvrez nos livres jeunesse éducatifs et nos options de commandes de groupe pour garderies, écoles, bibliothèques et organismes.</p>
+    <div class="kicker">📚 Official Shop</div>
+    <h1>Éco-Rêves Shop</h1>
+    <p class="hero-text">Discover our educational children’s books and our group order options for daycares, schools, libraries, and organizations.</p>
   </main>
 
   <section id="livres">
-    <div class="section-kicker">Nos livres</div>
-    <h2 class="section-title">Acheter ou réserver nos histoires.</h2>
-    <p class="section-subtitle">Bella et Bibo sont maintenant disponibles sur Amazon.</p>
+    <div class="section-kicker">Our Books</div>
+    <h2 class="section-title">Buy or reserve our stories.</h2>
+    <p class="section-subtitle">Bella is available on Amazon. Bibo will soon arrive in the Éco-Rêves shop.</p>
 
     <div class="shop-grid">
       <article class="product-card bella">
         <div class="book-cover">
-          <img src="bella labeille.png" alt="Couverture de Bella l’abeille">
+          <img src="bella labeille.png" alt="Cover of Bella the Bee">
         </div>
         <div class="product-copy">
-          <span class="status">🐝 Disponible maintenant</span>
-          <h2>Bella l’abeille</h2>
-          <p>Une histoire lumineuse pour faire découvrir aux enfants le rôle essentiel des abeilles, des fleurs et du pollen.</p>
+          <span class="status">🐝 Available Now</span>
+          <h2>Bella the Bee</h2>
+          <p>A bright story that helps children discover the essential role of bees, flowers, and pollen.</p>
           <div class="pill-list">
-            <span class="pill">2 à 6 ans</span>
+            <span class="pill">Ages 2 to 6</span>
             <span class="pill">Nature</span>
-            <span class="pill">Abeilles</span>
+            <span class="pill">Bees</span>
           </div>
-          <a class="btn btn-secondary" href="https://www.amazon.ca/-/fr/Jos%C3%A9e-Tremblay/dp/B0H1JVYJT3/" target="_blank" rel="noopener">🛒 Acheter sur Amazon</a>
+          <a class="btn btn-secondary" href="https://www.amazon.ca/-/fr/Jos%C3%A9e-Tremblay/dp/B0H1JVYJT3/" target="_blank" rel="noopener">🛒 Buy on Amazon</a>
         </div>
       </article>
 
       <article class="product-card bibo">
         <div class="book-cover">
-          <img src="bibo-cover.png" alt="Couverture de Bibo le castor">
+          <img src="bibo-cover.png" alt="Cover of Bibo the Beaver">
         </div>
         <div class="product-copy">
-          <span class="status">🦫 Disponible maintenant</span>
-          <h2>Bibo le castor</h2>
-          <p><strong>Bibo le castor et les gardiens des milieux humides</strong> fera découvrir les castors, les étangs et la biodiversité.</p>
+          <span class="status">🦫 Coming Soon</span>
+          <h2>Bibo the Beaver</h2>
+          <p><strong>Bibo the Beaver and the Wetland Guardians</strong> will introduce children to beavers, ponds, and biodiversity.</p>
           <div class="pill-list">
-            <span class="pill">Castors</span>
-            <span class="pill">Milieux humides</span>
-            <span class="pill">Biodiversité</span>
+            <span class="pill">Beavers</span>
+            <span class="pill">Wetlands</span>
+            <span class="pill">Biodiversity</span>
           </div>
-          <p style="margin-bottom:18px;font-weight:800;color:#1d7245;">🌍 Commandez votre exemplaire sur Amazon — expédition disponible dans de nombreux pays.</p>
-          <a class="btn btn-primary" href="https://www.amazon.ca/s?k=bibo+le+castor&__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=6KNJ8R5K0GRT&sprefix=bibo+le+castor+%2Caps%2C85&ref=nb_sb_noss" target="_blank" rel="noopener">🛒 Acheter sur Amazon</a>
+          <a class="btn btn-primary" href="#contact">✉️ Keep Me Updated</a>
         </div>
       </article>
     </div>
@@ -545,34 +525,34 @@
     <div class="bulk-order">
       <div class="bulk-layout">
         <div class="bulk-copy">
-          <span class="status">📦 Commandes de groupe</span>
-          <h2>Commandes de 20 livres ou plus</h2>
-          <p style="font-weight:800;color:#1d7245;">📚 Rabais de volume disponibles pour les écoles, garderies, bibliothèques, organismes et événements spéciaux.</p>
-          <p>Pour les commandes de groupe, nous préparons une soumission personnalisée selon la quantité, la livraison et la disponibilité.</p>
-          <p>Après confirmation, nous vous envoyons un lien de paiement sécurisé Stripe.</p>
+          <span class="status">📦 Group Orders</span>
+          <h2>Orders of 20 books or more</h2>
+          <p style="font-weight:800;color:#1d7245;">📚 Volume discounts available for schools, daycares, libraries, organizations, and special events.</p>
+          <p>For group orders, we prepare a personalized quote based on quantity, delivery, and availability.</p>
+          <p>After confirmation, we will send you a secure Stripe payment link.</p>
           <div class="pill-list">
-            <span class="pill">Garderies</span>
-            <span class="pill">Écoles</span>
-            <span class="pill">Bibliothèques</span>
-            <span class="pill">Cadeaux éducatifs</span>
+            <span class="pill">Daycares</span>
+            <span class="pill">Schools</span>
+            <span class="pill">Libraries</span>
+            <span class="pill">Educational Gifts</span>
           </div>
         </div>
 
         <div class="bulk-box">
-          <h3>Paiement sécurisé</h3>
+          <h3>Secure Payment</h3>
           <ul class="bulk-list">
-            <li>✅ Minimum : 20 livres</li>
-            <li>✅ Rabais de volume disponibles</li>
-            <li>✅ Paiement sécurisé avec Stripe</li>
-            <li>✅ Livraison à confirmer selon l’adresse</li>
-            <li>✅ Idéal pour garderies, écoles et organismes</li>
+            <li>✅ Minimum: 20 books</li>
+            <li>✅ Volume discounts available</li>
+            <li>✅ Secure payment with Stripe</li>
+            <li>✅ Delivery confirmed according to address</li>
+            <li>✅ Ideal for daycares, schools, and organizations</li>
           </ul>
 
-          <a class="btn btn-primary" href="mailto:tremblayjosee00@gmail.com?subject=Demande%20de%20soumission%20-%20Commande%20de%2020%20livres%20ou%20plus%20-%20%C3%89co-R%C3%AAves&body=Bonjour%2C%0A%0AJ%E2%80%99aimerais%20obtenir%20une%20soumission%20pour%20une%20commande%20de%2020%20livres%20ou%20plus.%0A%0ANom%20%3A%0AOrganisation%20/%20garderie%20/%20%C3%A9cole%20%3A%0ALivre%20souhait%C3%A9%20%3A%0AQuantit%C3%A9%20d%C3%A9sir%C3%A9e%20%3A%0AAdresse%20de%20livraison%20%3A%0ADate%20souhait%C3%A9e%20%3A%0ACommentaires%20%3A%0A%0AMerci%21">📋 Demander une soumission</a>
+          <a class="btn btn-primary" href="mailto:tremblayjosee00@gmail.com?subject=Quote%20Request%20-%20Order%20of%2020%20Books%20or%20More%20-%20Eco-Reves&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20an%20order%20of%2020%20books%20or%20more.%0A%0AName%3A%0AOrganization%20/%20daycare%20/%20school%3A%0ABook%20requested%3A%0ADesired%20quantity%3A%0ADelivery%20address%3A%0ADesired%20date%3A%0AComments%3A%0A%0AThank%20you%21">📋 Request a Quote</a>
 
-          <a class="btn btn-secondary" style="margin-top:12px" href="mailto:tremblayjosee00@gmail.com?subject=Commande%20%C3%89co-R%C3%AAves&body=Bonjour%2C%0A%0AJ%E2%80%99aimerais%20vous%20%C3%A9crire%20pour%20une%20commande%20%C3%89co-R%C3%AAves.%0A%0ANom%20%3A%0ALivre%20souhait%C3%A9%20%3A%0AQuantit%C3%A9%20%3A%0ACommentaires%20%3A%0A%0AMerci%21">✉️ Nous écrire pour une commande</a>
+          <a class="btn btn-secondary" style="margin-top:12px" href="mailto:tremblayjosee00@gmail.com?subject=Eco-Reves%20Order&body=Hello%2C%0A%0AI%20would%20like%20to%20contact%20you%20about%20an%20Eco-Reves%20order.%0A%0AName%3A%0ABook%20requested%3A%0AQuantity%3A%0AComments%3A%0A%0AThank%20you%21">✉️ Write to Us About an Order</a>
 
-          <p class="bulk-note">Après votre demande, nous confirmerons la quantité, la livraison et le rabais applicable, puis nous vous enverrons une soumission personnalisée.</p>
+          <p class="bulk-note">After your request, we will confirm the quantity, delivery, and applicable discount, then send you a personalized quote.</p>
         </div>
       </div>
     </div>
@@ -580,13 +560,13 @@
 
   <section id="contact">
     <div class="contact">
-      <h2>Une question sur la boutique?</h2>
-      <p>Écrivez-nous pour une commande, une collaboration ou une demande de livres pour votre milieu.</p>
+      <h2>Questions about the shop?</h2>
+      <p>Write to us for an order, a collaboration, or a book request for your school, daycare, library, or organization.</p>
       <a class="btn btn-secondary" href="mailto:tremblayjosee00@gmail.com">tremblayjosee00@gmail.com</a>
     </div>
   </section>
 
-  <footer>© 2026 Les éditions Éco-Rêves — Boutique officielle.</footer>
+  <footer>© 2026 Les éditions Éco-Rêves — Official Shop.</footer>
 </div>
 </body>
-</html>
+</
