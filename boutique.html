@@ -619,7 +619,7 @@
             <li>✅ Idéal pour garderies, écoles et organismes</li>
           </ul>
 
-          <a class="btn btn-primary" href="#bon-commande">📝 Remplir le bon de commande</a>
+          <button class="btn btn-primary" type="button" onclick="openOrderFormFr()">📝 Remplir le bon de commande</button>
 
           <a class="btn btn-secondary" style="margin-top:12px" href="mailto:tremblayjosee00@gmail.com?subject=Commande%20%C3%89co-R%C3%AAves&body=Bonjour%2C%0A%0AJ%E2%80%99aimerais%20vous%20%C3%A9crire%20pour%20une%20commande%20%C3%89co-R%C3%AAves.%0A%0ANom%20%3A%0ALivre%20souhait%C3%A9%20%3A%0AQuantit%C3%A9%20%3A%0ACommentaires%20%3A%0A%0AMerci%21">✉️ Nous écrire pour une commande</a>
 
@@ -684,6 +684,7 @@
 
         <div class="form-actions">
           <button class="btn btn-primary" type="button" onclick="sendOrderFr()">📨 Envoyer la demande par courriel</button>
+          <button class="btn btn-secondary" type="button" onclick="copyOrderFr()">📋 Copier la demande</button>
           <button class="btn btn-secondary" type="button" onclick="window.print()">🖨️ Imprimer / enregistrer en PDF</button>
         </div>
         <p class="form-note">Ce formulaire ne prélève aucun paiement. Le prix final, le rabais de volume et les frais de livraison seront confirmés avant paiement.</p>
@@ -701,5 +702,105 @@
 
   <footer>© 2026 Les éditions Éco-Rêves — Boutique officielle.</footer>
 </div>
+
+<script>
+(function(){
+  function n(id){
+    const el=document.getElementById(id);
+    const num=parseInt(el && el.value ? el.value : '0',10);
+    return Number.isFinite(num) && num>0 ? num : 0;
+  }
+  function v(id){
+    const el=document.getElementById(id);
+    return el ? el.value.trim() : '';
+  }
+  function totalFr(){
+    const total=n('frBella')+n('frBibo')+n('frChouette');
+    const out=document.getElementById('frTotal');
+    if(out) out.textContent=String(total);
+    const err=document.getElementById('frError');
+    if(err) err.classList.toggle('show', total>0 && total<20);
+    return total;
+  }
+  function bodyFr(){
+    return [
+      'BON DE COMMANDE ÉCO-RÊVES',
+      '',
+      'Organisation : '+v('frOrg'),
+      'Personne responsable : '+v('frContact'),
+      'Courriel : '+v('frEmail'),
+      'Téléphone : '+v('frPhone'),
+      'Type d’organisation : '+v('frType'),
+      'No de bon de commande : '+v('frPo'),
+      '',
+      'ADRESSE DE LIVRAISON',
+      v('frAddress'),
+      v('frCity')+', '+v('frProvince')+' '+v('frPostal'),
+      v('frCountry'),
+      '',
+      'LIVRES',
+      'Bella l’abeille : '+n('frBella'),
+      'Bibo le castor : '+n('frBibo'),
+      'Ah! Que c’est chouette! : '+n('frChouette'),
+      'Total : '+totalFr()+' livres',
+      '',
+      'Date souhaitée : '+v('frDate'),
+      'Préférence de livraison : '+v('frDelivery'),
+      '',
+      'Commentaires :',
+      v('frNotes')
+    ].join('\n');
+  }
+  window.openOrderFormFr=function(){
+    const section=document.getElementById('bon-commande');
+    if(section) section.scrollIntoView({behavior:'smooth',block:'start'});
+    setTimeout(function(){
+      const first=document.getElementById('frOrg');
+      if(first) first.focus();
+    },450);
+  };
+  window.sendOrderFr=function(){
+    const form=document.getElementById('orderFormFr');
+    if(form && !form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+    const total=totalFr();
+    if(total<20){
+      const err=document.getElementById('frError');
+      if(err){
+        err.classList.add('show');
+        err.scrollIntoView({behavior:'smooth',block:'center'});
+      }
+      return;
+    }
+    const subject='Bon de commande Éco-Rêves - '+(v('frOrg') || 'Commande de groupe');
+    const mailto='mailto:tremblayjosee00@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyFr());
+    window.location.assign(mailto);
+  };
+  window.copyOrderFr=async function(){
+    const content=bodyFr();
+    try{
+      await navigator.clipboard.writeText(content);
+    }catch(e){
+      const ta=document.createElement('textarea');
+      ta.value=content;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      ta.remove();
+    }
+    alert('La demande a été copiée. Vous pouvez la coller dans votre courriel.');
+  };
+  ['frBella','frBibo','frChouette'].forEach(function(id){
+    const el=document.getElementById(id);
+    if(el){
+      el.addEventListener('input',totalFr);
+      el.addEventListener('change',totalFr);
+    }
+  });
+  totalFr();
+})();
+</script>
 </body>
 </html>
