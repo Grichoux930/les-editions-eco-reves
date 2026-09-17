@@ -445,6 +445,57 @@
       .bulk-box .btn,.contact .btn,.product-copy .btn{width:100%;text-align:center}
       .contact{padding:42px 18px;border-radius:34px;border-width:4px}
     }
+
+
+    .order-form-wrap{
+      border-radius:42px;
+      padding:46px;
+      background:linear-gradient(135deg,#fffdf4 0%,#eef8e8 56%,#fff3c8 100%);
+      border:4px solid rgba(85,169,110,.28);
+      box-shadow:var(--shadow);
+    }
+
+    .order-form-head{text-align:center;max-width:820px;margin:0 auto 30px}
+    .order-form-head h2{color:var(--forest);font-size:clamp(2.35rem,4.6vw,3.9rem);line-height:1;margin-bottom:14px}
+    .order-form-head p{font-size:1.1rem;line-height:1.65;color:#514235}
+    .order-form{display:grid;gap:24px}
+    .form-section{background:#fffef7;border:5px solid white;border-radius:28px;padding:24px;box-shadow:0 14px 32px rgba(38,48,34,.08)}
+    .form-section h3{color:var(--forest);font-size:1.45rem;margin-bottom:16px}
+    .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .field{display:grid;gap:7px}
+    .field.full{grid-column:1/-1}
+    .field label{font-weight:800;color:var(--forest)}
+    .field input,.field select,.field textarea{
+      width:100%;font:inherit;color:var(--text);background:white;border:2px solid #dfead8;border-radius:14px;padding:12px 14px;outline:none;
+    }
+    .field textarea{min-height:120px;resize:vertical}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--leaf);box-shadow:0 0 0 4px rgba(85,169,110,.12)}
+    .book-qty-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .book-qty{background:#f3f9ee;border-radius:18px;padding:16px;display:grid;gap:8px}
+    .book-qty strong{color:var(--forest);line-height:1.25}
+    .book-qty input{max-width:120px}
+    .order-total{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:#edf7e7;border-radius:18px;padding:16px 18px;font-weight:800;color:var(--forest);margin-top:16px}
+    .order-total span:last-child{font-size:1.3rem}
+    .form-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:4px}
+    .form-note{text-align:center;font-size:.96rem;line-height:1.55;color:#5d4a3d}
+    .form-error{display:none;background:#fff0e8;color:#8a331d;border:2px solid #ffc4ae;border-radius:14px;padding:12px 14px;font-weight:800}
+    .form-error.show{display:block}
+
+    @media(max-width:768px){
+      .order-form-wrap{padding:24px 16px;border-radius:28px}
+      .form-grid,.book-qty-grid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .form-actions .btn{width:100%}
+    }
+
+    @media print{
+      .topbar,.shop-hero,#livres,#commandes,#contact,footer,.form-actions,.form-note{display:none!important}
+      body,.site-shell{background:white!important;box-shadow:none!important}
+      section#bon-commande{padding:0!important;max-width:none!important}
+      .order-form-wrap{box-shadow:none!important;border:1px solid #ccc!important;background:white!important;padding:20px!important}
+      .form-section{box-shadow:none!important;border:1px solid #ddd!important}
+    }
+
   </style>
 </head>
 <body>
@@ -568,13 +619,75 @@
             <li>✅ Ideal for daycares, schools, and organizations</li>
           </ul>
 
-          <a class="btn btn-primary" href="mailto:tremblayjosee00@gmail.com?subject=Quote%20Request%20-%20Order%20of%2020%20Books%20or%20More%20-%20Eco-Reves&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20an%20order%20of%2020%20books%20or%20more.%0A%0AName%3A%0AOrganization%20/%20daycare%20/%20school%3A%0ABook%20requested%3A%0ADesired%20quantity%3A%0ADelivery%20address%3A%0ADesired%20date%3A%0AComments%3A%0A%0AThank%20you%21">📋 Request a Quote</a>
+          <a class="btn btn-primary" href="#order-form">📝 Fill Out the Order Form</a>
 
           <a class="btn btn-secondary" style="margin-top:12px" href="mailto:tremblayjosee00@gmail.com?subject=Eco-Reves%20Order&body=Hello%2C%0A%0AI%20would%20like%20to%20contact%20you%20about%20an%20Eco-Reves%20order.%0A%0AName%3A%0ABook%20requested%3A%0AQuantity%3A%0AComments%3A%0A%0AThank%20you%21">✉️ Write to Us About an Order</a>
 
           <p class="bulk-note">After your request, we will confirm the quantity, delivery, and applicable discount, then send you a personalized quote.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+
+  <section id="order-form">
+    <div class="order-form-wrap">
+      <div class="order-form-head">
+        <span class="status">📝 Order Form</span>
+        <h2>Prepare a Group Order</h2>
+        <p>Complete this form for an order of 20 books or more. We will confirm the volume discount, shipping, and final amount before sending a secure payment link.</p>
+      </div>
+
+      <form class="order-form" id="orderFormEn" onsubmit="return false;">
+        <div class="form-section">
+          <h3>1. Contact Information</h3>
+          <div class="form-grid">
+            <div class="field"><label for="enOrg">Organization / daycare / school *</label><input id="enOrg" required></div>
+            <div class="field"><label for="enContact">Contact person *</label><input id="enContact" required></div>
+            <div class="field"><label for="enEmail">Email *</label><input id="enEmail" type="email" required></div>
+            <div class="field"><label for="enPhone">Phone</label><input id="enPhone" type="tel"></div>
+            <div class="field"><label for="enType">Organization type</label><select id="enType"><option>Daycare</option><option>School</option><option>Library</option><option>Organization</option><option>Business</option><option>Other</option></select></div>
+            <div class="field"><label for="enPo">Purchase order number</label><input id="enPo" placeholder="Optional"></div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>2. Shipping Address</h3>
+          <div class="form-grid">
+            <div class="field full"><label for="enAddress">Address *</label><input id="enAddress" required></div>
+            <div class="field"><label for="enCity">City *</label><input id="enCity" required></div>
+            <div class="field"><label for="enProvince">Province / State *</label><input id="enProvince" required></div>
+            <div class="field"><label for="enPostal">Postal / ZIP code *</label><input id="enPostal" required></div>
+            <div class="field"><label for="enCountry">Country *</label><input id="enCountry" value="Canada" required></div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>3. Books and Quantities</h3>
+          <div class="book-qty-grid">
+            <div class="book-qty"><strong>Bella the Bee</strong><label for="enBella">Quantity</label><input id="enBella" type="number" min="0" value="0" inputmode="numeric"></div>
+            <div class="book-qty"><strong>Bibo the Beaver</strong><label for="enBibo">Quantity</label><input id="enBibo" type="number" min="0" value="0" inputmode="numeric"></div>
+            <div class="book-qty"><strong>Ah! Que c’est chouette!</strong><label for="enChouette">Quantity</label><input id="enChouette" type="number" min="0" value="0" inputmode="numeric"></div>
+          </div>
+          <div class="order-total"><span>Total books</span><span id="enTotal">0</span></div>
+          <div class="form-error" id="enError">Group orders require a minimum of 20 books in total.</div>
+        </div>
+
+        <div class="form-section">
+          <h3>4. Order Details</h3>
+          <div class="form-grid">
+            <div class="field"><label for="enDate">Requested date</label><input id="enDate" type="date"></div>
+            <div class="field"><label for="enDelivery">Delivery preference</label><select id="enDelivery"><option>Shipping</option><option>Pickup if available</option><option>To be confirmed</option></select></div>
+            <div class="field full"><label for="enNotes">Comments / special requirements</label><textarea id="enNotes" placeholder="Example: school activity, event, signed copies, deadline, etc."></textarea></div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="button" onclick="sendOrderEn()">📨 Send request by email</button>
+          <button class="btn btn-secondary" type="button" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        </div>
+        <p class="form-note">This form does not collect payment. The final price, volume discount, and shipping costs will be confirmed before payment.</p>
+      </form>
     </div>
   </section>
 
