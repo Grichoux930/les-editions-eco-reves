@@ -619,7 +619,7 @@
             <li>✅ Ideal for daycares, schools, and organizations</li>
           </ul>
 
-          <a class="btn btn-primary" href="#order-form">📝 Fill Out the Order Form</a>
+          <button class="btn btn-primary" type="button" onclick="openOrderFormEn()">📝 Fill Out the Order Form</button>
 
           <a class="btn btn-secondary" style="margin-top:12px" href="mailto:tremblayjosee00@gmail.com?subject=Eco-Reves%20Order&body=Hello%2C%0A%0AI%20would%20like%20to%20contact%20you%20about%20an%20Eco-Reves%20order.%0A%0AName%3A%0ABook%20requested%3A%0AQuantity%3A%0AComments%3A%0A%0AThank%20you%21">✉️ Write to Us About an Order</a>
 
@@ -684,6 +684,7 @@
 
         <div class="form-actions">
           <button class="btn btn-primary" type="button" onclick="sendOrderEn()">📨 Send request by email</button>
+          <button class="btn btn-secondary" type="button" onclick="copyOrderEn()">📋 Copy request</button>
           <button class="btn btn-secondary" type="button" onclick="window.print()">🖨️ Print / Save as PDF</button>
         </div>
         <p class="form-note">This form does not collect payment. The final price, volume discount, and shipping costs will be confirmed before payment.</p>
@@ -701,5 +702,105 @@
 
   <footer>© 2026 Les éditions Éco-Rêves — Official Shop.</footer>
 </div>
+
+<script>
+(function(){
+  function n(id){
+    const el=document.getElementById(id);
+    const num=parseInt(el && el.value ? el.value : '0',10);
+    return Number.isFinite(num) && num>0 ? num : 0;
+  }
+  function v(id){
+    const el=document.getElementById(id);
+    return el ? el.value.trim() : '';
+  }
+  function totalEn(){
+    const total=n('enBella')+n('enBibo')+n('enChouette');
+    const out=document.getElementById('enTotal');
+    if(out) out.textContent=String(total);
+    const err=document.getElementById('enError');
+    if(err) err.classList.toggle('show', total>0 && total<20);
+    return total;
+  }
+  function bodyEn(){
+    return [
+      'ÉCO-RÊVES ORDER FORM',
+      '',
+      'Organization: '+v('enOrg'),
+      'Contact person: '+v('enContact'),
+      'Email: '+v('enEmail'),
+      'Phone: '+v('enPhone'),
+      'Organization type: '+v('enType'),
+      'Purchase order number: '+v('enPo'),
+      '',
+      'SHIPPING ADDRESS',
+      v('enAddress'),
+      v('enCity')+', '+v('enProvince')+' '+v('enPostal'),
+      v('enCountry'),
+      '',
+      'BOOKS',
+      'Bella the Bee: '+n('enBella'),
+      'Bibo the Beaver: '+n('enBibo'),
+      'Ah! Que c’est chouette!: '+n('enChouette'),
+      'Total: '+totalEn()+' books',
+      '',
+      'Requested date: '+v('enDate'),
+      'Delivery preference: '+v('enDelivery'),
+      '',
+      'Comments:',
+      v('enNotes')
+    ].join('\n');
+  }
+  window.openOrderFormEn=function(){
+    const section=document.getElementById('order-form');
+    if(section) section.scrollIntoView({behavior:'smooth',block:'start'});
+    setTimeout(function(){
+      const first=document.getElementById('enOrg');
+      if(first) first.focus();
+    },450);
+  };
+  window.sendOrderEn=function(){
+    const form=document.getElementById('orderFormEn');
+    if(form && !form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+    const total=totalEn();
+    if(total<20){
+      const err=document.getElementById('enError');
+      if(err){
+        err.classList.add('show');
+        err.scrollIntoView({behavior:'smooth',block:'center'});
+      }
+      return;
+    }
+    const subject='Éco-Rêves Order Form - '+(v('enOrg') || 'Group Order');
+    const mailto='mailto:tremblayjosee00@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyEn());
+    window.location.assign(mailto);
+  };
+  window.copyOrderEn=async function(){
+    const content=bodyEn();
+    try{
+      await navigator.clipboard.writeText(content);
+    }catch(e){
+      const ta=document.createElement('textarea');
+      ta.value=content;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      ta.remove();
+    }
+    alert('The order request has been copied. You can paste it into your email.');
+  };
+  ['enBella','enBibo','enChouette'].forEach(function(id){
+    const el=document.getElementById(id);
+    if(el){
+      el.addEventListener('input',totalEn);
+      el.addEventListener('change',totalEn);
+    }
+  });
+  totalEn();
+})();
+</script>
 </body>
 </html>
