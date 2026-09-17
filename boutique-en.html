@@ -104,6 +104,26 @@
       flex-shrink:0;
     }
 
+    .lang-switch{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex-shrink:0;
+    }
+
+    .lang-switch a{
+      color:var(--forest);
+      text-decoration:none;
+      font-weight:800;
+      background:#fffef7;
+      padding:9px 13px;
+      border-radius:999px;
+      box-shadow:0 8px 16px rgba(0,0,0,.07);
+      white-space:nowrap;
+    }
+
+    .lang-switch a:hover{transform:translateY(-2px)}
+
     .shop-hero{
       max-width:1260px;
       margin:0 auto;
@@ -213,7 +233,7 @@
       grid-template-columns:.9fr 1.1fr;
       gap:26px;
       align-items:center;
-      min-height:390px;
+      min-height:430px;
     }
 
     .product-card.bella{
@@ -222,6 +242,18 @@
 
     .product-card.bibo{
       background:linear-gradient(135deg,#e3f7df 0%,#fff7ce 56%,#dff4ff 100%);
+    }
+
+    .product-card.chouette{
+      background:linear-gradient(135deg,#fff1d6 0%,#f4d4a5 55%,#fff5df 100%);
+      grid-column:1 / -1;
+      grid-template-columns:.72fr 1.28fr;
+    }
+
+    .product-card.chouette .book-cover{
+      max-width:390px;
+      width:100%;
+      margin:auto;
     }
 
     .book-cover{
@@ -278,6 +310,14 @@
       border-radius:999px;
       font-weight:800;
       box-shadow:0 8px 16px rgba(0,0,0,.06);
+    }
+
+    .amazon-note{
+      margin:0 0 18px;
+      font-size:1.02rem;
+      line-height:1.5;
+      font-weight:800;
+      color:#1d7245;
     }
 
     .bulk-order{
@@ -381,7 +421,9 @@
       .menu{display:none}
       .shop-grid,
       .bulk-layout,
-      .product-card{grid-template-columns:1fr}
+      .product-card,
+      .product-card.chouette{grid-template-columns:1fr}
+      .product-card.chouette{grid-column:auto}
       .logo-link{width:215px;height:82px}
       .shop-active{padding:13px 22px;font-size:.95rem}
       .book-cover{
@@ -392,55 +434,16 @@
     }
 
     @media(max-width:768px){
-      .nav-wrap{
-        padding:10px 14px;
-        gap:12px;
-      }
-
-      .logo-link{
-        width:150px;
-        height:64px;
-      }
-
-      .shop-active{
-        padding:10px 15px;
-        font-size:.86rem;
-      }
-
-      .shop-hero{
-        padding:38px 16px 18px;
-      }
-
-      h1{
-        font-size:clamp(2.7rem,15vw,4.5rem);
-      }
-
-      .hero-text{
-        font-size:1.05rem;
-      }
-
-      section{
-        padding:48px 16px;
-      }
-
-      .product-card,
-      .bulk-order{
-        padding:22px 16px;
-        border-radius:28px;
-      }
-
-      .bulk-box .btn,
-      .contact .btn,
-      .product-copy .btn{
-        width:100%;
-        text-align:center;
-      }
-
-      .contact{
-        padding:42px 18px;
-        border-radius:34px;
-        border-width:4px;
-      }
+      .nav-wrap{padding:10px 14px;gap:12px}
+      .logo-link{width:150px;height:64px}
+      .shop-active{padding:10px 15px;font-size:.86rem}
+      .shop-hero{padding:38px 16px 18px}
+      h1{font-size:clamp(2.7rem,15vw,4.5rem)}
+      .hero-text{font-size:1.05rem}
+      section{padding:48px 16px}
+      .product-card,.bulk-order{padding:22px 16px;border-radius:28px}
+      .bulk-box .btn,.contact .btn,.product-copy .btn{width:100%;text-align:center}
+      .contact{padding:42px 18px;border-radius:34px;border-width:4px}
     }
   </style>
 </head>
@@ -455,11 +458,14 @@
         <a href="index-en.html">Home</a>
         <a href="index-en.html#livres">Our Books</a>
         <a href="auteur-en.html">About</a>
-        <a href="#commandes">For Schools</a>
-        <a href="index-en.html#mission">Resources</a>
-        <a href="#contact">Contact</a>
-        <a href="boutique.html">FR</a>
+        <a href="boutique-en.html">Shop</a>
+        <a href="index-en.html#contact">Contact</a>
       </nav>
+
+      <div class="lang-switch" aria-label="Language switcher">
+        <a href="boutique.html">🇫🇷 FR</a>
+        <a href="boutique-en.html">🇬🇧 EN</a>
+      </div>
 
       <a class="shop-active" href="boutique-en.html">🛍️ Shop</a>
     </div>
@@ -473,8 +479,8 @@
 
   <section id="livres">
     <div class="section-kicker">Our Books</div>
-    <h2 class="section-title">Buy or reserve our stories.</h2>
-    <p class="section-subtitle">Bella and Bibo are now available on Amazon.</p>
+    <h2 class="section-title">Buy our stories.</h2>
+    <p class="section-subtitle">Bella, Bibo and Ah! Que c’est chouette! are now available on Amazon.</p>
 
     <div class="shop-grid">
       <article class="product-card bella">
@@ -490,6 +496,7 @@
             <span class="pill">Nature</span>
             <span class="pill">Bees</span>
           </div>
+          <p class="amazon-note">🌍 Order your copy on Amazon — shipping available in many countries.</p>
           <a class="btn btn-secondary" href="https://www.amazon.ca/-/fr/Jos%C3%A9e-Tremblay/dp/B0H1JVYJT3/" target="_blank" rel="noopener">🛒 Buy on Amazon</a>
         </div>
       </article>
@@ -501,14 +508,34 @@
         <div class="product-copy">
           <span class="status">🦫 Available Now</span>
           <h2>Bibo the Beaver</h2>
-          <p><strong>Bibo the Beaver and the Wetland Guardians</strong> is a heartwarming educational story about beavers, wetlands, and biodiversity in Canadian forests.</p>
+          <p><strong>Bibo the Beaver and the Wetland Guardians</strong> introduces children to beavers, ponds, and biodiversity.</p>
           <div class="pill-list">
             <span class="pill">Beavers</span>
             <span class="pill">Wetlands</span>
-            <span class="pill">Biodiversity</span>
+            <span class="pill">Biodiversité</span>
           </div>
-          <p style="margin-bottom:18px;font-weight:800;color:#1d7245;">🌍 Order your copy on Amazon — shipping available in many countries.</p>
+          <p class="amazon-note">🌍 Order your copy on Amazon — shipping available in many countries.</p>
           <a class="btn btn-primary" href="https://www.amazon.ca/s?k=bibo+le+castor&__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=6KNJ8R5K0GRT&sprefix=bibo+le+castor+%2Caps%2C85&ref=nb_sb_noss" target="_blank" rel="noopener">🛒 Buy on Amazon</a>
+        </div>
+      </article>
+
+      <article class="product-card chouette">
+        <div class="book-cover">
+          <img src="chouette-cover.png" alt="Cover of Ah! Que c’est chouette! — Protecting Mature Trees">
+        </div>
+        <div class="product-copy">
+          <span class="status">🦉 Available Now</span>
+          <h2>Ah! Que c’est chouette!</h2>
+          <p><strong>Protecting Mature Trees</strong> follows Loulou as she discovers that a large tree can shelter an entire family of animals.</p>
+          <p>With Grandpa Renald, she helps Mr. Coupeur understand why a mature tree should be carefully observed before it is cut down.</p>
+          <div class="pill-list">
+            <span class="pill">Ages 2 to 6</span>
+            <span class="pill">Mature Trees</span>
+            <span class="pill">Owls</span>
+            <span class="pill">Biodiversité</span>
+          </div>
+          <p class="amazon-note">🌍 Order your copy on Amazon — shipping available in many countries.</p>
+          <a class="btn btn-primary" href="https://www.amazon.ca/-/fr/dp/B0HK34PLKK" target="_blank" rel="noopener">🛒 Buy on Amazon</a>
         </div>
       </article>
     </div>
