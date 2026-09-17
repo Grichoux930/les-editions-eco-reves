@@ -244,6 +244,18 @@
       background:linear-gradient(135deg,#e3f7df 0%,#fff7ce 56%,#dff4ff 100%);
     }
 
+    .product-card.chouette{
+      background:linear-gradient(135deg,#fff1d6 0%,#f4d4a5 55%,#fff5df 100%);
+      grid-column:1 / -1;
+      grid-template-columns:.72fr 1.28fr;
+    }
+
+    .product-card.chouette .book-cover{
+      max-width:390px;
+      width:100%;
+      margin:auto;
+    }
+
     .book-cover{
       aspect-ratio:1/1;
       border-radius:28px;
@@ -409,7 +421,9 @@
       .menu{display:none}
       .shop-grid,
       .bulk-layout,
-      .product-card{grid-template-columns:1fr}
+      .product-card,
+      .product-card.chouette{grid-template-columns:1fr}
+      .product-card.chouette{grid-column:auto}
       .logo-link{width:215px;height:82px}
       .shop-active{padding:13px 22px;font-size:.95rem}
       .book-cover{
@@ -466,7 +480,7 @@
   <section id="livres">
     <div class="section-kicker">Nos livres</div>
     <h2 class="section-title">Acheter nos histoires.</h2>
-    <p class="section-subtitle">Bella et Bibo sont maintenant disponibles sur Amazon.</p>
+    <p class="section-subtitle">Bella, Bibo et Ah! Que c’est chouette! sont maintenant disponibles sur Amazon.</p>
 
     <div class="shop-grid">
       <article class="product-card bella">
@@ -502,6 +516,26 @@
           </div>
           <p class="amazon-note">🌍 Commandez votre exemplaire sur Amazon — expédition disponible dans de nombreux pays.</p>
           <a class="btn btn-primary" href="https://www.amazon.ca/s?k=bibo+le+castor&__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=6KNJ8R5K0GRT&sprefix=bibo+le+castor+%2Caps%2C85&ref=nb_sb_noss" target="_blank" rel="noopener">🛒 Acheter sur Amazon</a>
+        </div>
+      </article>
+
+      <article class="product-card chouette">
+        <div class="book-cover">
+          <img src="chouette-cover.png" alt="Couverture de Ah! Que c’est chouette! — Protéger les arbres matures">
+        </div>
+        <div class="product-copy">
+          <span class="status">🦉 Disponible maintenant</span>
+          <h2>Ah! Que c’est chouette!</h2>
+          <p><strong>Protéger les arbres matures</strong> raconte la découverte de Loulou, qui comprend qu’un grand arbre peut abriter toute une famille d’animaux.</p>
+          <p>Avec grand-papa Renald, elle aide M. Coupeur à comprendre pourquoi il faut bien observer un arbre mature avant de l’abattre.</p>
+          <div class="pill-list">
+            <span class="pill">2 à 6 ans</span>
+            <span class="pill">Arbres matures</span>
+            <span class="pill">Chouettes</span>
+            <span class="pill">Biodiversité</span>
+          </div>
+          <p class="amazon-note">🌍 Commandez votre exemplaire sur Amazon — expédition disponible dans de nombreux pays.</p>
+          <a class="btn btn-primary" href="https://www.amazon.ca/-/fr/dp/B0HK34PLKK" target="_blank" rel="noopener">🛒 Acheter sur Amazon</a>
         </div>
       </article>
     </div>
