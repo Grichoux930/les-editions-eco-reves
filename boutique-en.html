@@ -496,6 +496,39 @@
       .form-section{box-shadow:none!important;border:1px solid #ddd!important}
     }
 
+    .editorial-transparency{
+      max-width:1260px;
+      margin:0 auto;
+      padding:34px 24px 58px;
+    }
+
+    .editorial-transparency-box{
+      background:linear-gradient(135deg,#f7fbf2 0%,#fff8e9 100%);
+      border:3px solid rgba(85,169,110,.24);
+      border-radius:34px;
+      padding:34px;
+      box-shadow:0 16px 40px rgba(36,47,31,.08);
+    }
+
+    .editorial-transparency-box h2{
+      color:var(--forest);
+      font-size:clamp(1.8rem,3.5vw,2.7rem);
+      line-height:1.05;
+      margin-bottom:14px;
+    }
+
+    .editorial-transparency-box p{
+      color:#514235;
+      font-size:1.08rem;
+      line-height:1.7;
+      margin:0;
+    }
+
+    @media(max-width:768px){
+      .editorial-transparency{padding:20px 16px 44px}
+      .editorial-transparency-box{padding:24px 20px;border-radius:26px}
+    }
+
   </style>
 </head>
 <body>
@@ -670,6 +703,14 @@
         </div>
         <p class="form-note">This form does not collect payment. The final price, volume discount, and shipping costs will be confirmed before payment.</p>
       </form>
+    </div>
+  </section>
+
+
+  <section class="editorial-transparency" aria-labelledby="editorial-transparency">
+    <div class="editorial-transparency-box">
+      <h2 id="editorial-transparency">Our Creative Process</h2>
+      <p>All books published by Éditions Éco-Rêves are conceived, developed, and supervised by the author. The illustrations throughout our publications are created with the assistance of artificial intelligence tools under the author’s artistic direction. Artificial intelligence tools may also be used to support linguistic correction, proofreading, and improvements to the clarity of the text, without replacing the author’s creative and editorial decisions.</p>
     </div>
   </section>
 
