@@ -470,7 +470,7 @@
     }
     .field textarea{min-height:120px;resize:vertical}
     .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--leaf);box-shadow:0 0 0 4px rgba(85,169,110,.12)}
-    .book-qty-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .book-qty-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
     .book-qty{background:#f3f9ee;border-radius:18px;padding:16px;display:grid;gap:8px}
     .book-qty strong{color:var(--forest);line-height:1.25}
     .book-qty input{max-width:120px}
@@ -531,28 +531,10 @@
   <section id="livres">
     <div class="section-kicker">Our Books</div>
     <h2 class="section-title">Buy our stories.</h2>
-    <p class="section-subtitle">Bella, Bibo and Ah! Que c’est chouette! are now available on Amazon.</p>
+    <p class="section-subtitle">Bibo the Beaver and Ah! How Owl-Some! are now available on Amazon.</p>
 
     <div class="shop-grid">
-      <article class="product-card bella">
-        <div class="book-cover">
-          <img src="bella labeille.png" alt="Cover of Bella the Bee">
-        </div>
-        <div class="product-copy">
-          <span class="status">🐝 Available Now</span>
-          <h2>Bella the Bee</h2>
-          <p>A bright story that helps children discover the essential role of bees, flowers, and pollen.</p>
-          <div class="pill-list">
-            <span class="pill">Ages 2 to 6</span>
-            <span class="pill">Nature</span>
-            <span class="pill">Bees</span>
-          </div>
-          <p class="amazon-note">🌍 Order your copy on Amazon — shipping available in many countries.</p>
-          <a class="btn btn-secondary" href="https://www.amazon.ca/-/fr/Jos%C3%A9e-Tremblay/dp/B0H1JVYJT3/" target="_blank" rel="noopener">🛒 Buy on Amazon</a>
-        </div>
-      </article>
-
-      <article class="product-card bibo">
+<article class="product-card bibo">
         <div class="book-cover">
           <img src="bibo-cover.png" alt="Cover of Bibo the Beaver">
         </div>
@@ -572,11 +554,11 @@
 
       <article class="product-card chouette">
         <div class="book-cover">
-          <img src="chouette-cover.png" alt="Cover of Ah! Que c’est chouette! — Protecting Mature Trees">
+          <img src="chouette-cover.png" alt="Cover of Ah! How Owl-Some! — Protecting Mature Trees">
         </div>
         <div class="product-copy">
           <span class="status">🦉 Available Now</span>
-          <h2>Ah! Que c’est chouette!</h2>
+          <h2>Ah! How Owl-Some!</h2>
           <p><strong>Protecting Mature Trees</strong> follows Loulou as she discovers that a large tree can shelter an entire family of animals.</p>
           <p>With Grandpa Renald, she helps Mr. Coupeur understand why a mature tree should be carefully observed before it is cut down.</p>
           <div class="pill-list">
@@ -665,9 +647,8 @@
         <div class="form-section">
           <h3>3. Books and Quantities</h3>
           <div class="book-qty-grid">
-            <div class="book-qty"><strong>Bella the Bee</strong><label for="enBella">Quantity</label><input id="enBella" type="number" min="0" value="0" inputmode="numeric"></div>
-            <div class="book-qty"><strong>Bibo the Beaver</strong><label for="enBibo">Quantity</label><input id="enBibo" type="number" min="0" value="0" inputmode="numeric"></div>
-            <div class="book-qty"><strong>Ah! Que c’est chouette!</strong><label for="enChouette">Quantity</label><input id="enChouette" type="number" min="0" value="0" inputmode="numeric"></div>
+<div class="book-qty"><strong>Bibo the Beaver</strong><label for="enBibo">Quantity</label><input id="enBibo" type="number" min="0" value="0" inputmode="numeric"></div>
+            <div class="book-qty"><strong>Ah! How Owl-Some!</strong><label for="enChouette">Quantity</label><input id="enChouette" type="number" min="0" value="0" inputmode="numeric"></div>
           </div>
           <div class="order-total"><span>Total books</span><span id="enTotal">0</span></div>
           <div class="form-error" id="enError">Group orders require a minimum of 20 books in total.</div>
@@ -715,7 +696,7 @@
     return el ? el.value.trim() : '';
   }
   function totalEn(){
-    const total=n('enBella')+n('enBibo')+n('enChouette');
+    const total=n('enBibo')+n('enChouette');
     const out=document.getElementById('enTotal');
     if(out) out.textContent=String(total);
     const err=document.getElementById('enError');
@@ -739,9 +720,8 @@
       v('enCountry'),
       '',
       'BOOKS',
-      'Bella the Bee: '+n('enBella'),
       'Bibo the Beaver: '+n('enBibo'),
-      'Ah! Que c’est chouette!: '+n('enChouette'),
+      'Ah! How Owl-Some!: '+n('enChouette'),
       'Total: '+totalEn()+' books',
       '',
       'Requested date: '+v('enDate'),
@@ -792,7 +772,7 @@
     }
     alert('The order request has been copied. You can paste it into your email.');
   };
-  ['enBella','enBibo','enChouette'].forEach(function(id){
+  ['enBibo','enChouette'].forEach(function(id){
     const el=document.getElementById(id);
     if(el){
       el.addEventListener('input',totalEn);
