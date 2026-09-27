@@ -654,7 +654,7 @@
 
           <button class="btn btn-primary" type="button" onclick="openOrderFormFr()">📝 Remplir le bon de commande</button>
 
-          <a class="btn btn-secondary" style="margin-top:12px" href="mailto:tremblayjosee00@gmail.com?subject=Commande%20%C3%89co-R%C3%AAves&body=Bonjour%2C%0A%0AJ%E2%80%99aimerais%20vous%20%C3%A9crire%20pour%20une%20commande%20%C3%89co-R%C3%AAves.%0A%0ANom%20%3A%0ALivre%20souhait%C3%A9%20%3A%0AQuantit%C3%A9%20%3A%0ACommentaires%20%3A%0A%0AMerci%21">✉️ Nous écrire pour une commande</a>
+          <a class="btn btn-secondary" style="margin-top:12px" href="mailto:info@ecoreves.ca?subject=Commande%20%C3%89co-R%C3%AAves&body=Bonjour%2C%0A%0AJ%E2%80%99aimerais%20vous%20%C3%A9crire%20pour%20une%20commande%20%C3%89co-R%C3%AAves.%0A%0ANom%20%3A%0ALivre%20souhait%C3%A9%20%3A%0AQuantit%C3%A9%20%3A%0ACommentaires%20%3A%0A%0AMerci%21">✉️ Nous écrire pour une commande</a>
 
           <p class="bulk-note">Après votre demande, nous confirmerons la quantité, la livraison et le rabais applicable, puis nous vous enverrons une soumission personnalisée.</p>
         </div>
@@ -737,7 +737,7 @@
     <div class="contact">
       <h2>Une question sur la boutique?</h2>
       <p>Écrivez-nous pour une commande, une collaboration ou une demande de livres pour votre milieu.</p>
-      <a class="btn btn-secondary" href="mailto:tremblayjosee00@gmail.com">tremblayjosee00@gmail.com</a>
+      <a class="btn btn-secondary" href="mailto:info@ecoreves.ca">info@ecoreves.ca</a>
     </div>
   </section>
 
@@ -816,7 +816,7 @@
       return;
     }
     const subject='Bon de commande Éco-Rêves - '+(v('frOrg') || 'Commande de groupe');
-    const mailto='mailto:tremblayjosee00@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyFr());
+    const mailto='mailto:info@ecoreves.ca?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyFr());
     window.location.assign(mailto);
   };
   window.copyOrderFr=async function(){
