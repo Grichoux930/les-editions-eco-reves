@@ -636,7 +636,7 @@
 
           <button class="btn btn-primary" type="button" onclick="openOrderFormEn()">📝 Fill Out the Order Form</button>
 
-          <a class="btn btn-secondary" style="margin-top:12px" href="mailto:tremblayjosee00@gmail.com?subject=Eco-Reves%20Order&body=Hello%2C%0A%0AI%20would%20like%20to%20contact%20you%20about%20an%20Eco-Reves%20order.%0A%0AName%3A%0ABook%20requested%3A%0AQuantity%3A%0AComments%3A%0A%0AThank%20you%21">✉️ Write to Us About an Order</a>
+          <a class="btn btn-secondary" style="margin-top:12px" href="mailto:info@ecoreves.ca?subject=Eco-Reves%20Order&body=Hello%2C%0A%0AI%20would%20like%20to%20contact%20you%20about%20an%20Eco-Reves%20order.%0A%0AName%3A%0ABook%20requested%3A%0AQuantity%3A%0AComments%3A%0A%0AThank%20you%21">✉️ Write to Us About an Order</a>
 
           <p class="bulk-note">After your request, we will confirm the quantity, delivery, and applicable discount, then send you a personalized quote.</p>
         </div>
@@ -718,7 +718,7 @@
     <div class="contact">
       <h2>Questions about the shop?</h2>
       <p>Write to us for an order, a collaboration, or a book request for your school, daycare, library, or organization.</p>
-      <a class="btn btn-secondary" href="mailto:tremblayjosee00@gmail.com">tremblayjosee00@gmail.com</a>
+      <a class="btn btn-secondary" href="mailto:info@ecoreves.ca">info@ecoreves.ca</a>
     </div>
   </section>
 
@@ -796,7 +796,7 @@
       return;
     }
     const subject='Éco-Rêves Order Form - '+(v('enOrg') || 'Group Order');
-    const mailto='mailto:tremblayjosee00@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyEn());
+    const mailto='mailto:info@ecoreves.ca?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyEn());
     window.location.assign(mailto);
   };
   window.copyOrderEn=async function(){
