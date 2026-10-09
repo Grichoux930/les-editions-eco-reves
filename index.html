@@ -97,6 +97,20 @@
       height:68px;
       background:url('logo.png') center center / contain no-repeat;
     }.hero-shop{padding:10px 15px;font-size:.86rem}.lang-switch{gap:5px}.lang-switch a{min-width:34px;height:34px;font-size:.78rem}.hero-real-actions{left:16px;right:16px;bottom:12px;transform:none;flex-direction:column;gap:8px}.hero-real-actions a{width:100%;max-width:320px;margin:auto;padding:13px 16px;font-size:.95rem}.shop-mini{padding:22px 16px;border-radius:24px}.contact .btn{width:100%;text-align:center;max-width:315px;margin-left:auto;margin-right:auto}.contact{padding:42px 18px;border-radius:34px;border-width:4px}.contact p{font-size:1rem;line-height:1.55;margin-bottom:22px;max-width:330px}}
+    .sunshine-card{background:linear-gradient(135deg,#fffdf4,#fff0bb 65%,#edf8e9);border:6px solid white;border-radius:48px;box-shadow:var(--shadow);padding:44px 46px;text-align:center}
+    .sunshine-logo{display:block;width:min(260px,100%);height:auto;margin:0 auto 28px}
+    .sunshine-card h2{color:var(--forest);font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.1;margin-bottom:20px}
+    .sunshine-card p{max-width:780px;margin:0 auto 18px;font-size:1.16rem;line-height:1.7}
+    .sunshine-card strong{color:var(--forest)}
+    .sunshine-amount{display:inline-block;background:var(--forest);color:white;border-radius:999px;padding:12px 24px;font-weight:800;font-size:1.65rem;margin-bottom:22px}
+    .sunshine-card h3{color:var(--forest);font-size:1.8rem;margin:28px 0 16px}
+    .sunshine-stores{list-style:none;max-width:620px;margin:0 auto 26px;text-align:left}
+    .sunshine-stores li{background:var(--paper);border:2px solid white;border-radius:24px;padding:22px 26px;box-shadow:0 10px 24px rgba(38,48,34,.08)}
+    .sunshine-stores span{display:block;font-size:1.08rem}
+    .sunshine-stores strong{font-size:1.4rem}
+    .sunshine-card .sunshine-note{font-size:.98rem;color:#514235}
+    .sunshine-card a:focus-visible{outline:3px solid var(--forest);outline-offset:5px}
+    @media(max-width:768px){.sunshine-card{padding:30px 20px;border-radius:34px;border-width:4px}.sunshine-card p{font-size:1.05rem}.sunshine-card .btn{max-width:100%}.sunshine-logo{width:220px}}
   </style>
 </head>
 <body>
@@ -147,6 +161,22 @@
     </div>
   </section>
 
+  <section id="enfant-soleil" aria-labelledby="enfant-soleil-title">
+    <div class="sunshine-card">
+      <img class="sunshine-logo" src="enfant-soleil-logo.png" alt="Enfant Soleil" width="9860" height="3103" loading="lazy">
+      <div class="section-kicker">Notre soutien à Opération Enfant Soleil</div>
+      <h2 id="enfant-soleil-title">Des histoires qui font du bien.</h2>
+      <div class="sunshine-amount">1 $ par livre vendu</div>
+      <p>Pour chaque livre Éco-Rêves vendu dans les <strong>points de vente participants</strong>, nous remettons <strong>1 $ à Enfant Soleil</strong>, anciennement Opération Enfant Soleil.</p>
+      <p>Une belle façon de faire découvrir la nature aux enfants tout en soutenant leur santé.</p>
+      <h3>Où acheter nos livres pour soutenir la cause?</h3>
+      <ul class="sunshine-stores" aria-label="Points de vente participants">
+        <li><strong>Dépanneur 707</strong><span>Saint-Ambroise</span><span>Point de vente participant · 1 $ remis par livre vendu</span></li>
+      </ul>
+      <p class="sunshine-note">Cette remise s’applique aux livres achetés dans les points de vente participants indiqués ci-dessus.</p>
+      <a class="btn btn-primary" href="https://www.enfantsoleil.ca/">Découvrir Enfant Soleil</a>
+    </div>
+  </section>
   <section id="livres">
     <div class="section-kicker">Nos livres</div><h2 class="section-title">Trois univers doux, colorés et éducatifs.</h2><p class="section-subtitle">Bella fait découvrir le monde des abeilles, Bibo explore les milieux humides et Loulou révèle toute la vie cachée dans les arbres matures.</p>
     <article class="book-feature bella"><div class="book-layout"><div class="covers"><div class="cover"><img src="bella labeille.png" alt="Bella l’abeille"></div><div class="cover"><img src="bella-ruche.png" alt="Bella dans la ruche"></div></div><div class="book-copy"><span class="label">🐝 Disponible maintenant</span><h2>Bella l’abeille</h2><p>Une petite abeille curieuse découvre l’importance des abeilles pour la planète.</p><p>À travers ses aventures colorées, Bella apprend comment les abeilles transportent le pollen et aident les fleurs à pousser.</p><p>Un livre doux et lumineux pour aider les enfants à comprendre que chaque petit geste peut protéger le vivant.</p><div class="pill-list"><span class="pill">2 à 6 ans</span><span class="pill">Abeilles</span><span class="pill">Nature</span><span class="pill">Éducation</span></div><a class="btn btn-secondary amazon-btn" href="boutique.html">🛍️ Visiter la boutique</a></div></div></article>
@@ -161,6 +191,7 @@
 
   <section><div class="author-strip"><div><h2>Une créatrice proche des enfants.</h2><p>Éducatrice à l’enfance depuis plus de 20 ans, Josée Tremblay imagine des livres, des activités et du contenu jeunesse chaleureux, accessible et inspiré par la nature.</p></div><a class="btn btn-primary" href="auteur.html">Découvrir Josée</a></div></section>
   <section id="contact"><div class="contact"><h2>Une question ou une collaboration?</h2><p>Écrivez-nous pour en savoir plus sur nos livres, nos projets jeunesse ou nos futures publications.</p><a class="btn btn-secondary" href="mailto:info@ecoreves.ca">info@ecoreves.ca</a></div></section>
+  <p style="text-align:center;padding:0 20px"><a class="btn btn-secondary" href="#enfant-soleil">☀️ Nos livres pour la cause</a></p>
   <footer>© 2026 Les éditions Éco-Rêves — Des histoires pour rêver, apprendre et protéger la nature.</footer>
 </div>
 </body>
