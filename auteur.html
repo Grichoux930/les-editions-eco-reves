@@ -440,13 +440,15 @@
       .btn{width:100%;max-width:320px}
     }
   </style>
+  <link rel="stylesheet" href="mobile.css?v=20261013">
+  <script src="mobile-nav.js?v=20261013" defer></script>
 </head>
 <body>
 <div class="site-shell">
 <header>
-  <div class="nav">
+  <div class="nav mobile-header">
     <a href="index.html" aria-label="Accueil Éco-Rêves"><img src="logo.png" alt="Logo Éco-Rêves" class="logo"></a>
-    <nav>
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true">☰</span> Menu</button><nav id="mobile-menu">
       <a href="index.html">Accueil</a>
       <a href="index.html#livres">Nos livres</a>
       <a href="auteur.html" class="active">Créatrice</a>
@@ -455,8 +457,8 @@
     <a href="engagement.html">Notre engagement</a>
     </nav>
     <div class="lang-switch" aria-label="Choix de langue">
-      <a href="auteur.html">🇫🇷 FR</a>
-      <a href="auteur-en.html">🇬🇧 EN</a>
+      <a href="auteur.html">FR</a>
+      <a href="auteur-en.html">EN</a>
     </div>
   </div>
 </header>

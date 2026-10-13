@@ -131,13 +131,15 @@
     @media(max-width:1100px){.hero-nav{padding:10px 20px;gap:12px}.hero-menu{order:4;flex-basis:100%;display:flex;flex-wrap:wrap;gap:12px}.hero-logo-link{margin-right:auto}.solidarity-hero{min-height:480px}.solidarity-values li{padding:0 12px;font-size:1.15rem}}
     @media(max-width:900px){.hero-nav{padding:8px 12px}.hero-logo-link{width:135px;height:65px}.hero-shop{font-size:.9rem;padding:12px 16px}.hero-menu a{font-size:.85rem;padding:8px 3px}.hero-menu .commitment-link{padding:10px}.solidarity-hero{display:block;padding:300px 20px 28px;background-size:auto 330px;background-position:left top;background-repeat:no-repeat;background-color:#fff8df}.solidarity-copy{width:100%;background:#fff8df;padding-top:20px}.solidarity-copy h1{font-size:2rem}.solidarity-copy img{width:260px}.donation-brush strong{font-size:3.5rem}.donation-brush span{font-size:1.25rem}.solidarity-values{grid-template-columns:1fr 1fr;gap:22px 0;margin:12px;padding:20px 8px}.solidarity-values li:nth-child(2){border:0}.solidarity-values li{font-size:1.05rem}.solidarity-retail{padding:30px 16px}.solidarity-retail-grid{grid-template-columns:1fr}.retailer-card{padding:22px 20px}.retailer-donation{border-radius:18px}.solidarity-thanks{max-width:420px;width:100%;margin:auto}.solidarity-thanks img{height:280px}.solidarity-retail h2{font-size:2rem}}
   </style>
+  <link rel="stylesheet" href="mobile.css?v=20261013">
+  <script src="mobile-nav.js?v=20261013" defer></script>
 </head>
-<body>
+<body class="mobile-engagement">
 <div class="site-shell">
   <main class="hero-mockup" id="accueil" aria-label="Les éditions Éco-Rêves - Des histoires pour rêver plus vert">
-    <div class="hero-nav" aria-label="Navigation principale">
+    <div class="hero-nav mobile-header" aria-label="Navigation principale">
       <a class="hero-logo-link" href="index.html" aria-label="Accueil Les éditions Éco-Rêves">Accueil Éco-Rêves</a>
-      <nav class="hero-menu">
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true">☰</span> Menu</button><nav id="mobile-menu" class="hero-menu">
         <a href="index.html">Accueil</a>
         <a href="index.html#livres">Nos livres</a>
         <a href="auteur.html">Créatrice</a>

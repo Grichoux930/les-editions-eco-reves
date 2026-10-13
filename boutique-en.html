@@ -530,15 +530,17 @@
     }
 
   </style>
+  <link rel="stylesheet" href="mobile.css?v=20261013">
+  <script src="mobile-nav.js?v=20261013" defer></script>
 </head>
 <body>
 <div class="site-shell">
 
   <header class="topbar">
-    <div class="nav-wrap" aria-label="Main navigation">
+    <div class="nav-wrap mobile-header" aria-label="Main navigation">
       <a class="logo-link" href="index-en.html" aria-label="Les éditions Éco-Rêves Home">Éco-Rêves Home</a>
 
-      <nav class="menu">
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true">☰</span> Menu</button><nav id="mobile-menu" class="menu">
         <a href="index-en.html">Home</a>
         <a href="index-en.html#livres">Our Books</a>
         <a href="auteur-en.html">About</a>
@@ -548,8 +550,8 @@
     </nav>
 
       <div class="lang-switch" aria-label="Language switcher">
-        <a href="boutique.html">🇫🇷 FR</a>
-        <a href="boutique-en.html">🇬🇧 EN</a>
+        <a href="boutique.html">FR</a>
+        <a href="boutique-en.html">EN</a>
       </div>
 
       <a class="shop-active" href="boutique-en.html">🛍️ Shop</a>

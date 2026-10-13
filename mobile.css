@@ -1,0 +1,60 @@
+.mobile-menu-toggle,.mobile-home-intro{display:none}
+@media(max-width:980px){
+  .mobile-header{position:relative!important;inset:auto!important;display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;padding:10px 16px!important;background:#fffaf0!important;border-bottom:1px solid #0f4a2e15;width:100%!important;max-width:none!important;margin:0!important}
+  .mobile-header>a:first-child{width:110px!important;height:68px!important;flex:0 0 110px!important;margin:0 auto 0 0!important}
+  .mobile-header .logo{width:110px!important;height:68px!important;object-fit:contain}
+  .mobile-header .hero-right{display:contents!important}
+  .mobile-header .lang-switch{gap:5px!important;margin:0!important;flex:0 0 auto!important;order:1}
+  .mobile-header .lang-switch a{display:flex!important;align-items:center!important;justify-content:center!important;width:42px!important;min-width:42px!important;height:44px!important;padding:0!important;font-size:.85rem!important;box-shadow:none!important}
+  .mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;order:2;min-height:44px;padding:9px 13px;border:1px solid #0f4a2e25;border-radius:14px;background:#fff;color:#0f4a2e;font:800 .95rem 'Baloo 2',sans-serif;cursor:pointer}
+  .mobile-header .hero-shop,.mobile-header .shop-active{order:3!important;flex:1 0 100%!important;width:100%!important;min-height:44px!important;padding:12px 20px!important;text-align:center!important;font-size:1rem!important;box-shadow:none!important;display:flex!important;align-items:center!important;justify-content:center!important}
+  .mobile-header nav{position:static!important;inset:auto!important;order:4!important;display:flex!important;flex-direction:column!important;align-items:stretch!important;flex:1 0 100%!important;width:100%!important;gap:4px!important;background:#fff!important;border-radius:18px!important;padding:8px!important;margin:0!important;box-shadow:0 12px 30px #0f4a2e12}
+  .mobile-header[data-menu-ready] nav{display:none!important}
+  .mobile-header[data-menu-open] nav{display:flex!important}
+  .mobile-header nav a{font-size:1.05rem!important;line-height:1.3!important;min-height:44px!important;padding:12px 16px!important;border-radius:12px!important;text-shadow:none!important;text-align:left!important;margin:0!important}
+  .mobile-header nav a:hover,.mobile-header nav a[aria-current=page]{background:#fff0b5!important}
+  .mobile-menu-toggle:focus-visible,.mobile-header a:focus-visible{outline:3px solid #1d7245;outline-offset:3px}
+  .mobile-home .hero-mockup{min-height:0!important;background:none!important;overflow:visible!important}
+  .mobile-home .hero-mockup::after{display:none!important}
+  .mobile-home-intro{display:block;text-align:center;background:#fff6df;padding-bottom:12px}
+  .mobile-home-intro img{width:100%;height:clamp(220px,66vw,360px);object-fit:cover;object-position:center;display:block}
+  .mobile-home-intro h1{font-size:clamp(2.1rem,7vw,3rem);line-height:1.1;color:#0f4a2e;padding:24px 20px 12px;font-weight:800}
+  .mobile-home-intro h1 span{color:#a56400}
+  .mobile-home-intro p{padding:0 24px 16px;font-size:1.1rem;line-height:1.5}
+  .mobile-home .hero-real-actions{position:static!important;inset:auto!important;transform:none!important;display:flex!important;flex-direction:column!important;gap:10px!important;padding:8px 20px 24px;background:#fff6df;white-space:normal!important}
+  .mobile-home .hero-real-actions a{width:100%!important;max-width:460px!important;min-height:48px!important;padding:13px 18px!important;margin:auto!important;box-shadow:0 8px 18px #0f4a2e14!important}
+  .mobile-engagement .solidarity-hero{padding:0!important;background:none!important;display:block!important;min-height:0!important}
+  .mobile-engagement .solidarity-hero::before{content:"";display:block;height:clamp(240px,65vw,380px);background:url('solidarity-hero.png') left center/auto 100% no-repeat}
+  .mobile-engagement .solidarity-copy{width:100%!important;padding:24px 22px 28px!important;background:#fff8df!important}
+  .mobile-engagement .solidarity-copy h1{font-size:2rem;margin-bottom:20px}
+  .mobile-engagement .solidarity-copy img{width:240px;max-width:90%;margin-bottom:20px}
+  .mobile-engagement .solidarity-copy p{font-size:1.2rem;line-height:1.4}
+  .mobile-engagement .donation-brush{gap:14px;padding:16px 20px;border-radius:22px}
+  .mobile-engagement .solidarity-values{margin:16px;gap:24px 0;padding:22px 4px}
+  .mobile-engagement .solidarity-values li{line-height:1.4}
+  .mobile-engagement .solidarity-retail{padding:30px 20px}
+}
+@media(max-width:600px){
+  section{padding:40px 20px!important}
+  .section-title{font-size:2rem!important;line-height:1.15!important}
+  .section-subtitle{font-size:1.08rem!important;line-height:1.6!important;margin-bottom:28px!important}
+  .values,.book-layout,.bulk-layout,.author-strip{gap:24px!important}
+  .value-card,.book-feature,.eco-commitment,.sunshine-card,.author-strip,.bulk-box{padding:24px 20px!important;border-radius:26px!important;border-width:3px!important}
+  .value-card p,.book-copy p,.eco-commitment p,.sunshine-card p,.author-strip p{font-size:1.05rem!important;line-height:1.65!important}
+  .book-copy h2,.eco-commitment h2,.sunshine-card h2,.author-strip h2{font-size:2rem!important;line-height:1.15!important}
+  .covers{grid-template-columns:1fr 1fr!important;gap:12px!important}
+  .cover{border-width:4px!important;border-radius:18px!important}
+  .book-layout{display:flex!important;flex-direction:column!important}.book-layout .covers{order:-1;width:100%}
+  .pill{padding:7px 12px!important;font-size:.9rem}
+  .contact{padding:30px 20px!important;border-radius:26px!important}.contact h2{font-size:2rem!important;line-height:1.15!important}
+  .author-hero{padding:30px 20px 40px!important;gap:30px!important}
+  .photo-card img{max-height:340px;object-fit:cover}
+  .content{padding:26px 20px!important;border-radius:26px!important}.content h1{font-size:2.7rem!important;line-height:1.1!important}
+  .shop-hero{padding:30px 20px!important}.shop-hero h1{font-size:2.4rem!important;line-height:1.12!important}.shop-hero .hero-text{font-size:1.05rem!important;line-height:1.6!important}
+  .product-card,.order-box,.form-card{padding:22px 18px!important;border-radius:26px!important}
+  input,select,textarea{font-size:16px!important;max-width:100%}
+  .btn,.amazon-btn{white-space:normal!important;max-width:100%;min-height:48px}
+  .mobile-engagement .solidarity{padding:0!important}
+  footer{font-size:.95rem!important;line-height:1.5;padding:28px 20px!important}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
