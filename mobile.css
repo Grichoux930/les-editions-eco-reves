@@ -24,7 +24,7 @@
   .mobile-home .hero-real-actions{position:static!important;inset:auto!important;transform:none!important;display:flex!important;flex-direction:column!important;gap:10px!important;padding:8px 20px 24px;background:#fff6df;white-space:normal!important}
   .mobile-home .hero-real-actions a{width:100%!important;max-width:460px!important;min-height:48px!important;padding:13px 18px!important;margin:auto!important;box-shadow:0 8px 18px #0f4a2e14!important}
   .mobile-engagement .solidarity-hero{padding:0!important;background:none!important;display:block!important;min-height:0!important}
-  .mobile-engagement .solidarity-hero::before{content:"";display:block;height:auto;aspect-ratio:4/3;background:url('solidarity-mobile-bibo-loulou.png') center/cover no-repeat}
+  .mobile-engagement .solidarity-hero::before{content:"";display:block;height:auto;aspect-ratio:4/3;background:url('solidarity-mobile-loulou-bibo-v2.png') center/cover no-repeat}
   .mobile-engagement .solidarity-copy{width:100%!important;padding:24px 22px 28px!important;background:#fff8df!important}
   .mobile-engagement .solidarity-copy h1{font-size:2rem;margin-bottom:20px}
   .mobile-engagement .solidarity-copy img{width:240px;max-width:90%;margin-bottom:20px}
