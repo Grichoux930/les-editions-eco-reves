@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Catalogue des Éditions Éco-Rêves pour détaillants. Choisissez vos albums jeunesse et demandez un prix de gros.">
+<title>Éditions Éco-Rêves | Catalogue détaillants</title>
+<style>
+:root{--ink:#163e2f;--green:#17573d;--paper:#faf8ef;--muted:#53695d;--gold:#f5d883;--line:#d9e2d8;--white:#fffefa}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,sans-serif}a{color:var(--green);text-underline-offset:.2em}button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #9b5915;outline-offset:3px}img{display:block;max-width:100%}.wrap{max-width:1180px;margin:auto;padding-inline:24px}
+header{background:var(--white);border-bottom:1px solid var(--line)}.nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand img{width:110px;height:auto}.nav-actions{display:flex;align-items:center;gap:10px}.lang{display:flex;border:1px solid var(--line);border-radius:100px;padding:3px}.lang button{background:none;border:0;border-radius:100px;padding:5px 10px;color:var(--ink);font-weight:700}.lang button[aria-pressed=true]{background:var(--green);color:white}.pill,.primary,.secondary{display:inline-flex;justify-content:center;align-items:center;gap:7px;border-radius:100px;padding:10px 16px;text-decoration:none;font-weight:750;border:1px solid transparent}.pill,.secondary{background:#e9f0e5;color:var(--ink)}.primary{background:var(--green);color:white}.primary:hover{background:#103d2b}.secondary:hover,.pill:hover{background:#dae8d7}
+.hero{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:42px;padding-block:48px 32px}.hero img{border-radius:24px;width:100%;aspect-ratio:4/3;object-fit:cover}.eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--green)}h1,h2,h3,p{margin:0}h1{font-size:clamp(2.65rem,6vw,5rem);letter-spacing:-.065em;line-height:.99;margin-block:12px 20px}h2{font-size:clamp(1.65rem,4vw,2.7rem);letter-spacing:-.045em;line-height:1.08}h3{line-height:1.17}.intro{max-width:48ch;color:var(--muted);margin-bottom:22px}.impact{background:#f8e5aa;padding:12px 18px;border-radius:12px;margin-bottom:36px}.impact strong{color:var(--ink)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(275px,325px);gap:26px;align-items:start;margin-bottom:46px}.section-head{margin-bottom:15px}.section-head p,.fine,.empty{color:var(--muted);font-size:.91rem}.trio{background:#e6efe2;border-radius:18px;padding:17px;margin-bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:12px}.trio p{font-size:.9rem;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.card{overflow:hidden;border:1px solid var(--line);border-radius:19px;background:var(--white);display:flex;flex-direction:column}.cover-button{display:block;padding:15px;background:var(--tint);border:0;width:100%}.cover-button img{width:100%;max-width:194px;margin:auto;border-radius:4px;box-shadow:0 5px 15px #142d2433;aspect-ratio:1}.card-body{padding:15px;display:grid;gap:7px;flex:1;align-content:start}.tag{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--green)}.card h3{font-size:1.13rem}.card p{font-size:.88rem;color:var(--muted)}.actions{display:flex;flex-wrap:wrap;gap:9px;align-items:center}.text-button{border:0;padding:4px 0;background:none;color:var(--green);text-decoration:underline;text-underline-offset:.2em;font-weight:700}.add{padding:5px 11px;font-size:.82rem}
+.basket{position:sticky;top:15px;padding:18px;border-radius:19px;border:1px solid var(--line);background:var(--white)}.basket h2{font-size:1.65rem;margin-bottom:10px}.basket ul{padding:0;margin:0 0 10px;list-style:none}.line{padding:9px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:.86rem}.line input{width:60px;padding:4px;color:var(--ink)}.remove{padding:5px;border:0;background:none;color:var(--green);font-weight:800}.fields{display:grid;gap:9px;margin:15px 0}.fields label{display:grid;gap:4px;font-size:.82rem;font-weight:700}.fields input,.line input{border:1px solid #aab8aa;border-radius:7px;background:white}.fields input{padding:8px 10px;width:100%}.basket .primary{width:100%;font-size:.94rem}.basket .fine{margin-top:9px}.basket [disabled]{opacity:.5;cursor:default}.status{color:var(--green);font-size:.84rem;margin-top:6px}.notice{background:#ecf0e8;padding:19px;border-radius:16px;margin-bottom:30px}.notice p{margin-top:6px;color:var(--muted)}footer{border-top:1px solid var(--line);padding-block:20px;font-size:.9rem}
+dialog{border:1px solid var(--line);border-radius:20px;max-width:min(540px,calc(100% - 24px));padding:20px;background:var(--white);color:var(--ink)}dialog::backdrop{background:#152f25aa}dialog img{width:175px;border-radius:6px;margin:0 auto 13px}dialog h2{font-size:1.65rem}dialog p{margin:10px 0}dialog .close{display:block;margin:0 0 8px auto}
+@media(max-width:850px){.hero{gap:20px}.layout{grid-template-columns:1fr}.basket{position:static}.grid{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}}@media(max-width:530px){.wrap{padding-inline:14px}.hero{grid-template-columns:1fr;padding-block:24px}.hero img{aspect-ratio:4/3}.nav{min-height:68px}.brand img{width:85px}.pill{padding:7px 9px;font-size:.84rem}.grid{grid-template-columns:1fr 1fr;gap:9px}.card-body{padding:10px}.trio{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="https://ecoreves.ca/"><img src="logo.png" alt="Éditions Éco-Rêves" width="110" height="73"></a><div class="nav-actions"><div class="lang" aria-label="Langue / Language"><button type="button" data-language="fr" aria-pressed="true">FR</button><button type="button" data-language="en" aria-pressed="false">EN</button></div><a class="pill" href="#selection"><span data-text="selection"></span> <span id="count">0</span></a></div></div></header>
+<main class="wrap">
+<section class="hero"><div><p class="eyebrow" data-text="eyebrow"></p><h1 data-text="headline"></h1><p class="intro" data-text="intro"></p><a class="primary" href="#albums" data-text="browse"></a></div><img src="accueil-personnages.png" alt="" width="720" height="540"></section>
+<p class="impact"><strong data-text="impact"></strong> <a href="https://ecoreves.ca/engagement.html" data-text="learn"></a></p>
+<div class="layout">
+<section id="albums"><div class="section-head"><h2 data-text="books"></h2><p data-text="bookIntro"></p></div><div class="trio"><div><h3 data-text="trio"></h3><p data-text="trioDesc"></p></div><button type="button" id="add-trio" class="secondary" data-text="addTrio"></button></div><div id="grid" class="grid"></div></section>
+<section id="selection" class="basket"><h2 data-text="selection"></h2><p id="empty" class="empty" data-text="empty"></p><ul id="items"></ul><form id="quote"><div class="fields"><label><span data-text="retailer"></span><input name="retailer" autocomplete="organization" maxlength="100" required></label><label><span data-text="postal"></span><input name="postal" autocomplete="postal-code" maxlength="12" required></label></div><button class="primary" id="submit" data-text="quote" disabled></button><p class="fine" data-text="terms"></p><button type="button" class="text-button" id="copy" data-text="copy" disabled></button></form><p id="status" class="status" role="status"></p></section>
+</div>
+<section class="notice"><h3 data-text="aboutTitle"></h3><p data-text="about"></p></section>
+</main>
+<footer><div class="wrap">Éditions Éco-Rêves · Saguenay, Québec · <a href="mailto:info@ecoreves.ca">info@ecoreves.ca</a></div></footer>
+<dialog id="details" aria-labelledby="detail-title"><button type="button" class="secondary close" id="close" data-text="close"></button><div id="detail-body"></div></dialog>
+<script>
+const copy = {
+fr:{selection:"Ma sélection",eyebrow:"Catalogue pour détaillants",headline:"Des albums jeunesse au cœur de la nature",intro:"Des histoires du Saguenay pour découvrir les animaux et leurs habitats. Composez votre assortiment et demandez un prix de gros.",browse:"Découvrir les albums",impact:"25 $ consacrés à la compensation carbone par tranche de 1 000 livres imprimés.",learn:"Notre engagement",books:"Les albums",bookIntro:"Éditions françaises · 8,5 × 8,5 po · 24 pages couleur et couverture (format proposé)",trio:"Trio découverte de la nature",trioDesc:"Bella, Bibo et Loulou pour un rayon à l’année.",addTrio:"Ajouter le trio",empty:"Ajoutez un album ou le trio pour commencer.",retailer:"Nom de l’enseigne",postal:"Code postal de livraison",quote:"Demander un prix de gros",terms:"Le devis se confirme par bon de commande. Vente ferme, sans consignation.",copy:"Copier la demande",aboutTitle:"Les Éditions Éco-Rêves",about:"Maison d’édition jeunesse du Saguenay. Éducatrice à l’enfance depuis plus de 20 ans, Josée Tremblay crée des albums qui invitent les enfants à découvrir et à protéger la nature.",close:"Fermer",more:"Voir la fiche",add:"Ajouter",remove:"Retirer",qty:"Quantité",added:"Ajouté à votre sélection.",copied:"Demande copiée.",copyError:"Copie indisponible. Utilisez le bouton de demande de prix.",subject:"Demande de prix de gros – Éditions Éco-Rêves",greeting:"Bonjour,",request:"J’aimerais obtenir un prix de gros pour les albums suivants.",thanks:"Merci !",season:"Album des Fêtes",series:"Trio découverte",french:"Français",english:"Anglais"},
+en:{selection:"My selection",eyebrow:"Retail catalogue",headline:"Children’s books about the natural world",intro:"Stories from Saguenay that introduce children to animals and their habitats. Build your assortment and request wholesale pricing.",browse:"Explore the books",impact:"We allocate $25 to carbon offsetting for every 1,000 books printed.",learn:"Our commitment",books:"Picture books",bookIntro:"English editions · 8.5 × 8.5 in. · 24 colour pages plus cover (proposed format)",trio:"Nature Discovery Trio",trioDesc:"Bella, Bibo and Loulou for a year-round display.",addTrio:"Add the trio",empty:"Add a book or the trio to get started.",retailer:"Retailer name",postal:"Delivery postal code",quote:"Request wholesale pricing",terms:"Confirm the quote by purchase order. Firm sale, no consignment.",copy:"Copy the request",aboutTitle:"About Éditions Éco-Rêves",about:"We’re a children’s publisher in Saguenay, Quebec. An early childhood educator for over 20 years, Josée Tremblay writes stories that help children discover and care for nature.",close:"Close",more:"View details",add:"Add",remove:"Remove",qty:"Quantity",added:"Added to your selection.",copied:"Request copied.",copyError:"Copy unavailable. Use the wholesale pricing button.",subject:"Wholesale quote request – Éditions Éco-Rêves",greeting:"Hello,",request:"I’d like wholesale pricing for the following books.",thanks:"Thank you!",season:"Holiday title",series:"Nature Discovery Trio",french:"French",english:"English"}
+};
+const books = [
+["fr","Bella l’abeille","Petits amis curieux, grande aventure !","Une petite abeille curieuse, une grande aventure au milieu des fleurs.","978-2-9825952-0-0","bella%20labeille.png","#f7e9b7"],
+["fr","Bibo le castor","et les gardiens des milieux humides","Suivez Bibo à la découverte des milieux humides.","978-2-9825952-2-4","bibo-cover-fr.png","#e1eedf"],
+["fr","Ah ! Que c’est chouette !","Protéger les arbres matures","Avec Loulou, rencontrez les animaux qui se réfugient dans les grands arbres.","978-2-9825952-4-8","chouette-cover-fr.png","#f7e4d4"],
+["fr","Le sapin des souvenirs","et les trésors de la nature","Une aventure de Noël en forêt, à lire en famille.","978-2-9825952-6-2","sapin-souvenirs-cover-fr.png","#e4edf5"],
+["en","Bella the Bee","Little Curious Friends, Big Adventure!","A curious little bee and a big adventure among the flowers.","978-2-9825952-1-7","bella-cover-en.png","#f7e9b7"],
+["en","Bibo the Beaver","and the Guardians of the Wetlands","Follow Bibo into the wetlands and discover why they matter.","978-2-9825952-3-1","bibo-cover-en.png","#e1eedf"],
+["en","Ah! How Owl-Some!","Protecting Mature Trees","Join Loulou and meet the animals that shelter in mature trees.","978-2-9825952-5-5","chouette-cover-en.png","#f7e4d4"]
+].map(([language,title,subtitle,pitch,isbn,image,tint])=>({language,title,subtitle,pitch,isbn,image,tint}));
+let language = "fr";
+let activeBook;
+const cart = new Map();
+const $ = id => document.getElementById(id);
+const strings = () => copy[language];
+const edition = book => strings()[book.language === "fr" ? "french" : "english"];
+const visibleBooks = () => books.filter(book => book.language === language);
+const form = $("quote");
+
+function renderBooks(){
+ const t = strings();
+ $("grid").innerHTML = visibleBooks().map(book => `<article class="card" style="--tint:${book.tint}"><button class="cover-button" data-view="${book.isbn}" aria-label="${t.more} · ${book.title}"><img src="${book.image}" alt="" width="194" height="194"></button><div class="card-body"><span class="tag">${book.isbn.endsWith("-6-2") ? t.season : t.series}</span><h3>${book.title}</h3><p>${book.pitch}</p><div class="actions"><button class="text-button" data-view="${book.isbn}">${t.more}</button><button class="secondary add" data-add="${book.isbn}">${t.add}</button></div></div></article>`).join("");
+}
+function renderCart(){
+ const t = strings();
+ $("count").textContent = [...cart.values()].reduce((sum, quantity)=>sum+quantity,0);
+ $("empty").hidden = cart.size > 0;
+ $("submit").disabled = $("copy").disabled = cart.size === 0;
+ $("items").innerHTML = [...cart].map(([isbn,qty])=>{
+   const book = books.find(item=>item.isbn === isbn);
+   return `<li class="line"><span><strong>${book.title}</strong><br>${edition(book)}</span><div><input type="number" min="1" max="999999" step="1" value="${qty}" data-quantity="${isbn}" aria-label="${t.qty} · ${book.title}"><button type="button" class="remove" data-remove="${isbn}" aria-label="${t.remove} · ${book.title}">×</button></div></li>`;
+ }).join("");
+}
+function setLanguage(next){
+ language = next;
+ document.documentElement.lang = next;
+ document.querySelectorAll("[data-language]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.language===next)));
+ document.querySelectorAll("[data-text]").forEach(el=>{el.textContent=strings()[el.dataset.text];});
+ $("status").textContent="";
+ renderBooks();
+ renderCart();
+}
+function add(isbns){
+ isbns.forEach(isbn=>cart.set(isbn,Math.min(999999,(cart.get(isbn)||0)+1)));
+ renderCart();
+ $("status").textContent=strings().added;
+}
+function showBook(isbn){
+ const t = strings();
+ const book = books.find(item=>item.isbn===isbn);
+ activeBook = document.activeElement;
+ $("detail-body").innerHTML=`<img src="${book.image}" alt=""><h2 id="detail-title">${book.title}</h2><p>${book.subtitle}</p><p><strong>${book.pitch}</strong></p><p>${edition(book)} · ISBN ${book.isbn}</p><button type="button" class="primary" data-add="${isbn}">${t.add}</button>`;
+ $("details").showModal();
+}
+function quoteBody(){
+ const t = strings();
+ const fields = new FormData(form);
+ const titles = [...cart].map(([isbn,qty])=>{
+   const book=books.find(item=>item.isbn===isbn);
+   return `• ${book.title} (${edition(book)}) — ISBN ${isbn} — ${t.qty}: ${qty}`;
+ });
+ return [t.greeting,"",t.request,"",...titles,"",`${t.retailer}: ${fields.get("retailer").trim()}`,`${t.postal}: ${fields.get("postal").trim()}`,"",t.thanks].join("\r\n");
+}
+document.addEventListener("click",event=>{
+ const button=event.target.closest("button");
+ if(!button) return;
+ if(button.dataset.language) setLanguage(button.dataset.language);
+ if(button.dataset.view) showBook(button.dataset.view);
+ if(button.dataset.add){
+   add([button.dataset.add]);
+   if($("details").open) $("details").close();
+ }
+ if(button.dataset.remove){
+   cart.delete(button.dataset.remove);
+   renderCart();
+   ($("items").querySelector("input") || $("add-trio")).focus();
+ }
+});
+$("items").addEventListener("change",event=>{
+ const isbn=event.target.dataset.quantity;
+ if(!isbn) return;
+ const qty=Math.min(999999,Math.max(1,Math.floor(Number(event.target.value)||1)));
+ cart.set(isbn,qty);
+ event.target.value=qty;
+ $("count").textContent=[...cart.values()].reduce((sum,value)=>sum+value,0);
+});
+$("add-trio").addEventListener("click",()=>add(visibleBooks().slice(0,3).map(book=>book.isbn)));
+$("close").addEventListener("click",()=>$("details").close());
+$("details").addEventListener("close",()=>activeBook?.focus());
+form.addEventListener("submit",event=>{
+ event.preventDefault();
+ if(!cart.size) return;
+ location.href=`mailto:info@ecoreves.ca?subject=${encodeURIComponent(strings().subject)}&body=${encodeURIComponent(quoteBody())}`;
+});
+$("copy").addEventListener("click",async()=>{
+ if(!cart.size || !form.reportValidity()) return;
+ try{await navigator.clipboard.writeText(quoteBody());$("status").textContent=strings().copied;}
+ catch{$("status").textContent=strings().copyError;}
+});
+setLanguage("fr");
+</script>
+</body></html>
