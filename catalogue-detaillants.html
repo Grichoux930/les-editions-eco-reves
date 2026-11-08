@@ -132,6 +132,6 @@ $("copy").addEventListener("click",async()=>{
  try{await navigator.clipboard.writeText(quoteBody());$("status").textContent=strings().copied;}
  catch{$("status").textContent=strings().copyError;}
 });
-setLanguage("fr");
+setLanguage(new URLSearchParams(location.search).get("lang") === "en" ? "en" : "fr");
 </script>
 </body></html>
