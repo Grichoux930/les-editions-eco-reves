@@ -14,10 +14,12 @@ header{background:var(--white);border-bottom:1px solid var(--line)}.nav{min-heig
 .basket{position:sticky;top:15px;padding:18px;border-radius:19px;border:1px solid var(--line);background:var(--white)}.basket h2{font-size:1.65rem;margin-bottom:10px}.basket ul{padding:0;margin:0 0 10px;list-style:none}.line{padding:9px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:.86rem}.line input{width:60px;padding:4px;color:var(--ink)}.remove{padding:5px;border:0;background:none;color:var(--green);font-weight:800}.fields{display:grid;gap:9px;margin:15px 0}.fields label{display:grid;gap:4px;font-size:.82rem;font-weight:700}.fields input,.line input{border:1px solid #aab8aa;border-radius:7px;background:white}.fields input{padding:8px 10px;width:100%}.basket .primary{width:100%;font-size:.94rem}.basket .fine{margin-top:9px}.basket [disabled]{opacity:.5;cursor:default}.status{color:var(--green);font-size:.84rem;margin-top:6px}.notice{background:#ecf0e8;padding:19px;border-radius:16px;margin-bottom:30px}.notice p{margin-top:6px;color:var(--muted)}footer{border-top:1px solid var(--line);padding-block:20px;font-size:.9rem}
 dialog{border:1px solid var(--line);border-radius:20px;max-width:min(540px,calc(100% - 24px));padding:20px;background:var(--white);color:var(--ink)}dialog::backdrop{background:#152f25aa}dialog img{width:175px;border-radius:6px;margin:0 auto 13px}dialog h2{font-size:1.65rem}dialog p{margin:10px 0}dialog .close{display:block;margin:0 0 8px auto}
 @media(max-width:850px){.hero{gap:20px}.layout{grid-template-columns:1fr}.basket{position:static}.grid{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}}@media(max-width:530px){.wrap{padding-inline:14px}.hero{grid-template-columns:1fr;padding-block:24px}.hero img{aspect-ratio:4/3}.nav{min-height:68px}.brand img{width:85px}.pill{padding:7px 9px;font-size:.84rem}.grid{grid-template-columns:1fr 1fr;gap:9px}.card-body{padding:10px}.trio{align-items:flex-start;flex-direction:column}}
+.site-link{display:inline-flex;align-items:center;justify-content:center;padding:8px 13px;border:1px solid var(--line);border-radius:100px;background:var(--white);font-weight:750;text-decoration:none;white-space:nowrap}.site-link:hover{background:#e9f0e5}
+@media(max-width:530px){.nav{padding-block:8px;gap:8px}.nav-actions{gap:6px;flex-wrap:wrap;justify-content:flex-end}.site-link{font-size:.82rem;padding:6px 9px}.lang button{padding:4px 7px}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="https://ecoreves.ca/"><img src="logo.png" alt="Éditions Éco-Rêves" width="110" height="73"></a><div class="nav-actions"><div class="lang" aria-label="Langue / Language"><button type="button" data-language="fr" aria-pressed="true">FR</button><button type="button" data-language="en" aria-pressed="false">EN</button></div><a class="pill" href="#selection"><span data-text="selection"></span> <span id="count">0</span></a></div></div></header>
+<header><div class="wrap nav"><a class="brand" href="https://ecoreves.ca/"><img src="logo.png" alt="Éditions Éco-Rêves" width="110" height="73"></a><div class="nav-actions"><a class="site-link" id="site-link" href="https://ecoreves.ca/" data-text="site"></a><div class="lang" aria-label="Langue / Language"><button type="button" data-language="fr" aria-pressed="true">FR</button><button type="button" data-language="en" aria-pressed="false">EN</button></div><a class="pill" href="#selection"><span data-text="selection"></span> <span id="count">0</span></a></div></div></header>
 <main class="wrap">
 <section class="hero"><div><p class="eyebrow" data-text="eyebrow"></p><h1 data-text="headline"></h1><p class="intro" data-text="intro"></p><a class="primary" href="#albums" data-text="browse"></a></div><img src="accueil-personnages.png" alt="" width="720" height="540"></section>
 <p class="impact"><strong data-text="impact"></strong> <a href="https://ecoreves.ca/engagement.html" data-text="learn"></a></p>
@@ -31,8 +33,8 @@ dialog{border:1px solid var(--line);border-radius:20px;max-width:min(540px,calc(
 <dialog id="details" aria-labelledby="detail-title"><button type="button" class="secondary close" id="close" data-text="close"></button><div id="detail-body"></div></dialog>
 <script>
 const copy = {
-fr:{selection:"Ma sélection",eyebrow:"Catalogue pour détaillants",headline:"Des albums jeunesse au cœur de la nature",intro:"Des histoires du Saguenay pour découvrir les animaux et leurs habitats. Composez votre assortiment et demandez un prix de gros.",browse:"Découvrir les albums",impact:"25 $ consacrés à la compensation carbone par tranche de 1 000 livres imprimés.",learn:"Notre engagement",books:"Les albums",bookIntro:"Éditions françaises · 8,5 × 8,5 po · 24 pages couleur et couverture (format proposé)",trio:"Trio découverte de la nature",trioDesc:"Bella, Bibo et Loulou pour un rayon à l’année.",addTrio:"Ajouter le trio",empty:"Ajoutez un album ou le trio pour commencer.",retailer:"Nom de l’enseigne",postal:"Code postal de livraison",quote:"Demander un prix de gros",terms:"Le devis se confirme par bon de commande. Vente ferme, sans consignation.",copy:"Copier la demande",aboutTitle:"Les Éditions Éco-Rêves",about:"Maison d’édition jeunesse du Saguenay. Éducatrice à l’enfance depuis plus de 20 ans, Josée Tremblay crée des albums qui invitent les enfants à découvrir et à protéger la nature.",close:"Fermer",more:"Voir la fiche",add:"Ajouter",remove:"Retirer",qty:"Quantité",added:"Ajouté à votre sélection.",copied:"Demande copiée.",copyError:"Copie indisponible. Utilisez le bouton de demande de prix.",subject:"Demande de prix de gros – Éditions Éco-Rêves",greeting:"Bonjour,",request:"J’aimerais obtenir un prix de gros pour les albums suivants.",thanks:"Merci !",season:"Album des Fêtes",series:"Trio découverte",french:"Français",english:"Anglais"},
-en:{selection:"My selection",eyebrow:"Retail catalogue",headline:"Children’s books about the natural world",intro:"Stories from Saguenay that introduce children to animals and their habitats. Build your assortment and request wholesale pricing.",browse:"Explore the books",impact:"We allocate $25 to carbon offsetting for every 1,000 books printed.",learn:"Our commitment",books:"Picture books",bookIntro:"English editions · 8.5 × 8.5 in. · 24 colour pages plus cover (proposed format)",trio:"Nature Discovery Trio",trioDesc:"Bella, Bibo and Loulou for a year-round display.",addTrio:"Add the trio",empty:"Add a book or the trio to get started.",retailer:"Retailer name",postal:"Delivery postal code",quote:"Request wholesale pricing",terms:"Confirm the quote by purchase order. Firm sale, no consignment.",copy:"Copy the request",aboutTitle:"About Éditions Éco-Rêves",about:"We’re a children’s publisher in Saguenay, Quebec. An early childhood educator for over 20 years, Josée Tremblay writes stories that help children discover and care for nature.",close:"Close",more:"View details",add:"Add",remove:"Remove",qty:"Quantity",added:"Added to your selection.",copied:"Request copied.",copyError:"Copy unavailable. Use the wholesale pricing button.",subject:"Wholesale quote request – Éditions Éco-Rêves",greeting:"Hello,",request:"I’d like wholesale pricing for the following books.",thanks:"Thank you!",season:"Holiday title",series:"Nature Discovery Trio",french:"French",english:"English"}
+fr:{site:"Site Éco-Rêves ↗",selection:"Ma sélection",eyebrow:"Catalogue pour détaillants",headline:"Des albums jeunesse au cœur de la nature",intro:"Des histoires du Saguenay pour découvrir les animaux et leurs habitats. Composez votre assortiment et demandez un prix de gros.",browse:"Découvrir les albums",impact:"25 $ consacrés à la compensation carbone par tranche de 1 000 livres imprimés.",learn:"Notre engagement",books:"Les albums",bookIntro:"Éditions françaises · 8,5 × 8,5 po · 24 pages couleur et couverture (format proposé)",trio:"Trio découverte de la nature",trioDesc:"Bella, Bibo et Loulou pour un rayon à l’année.",addTrio:"Ajouter le trio",empty:"Ajoutez un album ou le trio pour commencer.",retailer:"Nom de l’enseigne",postal:"Code postal de livraison",quote:"Demander un prix de gros",terms:"Le devis se confirme par bon de commande. Vente ferme, sans consignation.",copy:"Copier la demande",aboutTitle:"Les Éditions Éco-Rêves",about:"Maison d’édition jeunesse du Saguenay. Éducatrice à l’enfance depuis plus de 20 ans, Josée Tremblay crée des albums qui invitent les enfants à découvrir et à protéger la nature.",close:"Fermer",more:"Voir la fiche",add:"Ajouter",remove:"Retirer",qty:"Quantité",added:"Ajouté à votre sélection.",copied:"Demande copiée.",copyError:"Copie indisponible. Utilisez le bouton de demande de prix.",subject:"Demande de prix de gros – Éditions Éco-Rêves",greeting:"Bonjour,",request:"J’aimerais obtenir un prix de gros pour les albums suivants.",thanks:"Merci !",season:"Album des Fêtes",series:"Trio découverte",french:"Français",english:"Anglais"},
+en:{site:"Éco-Rêves website ↗",selection:"My selection",eyebrow:"Retail catalogue",headline:"Children’s books about the natural world",intro:"Stories from Saguenay that introduce children to animals and their habitats. Build your assortment and request wholesale pricing.",browse:"Explore the books",impact:"We allocate $25 to carbon offsetting for every 1,000 books printed.",learn:"Our commitment",books:"Picture books",bookIntro:"English editions · 8.5 × 8.5 in. · 24 colour pages plus cover (proposed format)",trio:"Nature Discovery Trio",trioDesc:"Bella, Bibo and Loulou for a year-round display.",addTrio:"Add the trio",empty:"Add a book or the trio to get started.",retailer:"Retailer name",postal:"Delivery postal code",quote:"Request wholesale pricing",terms:"Confirm the quote by purchase order. Firm sale, no consignment.",copy:"Copy the request",aboutTitle:"About Éditions Éco-Rêves",about:"We’re a children’s publisher in Saguenay, Quebec. An early childhood educator for over 20 years, Josée Tremblay writes stories that help children discover and care for nature.",close:"Close",more:"View details",add:"Add",remove:"Remove",qty:"Quantity",added:"Added to your selection.",copied:"Request copied.",copyError:"Copy unavailable. Use the wholesale pricing button.",subject:"Wholesale quote request – Éditions Éco-Rêves",greeting:"Hello,",request:"I’d like wholesale pricing for the following books.",thanks:"Thank you!",season:"Holiday title",series:"Nature Discovery Trio",french:"French",english:"English"}
 };
 const books = [
 ["fr","Bella l’abeille","Petits amis curieux, grande aventure !","Une petite abeille curieuse, une grande aventure au milieu des fleurs.","978-2-9825952-0-0","bella%20labeille.png","#f7e9b7"],
@@ -106,6 +108,7 @@ function renderCart(){
 function setLanguage(next){
  language = next;
  document.documentElement.lang = next;
+ $("site-link").href = next === "en" ? "https://ecoreves.ca/index-en.html" : "https://ecoreves.ca/";
  document.querySelectorAll("[data-language]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.language===next)));
  document.querySelectorAll("[data-text]").forEach(el=>{el.textContent=strings()[el.dataset.text];});
  $("status").textContent="";
@@ -127,11 +130,35 @@ function showBook(isbn){
 function quoteBody(){
  const t = strings();
  const fields = new FormData(form);
- const titles = [...cart].map(([isbn,qty])=>{
-   const book=books.find(item=>item.isbn===isbn);
-   return `• ${book.title} (${edition(book)}) — ISBN ${isbn} — ${t.qty}: ${qty}`;
+ const retailer = fields.get("retailer").trim();
+ const postal = fields.get("postal").trim();
+ const total = [...cart.values()].reduce((sum, quantity) => sum + quantity, 0);
+ const number = new Intl.NumberFormat(language === "fr" ? "fr-CA" : "en-CA");
+ const french = language === "fr";
+ const titles = [...cart].map(([isbn, qty], index) => {
+   const book = books.find(item => item.isbn === isbn);
+   return [
+     `${index + 1}. ${book.title}`,
+     `   ${edition(book)} · ISBN ${isbn} · ${number.format(qty)} ${french ? "ex." : "copies"}`
+   ].join("\r\n");
  });
- return [t.greeting,"",t.request,"",...titles,"",`${t.retailer}: ${fields.get("retailer").trim()}`,`${t.postal}: ${fields.get("postal").trim()}`,"",t.thanks].join("\r\n");
+ return [
+   t.greeting, "",
+   french ? "Je souhaite recevoir un devis de gros pour la sélection ci-dessous." : "I’d like a wholesale quote for the selection below.",
+   french ? "Pourriez-vous indiquer le prix de gros, les frais de livraison et le délai estimé ?" : "Could you include wholesale pricing, shipping costs and the estimated lead time?",
+   "",
+   french ? "ENSEIGNE ET LIVRAISON" : "RETAILER AND DELIVERY",
+   `${t.retailer} : ${retailer}`,
+   `${t.postal} : ${postal}`,
+   "",
+   french ? "ALBUMS SÉLECTIONNÉS" : "SELECTED TITLES",
+   ...titles,
+   "",
+   french ? `Total : ${number.format(total)} exemplaire${total === 1 ? "" : "s"}` : `Total: ${number.format(total)} ${total === 1 ? "copy" : "copies"}`,
+   "",
+   french ? "Merci et bonne journée," : "Thank you,",
+   retailer
+ ].join("\r\n");
 }
 document.addEventListener("click",event=>{
  const button=event.target.closest("button");
@@ -162,7 +189,7 @@ $("details").addEventListener("close",()=>activeBook?.focus());
 form.addEventListener("submit",event=>{
  event.preventDefault();
  if(!cart.size) return;
- location.href=`mailto:info@ecoreves.ca?subject=${encodeURIComponent(strings().subject)}&body=${encodeURIComponent(quoteBody())}`;
+ location.href=`mailto:info@ecoreves.ca?subject=${encodeURIComponent(`${strings().subject} | ${new FormData(form).get("retailer").trim()}`)}&body=${encodeURIComponent(quoteBody())}`;
 });
 $("copy").addEventListener("click",async()=>{
  if(!cart.size || !form.reportValidity()) return;
