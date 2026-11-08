@@ -43,6 +43,43 @@ const books = [
 ["en","Bibo the Beaver","and the Guardians of the Wetlands","Follow Bibo into the wetlands and discover why they matter.","978-2-9825952-3-1","bibo-cover-en.png","#e1eedf"],
 ["en","Ah! How Owl-Some!","Protecting Mature Trees","Join Loulou and meet the animals that shelter in mature trees.","978-2-9825952-5-5","chouette-cover-en.png","#f7e4d4"]
 ].map(([language,title,subtitle,pitch,isbn,image,tint])=>({language,title,subtitle,pitch,isbn,image,tint}));
+const summaries = {
+  "978-2-9825952-0-0": [
+    "Une petite abeille curieuse découvre l’importance des abeilles pour la planète.",
+    "À travers ses aventures colorées, Bella apprend comment les abeilles transportent le pollen de fleur en fleur.",
+    "Un livre doux et lumineux pour aider les enfants à comprendre que chaque petit geste peut protéger le vivant."
+  ],
+  "978-2-9825952-2-4": [
+    "Bibo le castor et les gardiens des milieux humides entraîne les enfants dans une aventure éducative au cœur des étangs et de la biodiversité.",
+    "Les jeunes lecteurs découvriront l’importance des castors, des milieux humides et de la protection de la nature.",
+    "Un livre tendre et éducatif pour apprendre à aimer, observer et protéger les petits trésors de notre planète."
+  ],
+  "978-2-9825952-4-8": [
+    "Au cœur de la forêt, certains arbres sont là depuis très longtemps. Ils grandissent, traversent les saisons et deviennent peu à peu de précieux refuges pour une grande variété d’animaux.",
+    "Aux côtés de grand-papa Renald, Loulou découvre toute la vie qui dépend des arbres matures et comprend pourquoi il est si important de les préserver.",
+    "Une aventure touchante et colorée qui invite les enfants à découvrir la biodiversité et à prendre soin du vivant."
+  ],
+  "978-2-9825952-6-2": [
+    "Dans la forêt enneigée, Loulou et ses amis partent à la recherche de petites merveilles pour décorer le sapin de Mamie Sylvie et Papi Denis.",
+    "Au fil de leurs découvertes, ils apprennent à observer la nature, à respecter les animaux et à prendre soin des trésors qui les entourent.",
+    "Une histoire de Noël tendre et lumineuse, signée Josée Tremblay, qui célèbre les moments partagés en famille et les souvenirs que l’on crée ensemble."
+  ],
+  "978-2-9825952-1-7": [
+    "A curious little bee discovers why bees are so important for the planet.",
+    "Through her colorful adventures, Bella learns how bees carry pollen from flower to flower.",
+    "A gentle and bright book that helps children understand how every small action can help protect living things."
+  ],
+  "978-2-9825952-3-1": [
+    "Bibo the Beaver and the Wetland Guardians takes children on an educational adventure into the heart of ponds and biodiversity.",
+    "Young readers will discover the importance of beavers, wetlands and protecting nature.",
+    "A tender and educational book that teaches children to love, observe and protect the small treasures of our planet."
+  ],
+  "978-2-9825952-5-5": [
+    "Protecting Mature Trees follows Loulou as she discovers that a large tree can be home to an entire family of animals.",
+    "With Grandpa Renald, she helps Mr. Coupeur understand why a mature tree should be carefully observed before it is cut down.",
+    "A touching, colorful adventure that introduces children to biodiversity and encourages them to care for living things."
+  ]
+};
 let language = "fr";
 let activeBook;
 const cart = new Map();
@@ -84,7 +121,7 @@ function showBook(isbn){
  const t = strings();
  const book = books.find(item=>item.isbn===isbn);
  activeBook = document.activeElement;
- $("detail-body").innerHTML=`<img src="${book.image}" alt=""><h2 id="detail-title">${book.title}</h2><p>${book.subtitle}</p><p><strong>${book.pitch}</strong></p><p>${edition(book)} · ISBN ${book.isbn}</p><button type="button" class="primary" data-add="${isbn}">${t.add}</button>`;
+ $("detail-body").innerHTML=`<img src="${book.image}" alt=""><h2 id="detail-title">${book.title}</h2><p>${book.subtitle}</p><h3>${language === "fr" ? "Résumé" : "Synopsis"}</h3>${summaries[isbn].map(paragraph => `<p>${paragraph}</p>`).join("")}<p>${edition(book)} · ISBN ${book.isbn}</p><button type="button" class="primary" data-add="${isbn}">${t.add}</button>`;
  $("details").showModal();
 }
 function quoteBody(){
