@@ -107,6 +107,25 @@
     @media(max-width:768px){.sunshine-card{padding:30px 20px;border-radius:34px;border-width:4px}.sunshine-card p{font-size:1.05rem}.sunshine-card .btn{max-width:100%}.sunshine-logo{width:220px}}
     .hero-menu{gap:18px}.hero-menu .commitment-link{background:#ffe46e;padding:12px 14px;border-radius:999px;white-space:nowrap}
     @media(max-width:980px){.hero-menu{display:flex;position:absolute;top:100%;left:0;right:0;flex-wrap:wrap;gap:6px;background:#fffaf0ef;border-radius:14px;padding:8px}.hero-menu a{font-size:.8rem;padding:8px}.hero-menu .commitment-link{padding:8px}}
+    .book-video {
+      width: min(100%, 840px);
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+    .book-video h3 {
+      color: var(--forest);
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      margin-bottom: 14px;
+    }
+    .book-video video {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      border-radius: 18px;
+      background: #10382a;
+      box-shadow: var(--shadow);
+    }
   </style>
   <link rel="stylesheet" href="mobile.css?v=20261013-desktop-restored">
   <script src="mobile-nav.js?v=20261013" defer></script>
@@ -181,6 +200,15 @@
   </section>
   <section id="livres">
     <div class="section-kicker">Our Books</div><h2 class="section-title">Three gentle, colorful and educational worlds.</h2><p class="section-subtitle">Bella introduces the world of bees, Bibo explores wetlands, and Loulou reveals the hidden life sheltered by mature trees.</p>
+    <div class="book-video">
+      <h3 id="book-video-title">Discover Éditions Éco-Rêves in 19 seconds</h3>
+      <video controls playsinline preload="none" width="1280" height="720"
+             poster="media/discover-eco-reves.jpg" aria-labelledby="book-video-title">
+        <source src="media/discover-eco-reves.mp4" type="video/mp4">
+        <track kind="captions" src="media/discover-eco-reves.en.vtt" srclang="en" label="English">
+        <a href="media/discover-eco-reves.mp4">Download the video</a>
+      </video>
+    </div>
     <article class="book-feature bella"><div class="book-layout"><div class="covers"><div class="cover"><img src="bella-cover-en.png" alt="Cover of Bella the Bee — Little Curious Friends, Big Adventures!, by Josée Tremblay"></div><div class="cover"><img src="bella-page-en.png" alt="Page from Bella the Bee: Bella and Rosie discover why the flowers are sad"></div></div><div class="book-copy"><span class="label">🐝 Available Now</span><h2>Bella the Bee</h2><p><strong>Little Curious Friends, Big Adventures!</strong></p><p>A curious little bee discovers why bees are so important for the planet.</p><p>Through her colorful adventures, Bella learns how bees carry pollen and help flowers grow.</p><p>A gentle and bright book that helps children understand how every small action can help protect living things.</p><div class="pill-list"><span class="pill">Ages 2 to 6</span><span class="pill">Bees</span><span class="pill">Nature</span><span class="pill">Education</span></div><a class="btn btn-secondary amazon-btn" href="boutique-en.html">🛍️ Visit the Shop</a></div></div></article>
     <article class="book-feature bibo" id="bibo"><div class="book-layout"><div class="book-copy"><span class="label">🦫 Available Now</span><h2>Bibo the Beaver</h2><p><strong>Bibo the Beaver and the Wetland Guardians</strong> takes children on an educational adventure into the heart of ponds and biodiversity.</p><p>Young readers will discover the importance of beavers, wetlands and protecting nature.</p><p>A tender and educational book that teaches children to love, observe and protect the small treasures of our planet.</p><div class="pill-list"><span class="pill">Beavers</span><span class="pill">Wetlands</span><span class="pill">Biodiversity</span><span class="pill">Canadian Forest</span></div></div><div class="covers"><div class="cover"><img src="bibo-cover.png" alt="Bibo the Beaver"></div><div class="cover"><img src="bibo-page.png" alt="Bibo and the wetlands"></div></div></div>
 <div class="book-cta">
